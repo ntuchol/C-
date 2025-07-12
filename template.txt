@@ -1,0 +1,7 @@
+Dear {name},
+
+Thank you for your order of {quantity} {item}(s).
+Your total comes to ${total:.2f}.
+
+Sincerely,
+The Company
