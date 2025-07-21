@@ -1,35 +1,23 @@
+#include <queue>
+#include <vector>
 #include <iostream>
-#include <queue> // Required for std::priority_queue
+#include <functional> // For std::greater
 
 int main() {
-    // Create a priority queue of integers (default: max-heap)
-    std::priority_queue<int> pq;
+    // Default max-heap (largest element at top)
+    std::priority_queue<int> max_pq;
+    max_pq.push(10);
+    max_pq.push(5);
+    max_pq.push(20);
+    std::cout << "Max-heap top: " << max_pq.top() << std::endl; // Output: 20
 
-    // Push elements
-    pq.push(30);
-    pq.push(10);
-    pq.push(50);
-    pq.push(20);
-
-    // Access and remove elements based on priority
-    while (!pq.empty()) {
-        std::cout << pq.top() << " "; // Output: 50 30 20 10
-        pq.pop();
-    }
-    std::cout << std::endl;
-
-    // Create a min-heap by providing a custom comparator (std::greater)
+    // Min-heap (smallest element at top) using std::greater
     std::priority_queue<int, std::vector<int>, std::greater<int>> min_pq;
-    min_pq.push(30);
     min_pq.push(10);
-    min_pq.push(50);
+    min_pq.push(5);
     min_pq.push(20);
-
-    while (!min_pq.empty()) {
-        std::cout << min_pq.top() << " "; // Output: 10 20 30 50
-        min_pq.pop();
-    }
-    std::cout << std::endl;
+    std::cout << "Min-heap top: " << min_pq.top() << std::endl; // Output: 5
 
     return 0;
 }
+
