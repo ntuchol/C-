@@ -1,33 +1,48 @@
-#include <numeric> // For std::gcd
+#include <numeric> // For std::gcd in C++17
 
 class Rational {
 private:
     int numerator;
     int denominator;
 
-    void reduce(); // Helper to reduce the fraction
+    void simplify() {
+        if (denominator == 0) {
+            // Handle error: division by zero
+            // For example, throw an exception or set to an invalid state
+            return; 
+        }
+        if (numerator == 0) {
+            denominator = 1; // Represent 0 as 0/1
+            return;
+        }
+        int common_divisor = std::gcd(numerator, denominator);
+        numerator /= common_divisor;
+        denominator /= common_divisor;
+        if (denominator < 0) { // Ensure denominator is positive
+            numerator *= -1;
+            denominator *= -1;
+        }
+    }
 
 public:
-    // Constructor
-    Rational(int num = 0, int den = 1);
+    Rational(int n = 0, int d = 1) : numerator(n), denominator(d) {
+        simplify();
+    }
 
-    // Arithmetic operators
-    Rational operator+(const Rational& other) const;
-    Rational operator-(const Rational& other) const;
-    Rational operator*(const Rational& other) const;
-    Rational operator/(const Rational& other) const;
+    // Overload arithmetic operators
+    Rational operator+(const Rational& other) const {
+        int new_n = (numerator * other.denominator) + (other.numerator * denominator);
+        int new_d = denominator * other.denominator;
+        return Rational(new_n, new_d);
+    }
 
-    // Compound assignment operators
-    Rational& operator+=(const Rational& other);
-    Rational& operator-=(const Rational& other);
-    Rational& operator*=(const Rational& other);
-    Rational& operator/=(const Rational& other);
+    // Overload comparison operators
+    bool operator==(const Rational& other) const {
+        return (numerator == other.numerator) && (denominator == other.denominator);
+    }
 
-    // Comparison operators
-    bool operator==(const Rational& other) const;
-    bool operator!=(const Rational& other) const;
-    // ... other comparison operators
-
-    // Output operator
-    friend std::ostream& operator<<(std::ostream& os, const Rational& r);
+    // Output function
+    void print() const {
+        // Output in a/b format
+    }
 };
