@@ -2,51 +2,48 @@
 #include <cstdlib> // For rand() and srand()
 #include <ctime>   // For time()
 
-// Function to simulate rolling two dice
-int rollDice() {
-    int die1 = (rand() % 6) + 1; // Generates a random number from 1 to 6
-    int die2 = (rand() % 6) + 1;
-    return die1 + die2;
+// Function to simulate a single dice roll
+int rollDie() {
+    return (rand() % 6) + 1; // Generates a random number between 1 and 6
+}
+
+// Function to simulate a game of Craps
+void playCraps() {
+    int die1 = rollDie();
+    int die2 = rollDie();
+    int sum = die1 + die2;
+
+    std::cout << "Rolling dice now... You rolled a " << sum << std::endl;
+
+    if (sum == 7 || sum == 11) {
+        std::cout << "You win! (Natural)" << std::endl;
+    } else if (sum == 2 || sum == 3 || sum == 12) {
+        std::cout << "You lose! (Craps)" << std::endl;
+    } else {
+        int point = sum;
+        std::cout << "Point is " << point << ". Roll again!" << std::endl;
+
+        while (true) {
+            die1 = rollDie();
+            die2 = rollDie();
+            sum = die1 + die2;
+            std::cout << "You rolled a " << sum << std::endl;
+
+            if (sum == point) {
+                std::cout << "You win! (Made the point)" << std::endl;
+                break;
+            } else if (sum == 7) {
+                std::cout << "You lose! (Rolled a 7)" << std::endl;
+                break;
+            }
+        }
+    }
 }
 
 int main() {
-    srand(time(0)); // Seed the random number generator
+    srand(time(0)); // Seed the random number generator once
 
-    char playAgain = 'y';
-    while (playAgain == 'y' || playAgain == 'Y') {
-        int sum = rollDice();
-        int point = 0;
+    playCraps();
 
-        std::cout << "You rolled: " << sum << std::endl;
-
-        // First roll logic
-        if (sum == 7 || sum == 11) {
-            std::cout << "Natural! You win!" << std::endl;
-        } else if (sum == 2 || sum == 3 || sum == 12) {
-            std::cout << "Craps! You lose!" << std::endl;
-        } else {
-            point = sum;
-            std::cout << "Point is " << point << ". Roll again to make your point or roll a 7 to lose." << std::endl;
-
-            // Subsequent rolls (point phase)
-            while (true) {
-                sum = rollDice();
-                std::cout << "You rolled: " << sum << std::endl;
-
-                if (sum == point) {
-                    std::cout << "Made the point! You win!" << std::endl;
-                    break;
-                } else if (sum == 7) {
-                    std::cout << "Seven out! You lose!" << std::endl;
-                    break;
-                }
-            }
-        }
-
-        std::cout << "Play another game? (Y/N): ";
-        std::cin >> playAgain;
-    }
-
-    std::cout << "Thanks for playing!" << std::endl;
     return 0;
 }
