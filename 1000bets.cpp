@@ -1,6 +1,6 @@
 #include <iostream>
-#include <cstdlib> // For rand() and srand()
-#include <ctime>   // For time()
+#include <cstdlib> 
+#include <ctime>   
 
 int main() {
     double funds = 1000.0;
@@ -8,19 +8,19 @@ int main() {
     int wins = 0;
     int losses = 0;
 
-    srand(time(0)); // Seed the random number generator
+    srand(time(0)); 
 
     std::cout << "Starting funds: $" << funds << std::endl;
 
     for (int i = 0; i < numBets; ++i) {
-        double betAmount = 10.0; // Example: Fixed bet amount
+        double betAmount = 10.0; 
 
         if (funds < betAmount) {
             std::cout << "Insufficient funds to place bet " << (i + 1) << ". Stopping." << std::endl;
             break;
         }
 
-        int playerRoll = (rand() % 6) + 1; // Roll a 6-sided die
+        int playerRoll = (rand() % 6) + 1; 
         int opponentRoll = (rand() % 6) + 1;
 
         std::cout << "\nBet " << (i + 1) << ": Player rolled " << playerRoll 
@@ -35,7 +35,7 @@ int main() {
             losses++;
             std::cout << "You lose! Funds: $" << funds << std::endl;
         } else {
-            std::cout << "It's a tie! Funds: $" << funds << std::endl; // Funds remain unchanged
+            std::cout << "It's a tie! Funds: $" << funds << std::endl; 
         }
     }
 
