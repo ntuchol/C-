@@ -48,13 +48,12 @@ int main() {
     Animal* myAnimal = new Dog("Buddy", 3);
     Animal* anotherAnimal = new Cat("Whiskers", 2);
 
-    myAnimal->makeSound(); // Calls Dog's makeSound()
+    myAnimal->makeSound(); 
     myAnimal->eat();
 
-    anotherAnimal->makeSound(); // Calls Cat's makeSound()
+    anotherAnimal->makeSound(); 
     anotherAnimal->eat();
 
-    // Specific derived class methods
     Dog* myDog = dynamic_cast<Dog*>(myAnimal);
     if (myDog) {
         myDog->fetch();
