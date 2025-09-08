@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <map> // or <unordered_map>
+#include <map> 
 
 int main() {
     std::map<std::string, std::string> state_abbreviations = {
@@ -56,7 +56,6 @@ int main() {
         {"Wyoming", "WY"}
     };
 
-    // Example usage:
     std::cout << "The abbreviation for California is: " << state_abbreviations["California"] << std::endl;
 
     return 0;
