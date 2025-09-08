@@ -6,10 +6,8 @@ private:
     double imag;
 
 public:
-    // Constructor
     Complex(double r = 0.0, double i = 0.0) : real(r), imag(i) {}
 
-    // Getter methods
     double getReal() const {
         return real;
     }
@@ -18,7 +16,6 @@ public:
         return imag;
     }
 
-    // Overloading arithmetic operators
     Complex operator+(const Complex& other) const {
         return Complex(real + other.real, imag + other.imag);
     }
@@ -32,14 +29,12 @@ public:
                        real * other.imag + imag * other.real);
     }
 
-    // Overloading stream insertion operator for easy printing
     friend std::ostream& operator<<(std::ostream& os, const Complex& c) {
         os << "(" << c.real << ", " << c.imag << "i)";
         return os;
     }
 };
 
-// Example usage
 int main() {
     Complex c1(3.0, 4.0);
     Complex c2(1.0, 2.0);
