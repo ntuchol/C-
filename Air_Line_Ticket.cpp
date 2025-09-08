@@ -2,7 +2,6 @@
 #include <vector>
 #include <string>
 
-// Class to represent a seat
 class Seat {
 public:
     int seatNumber;
@@ -11,7 +10,6 @@ public:
     Seat(int num) : seatNumber(num), isBooked(false) {}
 };
 
-// Class to represent a flight
 class Flight {
 public:
     std::string flightID;
