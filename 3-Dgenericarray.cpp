@@ -22,8 +22,6 @@
         }
     };
 
-    // Example usage:
-    // Generic3DArray<float> float3DArray(2, 3, 4);
     float3DArray(0, 0, 0) = 1.23f;
     
     template <typename T>
