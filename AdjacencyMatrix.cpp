@@ -14,13 +14,12 @@ public:
     void addEdge(int u, int v, int weight = 1) {
         if (u >= 0 && u < numVertices && v >= 0 && v < numVertices) {
             adjMatrix[u][v] = weight;
-            // For undirected graphs, also set adjMatrix[v][u] = weight;
         }
     }
 
     bool hasEdge(int u, int v) {
         if (u >= 0 && u < numVertices && v >= 0 && v < numVertices) {
-            return adjMatrix[u][v] != 0; // Or check for a specific 'no edge' value
+            return adjMatrix[u][v] != 0; 
         }
         return false;
     }
