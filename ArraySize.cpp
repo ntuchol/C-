@@ -7,7 +7,7 @@ int main() {
 
     std::cout << "Initializing and printing heap array elements:" << std::endl;
     for (int i = 0; i < ARRAY_SIZE; ++i) {
-        heapArray[i] = (i + 1) * 10; // Assign values
+        heapArray[i] = (i + 1) * 10; 
         std::cout << "heapArray[" << i << "] = " << heapArray[i] << std::endl;
     }
 
