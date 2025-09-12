@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <queue>
-#include <limits> // For std::numeric_limits
+#include <limits> 
 
 const int INF = std::numeric_limits<int>::max();
 
@@ -9,7 +9,6 @@ void dijkstra(int source, int num_nodes, const std::vector<std::vector<std::pair
     dist.assign(num_nodes, INF);
     dist[source] = 0;
 
-    // Priority queue stores {distance, node} pairs
     std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>, std::greater<std::pair<int, int>>> pq;
     pq.push({0, source});
 
@@ -18,12 +17,10 @@ void dijkstra(int source, int num_nodes, const std::vector<std::vector<std::pair
         int u = pq.top().second;
         pq.pop();
 
-        // If a shorter path to u has already been found, skip
         if (d > dist[u]) {
             continue;
         }
 
-        // Explore neighbors
         for (const auto& edge : adj[u]) {
             int v = edge.first;
             int weight = edge.second;
@@ -40,7 +37,6 @@ int main() {
     int num_nodes = 5;
     std::vector<std::vector<std::pair<int, int>>> adj(num_nodes);
 
-    // Add edges: {destination, weight}
     adj[0].push_back({1, 4});
     adj[0].push_back({2, 1});
     adj[1].push_back({3, 1});
