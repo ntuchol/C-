@@ -8,11 +8,11 @@ int main() {
     std::cin >> income;
 
     if (income <= 10000) {
-        tax = income * 0.10; // 10% for income up to $10,000
+        tax = income * 0.10; 
     } else if (income <= 50000) {
-        tax = (10000 * 0.10) + ((income - 10000) * 0.15); // 10% on first $10k, 15% on rest
+        tax = (10000 * 0.10) + ((income - 10000) * 0.15); 
     } else {
-        tax = (10000 * 0.10) + (40000 * 0.15) + ((income - 50000) * 0.20); // 10% on first $10k, 15% on next $40k, 20% on rest
+        tax = (10000 * 0.10) + (40000 * 0.15) + ((income - 50000) * 0.20); 
     }
 
     std::cout << "Your estimated tax is: $" << tax << std::endl;
