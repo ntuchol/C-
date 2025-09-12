@@ -1,5 +1,5 @@
 #include <iostream>
-#include <numeric> // For std::gcd
+#include <numeric> 
 
 int main() {
     int a = 48;
