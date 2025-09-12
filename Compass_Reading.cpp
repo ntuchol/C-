@@ -1,7 +1,6 @@
  #include <QMC5883LCompass.h>
 
         QMC5883LCompass compass;
-
         void setup() {
           Serial.begin(9600);
           compass.init();
