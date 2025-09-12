@@ -1,5 +1,5 @@
 #include <iostream>
-#include <iomanip> // For std::setw and std::setfill
+#include <iomanip> 
 
 class Clock {
 private:
@@ -8,43 +8,38 @@ private:
     int seconds;
 
 public:
-    // Default constructor: Initializes the clock to 12:00:00 AM
     Clock() : hours(0), minutes(0), seconds(0) {}
 
-    // Constructor with hours, minutes, and seconds
-    // Handles invalid input by setting to 00:00:00
     Clock(int h, int m, int s) {
         setHours(h);
         setMinutes(m);
         setSeconds(s);
     }
 
-    // Setters
     void setHours(int h) {
-        if (h >= 0 && h < 24) { // Valid hours are 0-23
+        if (h >= 0 && h < 24) { 
             hours = h;
         } else {
-            hours = 0; // Default to 0 if invalid
+            hours = 0; 
         }
     }
 
     void setMinutes(int m) {
-        if (m >= 0 && m < 60) { // Valid minutes are 0-59
+        if (m >= 0 && m < 60) { 
             minutes = m;
         } else {
-            minutes = 0; // Default to 0 if invalid
+            minutes = 0;
         }
     }
 
     void setSeconds(int s) {
-        if (s >= 0 && s < 60) { // Valid seconds are 0-59
+        if (s >= 0 && s < 60) { 
             seconds = s;
         } else {
-            seconds = 0; // Default to 0 if invalid
+            seconds = 0; 
         }
     }
 
-    // Getters
     int getHours() const {
         return hours;
     }
@@ -57,7 +52,6 @@ public:
         return seconds;
     }
 
-    // Increment the clock by one second, handling rollovers
     void tick() {
         seconds++;
         if (seconds >= 60) {
@@ -67,24 +61,22 @@ public:
                 minutes = 0;
                 hours++;
                 if (hours >= 24) {
-                    hours = 0; // Rollover to the next day
+                    hours = 0; 
                 }
             }
         }
     }
 
-    // Display the time in 24-hour format
     void displayTime24Hour() const {
         std::cout << std::setw(2) << std::setfill('0') << hours << ":"
                   << std::setw(2) << std::setfill('0') << minutes << ":"
                   << std::setw(2) << std::setfill('0') << seconds << std::endl;
     }
 
-    // Display the time in 12-hour format (AM/PM)
     void displayTime12Hour() const {
         int displayHours = hours % 12;
         if (displayHours == 0) {
-            displayHours = 12; // 12 AM/PM
+            displayHours = 12; 
         }
 
         std::string ampm = (hours < 12) ? "AM" : "PM";
@@ -96,36 +88,30 @@ public:
 };
 
 int main() {
-    // Create a clock object using the default constructor
     Clock myClock;
     std::cout << "Default Clock (12-hour format): ";
-    myClock.displayTime12Hour(); // Expected Output: 12:00:00 AM
+    myClock.displayTime12Hour(); 
 
-    // Create a clock object with specific time
     Clock specificTime(14, 30, 45); // 2:30:45 PM
     std::cout << "Specific Time (24-hour format): ";
-    specificTime.displayTime24Hour(); // Expected Output: 14:30:45
+    specificTime.displayTime24Hour(); 
 
-    // Increment the specific time
     std::cout << "After 1 second tick (12-hour format): ";
     specificTime.tick();
-    specificTime.displayTime12Hour(); // Expected Output: 02:30:46 PM
+    specificTime.displayTime12Hour(); 
 
-    // Test rollover from 11:59:59 PM to 12:00:00 AM
     Clock rolloverClock(23, 59, 59);
     std::cout << "Rollover Test (12-hour format) - Initial: ";
     rolloverClock.displayTime12Hour();
     rolloverClock.tick();
     std::cout << "Rollover Test (12-hour format) - After tick: ";
-    rolloverClock.displayTime12Hour(); // Expected Output: 12:00:00 AM
-
-    // Test rollover from 11:59:59 AM to 12:00:00 PM
+    rolloverClock.displayTime12Hour(); 
+    
     Clock midDayRollover(11, 59, 59);
     std::cout << "Mid-day Rollover Test (12-hour format) - Initial: ";
     midDayRollover.displayTime12Hour();
     midDayRollover.tick();
     std::cout << "Mid-day Rollover Test (12-hour format) - After tick: ";
-    midDayRollover.displayTime12Hour(); // Expected Output: 12:00:00 PM
-
+    midDayRollover.displayTime12Hour(); 
     return 0;
 }
