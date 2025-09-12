@@ -1,5 +1,5 @@
 #include <iostream>
-#include <iomanip> // For formatting output
+#include <iomanip> 
 
 int main() {
     double cost, salvageValue;
@@ -12,20 +12,19 @@ int main() {
     std::cout << "Enter useful life in years: ";
     std::cin >> usefulLife;
 
-    double depreciationRate = (2.0 / usefulLife); // Double the straight-line rate
+    double depreciationRate = (2.0 / usefulLife); 
     double currentBookValue = cost;
 
-    std::cout << std::fixed << std::setprecision(2); // Format output to 2 decimal places
-
+    std::cout << std::fixed << std::setprecision(2); 
+    
     for (int year = 1; year <= usefulLife; ++year) {
         if (currentBookValue <= salvageValue) {
             std::cout << "Year " << year << ": No further depreciation (Book value reached salvage value)." << std::endl;
-            break; // Stop depreciating if salvage value is reached
+            break; 
         }
 
         double depreciationExpense = currentBookValue * depreciationRate;
 
-        // Adjust depreciation in the final year to not go below salvage value
         if (currentBookValue - depreciationExpense < salvageValue) {
             depreciationExpense = currentBookValue - salvageValue;
         }
