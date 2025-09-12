@@ -1,6 +1,5 @@
  #include <iostream>
 
-    // Function to calculate factorial
     long long factorial(int n) {
         if (n == 0)
             return 1;
@@ -10,7 +9,6 @@
         return res;
     }
 
-    // Function to calculate combinations (nCr)
     long long combinations(int n, int r) {
         if (r < 0 || r > n)
             return 0; // Invalid input
