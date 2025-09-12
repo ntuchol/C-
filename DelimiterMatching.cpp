@@ -1,7 +1,7 @@
  #include <iostream>
-        #include <string>
-        #include <sstream>
-        #include <vector>
+ #include <string>
+ #include <sstream>
+ #include <vector>
 
         int main() {
             std::string s = "apple,banana,orange";
