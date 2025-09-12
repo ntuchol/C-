@@ -12,6 +12,6 @@ int gcd(int a, int b) {
 int main() {
     int num1 = 48;
     int num2 = 18;
-    std::cout << "GCD of " << num1 << " and " << num2 << " is: " << gcd(num1, num2) << std::endl; // Output: 6
+    std::cout << "GCD of " << num1 << " and " << num2 << " is: " << gcd(num1, num2) << std::endl; 
     return 0;
 }
