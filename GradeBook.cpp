@@ -3,10 +3,8 @@
 
 class GradeBook {
 public:
-    // Constructor
     GradeBook(std::string name);
 
-    // Member functions
     void setCourseName(std::string name);
     std::string getCourseName() const;
     void inputGrades();
@@ -17,5 +15,5 @@ public:
 private:
     std::string courseName;
     std::vector<std::string> studentNames;
-    std::vector<std::vector<double>> studentGrades; // e.g., grades for each assignment
+    std::vector<std::vector<double>> studentGrades; 
 };
