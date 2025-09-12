@@ -23,9 +23,5 @@ void critical_section(int thread_id) {
         }
     }
 
-    // Critical Section Code
-    // ...
-
-    // 3. Exit
     number[thread_id] = 0;
 }
