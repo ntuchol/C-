@@ -5,7 +5,7 @@
         void setup() {
           Serial.begin(9600);
           compass.init();
-          compass.setCalibrationOffsets(-100, 100, -100, 100, -100, 100); // Example offsets
+          compass.setCalibrationOffsets(-100, 100, -100, 100, -100, 100); 
         }
 
         void loop() {
@@ -16,11 +16,11 @@
           Serial.println(azimuth);
           delay(100);
         }
-#include <QCompass>
-        #include <QCompassReading>
-        #include <QDebug>
 
-        // In a class or function
+#include <QCompass>
+#include <QCompassReading>
+#include <QDebug>
+
         QCompass *compass = new QCompass(this);
         compass->start();
 
