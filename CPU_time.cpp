@@ -1,4 +1,4 @@
-    #include <ctime>
+#include <ctime>
 
     std::clock_t start = std::clock();
     std::clock_t end = std::clock();
@@ -15,7 +15,7 @@ void intensive_computation() {
 int main() {
     std::clock_t start = std::clock();
 
-    intensive_computation(); // The code to measure
+    intensive_computation(); 
 
     std::clock_t end = std::clock();
 
