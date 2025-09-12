@@ -14,9 +14,7 @@ public:
     }
 
     double calculateGrossPay() const {
-        // Simple calculation, can be expanded for overtime, etc.
         return hoursWorked * hourlyRate;
     }
 
-    // Additional functions for deductions, net pay, display, etc.
 };
