@@ -4,9 +4,7 @@
 int main() {
     clock_t start = clock();
 
-    // Perform some operations
     for (int i = 0; i < 1000000; ++i) {
-        // ...
     }
 
     clock_t end = clock();
@@ -22,9 +20,7 @@ int main() {
 int main() {
     auto start = std::chrono::high_resolution_clock::now();
 
-    // Perform some operations
     for (int i = 0; i < 1000000; ++i) {
-        // ...
     }
 
     auto end = std::chrono::high_resolution_clock::now();
