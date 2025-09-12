@@ -1,13 +1,12 @@
 #include <iostream>
-#include <vector> // For using std::vector
+#include <vector> 
 
-// Function to calculate the average of elements in a vector
 double calculateAverage(const std::vector<int>& numbers) {
     if (numbers.empty()) {
-        return 0.0; // Handle empty vector case to avoid division by zero
+        return 0.0; 
     }
 
-    long long sum = 0; // Use long long to prevent overflow for large sums
+    long long sum = 0; 
     for (int num : numbers) {
         sum += num;
     }
