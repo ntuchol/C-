@@ -2,32 +2,28 @@
 #include <string>
 #include <map>
 
-// Function to convert English text to Morse code
 std::string englishToMorse(const std::string& text) {
     std::map<char, std::string> morseMap = {
         {'A', ".-"}, {'B', "-..."}, {'C', "-.-."}, {'D', "-.."}, {'E', "."},
-        // ... add more mappings for other letters, numbers, and punctuation
-        {' ', "/"} // Space between words
+        {' ', "/"} 
     };
 
     std::string morseOutput = "";
     for (char c : text) {
-        char upperC = toupper(c); // Convert to uppercase for consistent mapping
+        char upperC = toupper(c); 
         if (morseMap.count(upperC)) {
-            morseOutput += morseMap[upperC] + " "; // Add space between character codes
+            morseOutput += morseMap[upperC] + " "; 
         } else if (upperC == ' ') {
-            morseOutput += morseMap[upperC] + " "; // Add space between words
+            morseOutput += morseMap[upperC] + " "; 
         }
     }
     return morseOutput;
 }
 
-// Function to convert Morse code to English text
 std::string morseToEnglish(const std::string& morseCode) {
     std::map<std::string, char> englishMap = {
         {".-", 'A'}, {"-...", 'B'}, {"-.-.", 'C'}, {"-..", 'D'}, {".", 'E'},
-        // ... add more mappings
-        {"/", ' '} // Space between words
+        {"/", ' '} 
     };
 
     std::string englishOutput = "";
@@ -38,14 +34,13 @@ std::string morseToEnglish(const std::string& morseCode) {
                 englishOutput += englishMap[currentMorseChar];
             }
             if (c == '/') {
-                englishOutput += ' '; // Add space for word separation
+                englishOutput += ' '; 
             }
-            currentMorseChar = ""; // Reset for next Morse character
+            currentMorseChar = ""; 
         } else {
             currentMorseChar += c;
         }
     }
-    // Handle the last Morse character if not followed by a space/slash
     if (!currentMorseChar.empty() && englishMap.count(currentMorseChar)) {
         englishOutput += englishMap[currentMorseChar];
     }
