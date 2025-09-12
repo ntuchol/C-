@@ -1,13 +1,12 @@
 class Card {
 private:
-    int rank; // 0-12 for Ace-King
-    int suit; // 0-3 for Clubs, Diamonds, Hearts, Spades
+    int rank; 
+    int suit; 
 
 public:
-    Card(int r, int s) : rank(r), suit(s) {} // Constructor
+    Card(int r, int s) : rank(r), suit(s) {} 
     int getRank() const { return rank; }
     int getSuit() const { return suit; }
-    // Add other methods as needed (e.g., printing card information)
 };
 
 #include <vector>
@@ -20,7 +19,6 @@ private:
 
 public:
     Deck() {
-        // Initialize deck with 52 cards
         for (int s = 0; s < 4; ++s) {
             for (int r = 0; r < 13; ++r) {
                 cards.push_back(Card(r, s));
@@ -39,5 +37,4 @@ public:
         return drawnCard;
     }
 
-    // Add other methods as needed (e.g., dealing cards)
 };
