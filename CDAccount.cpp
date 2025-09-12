@@ -11,7 +11,6 @@ public:
     BankAccount(std::string accNum, std::string owner, double bal)
         : accountNumber(accNum), ownerName(owner), balance(bal) {}
 
-    // Common methods for all bank accounts (deposit, withdraw, print details)
     virtual void deposit(double amount) {
         balance += amount;
         std::cout << "Deposited " << amount << ". New balance: " << balance << std::endl;
@@ -36,7 +35,7 @@ public:
 class CDAccount : public BankAccount {
 private:
     int maturityMonths;
-    double interestRate; // Annual interest rate
+    double interestRate;
     int currentCDMonth;
 
 public:
@@ -48,7 +47,6 @@ public:
 
     void advanceMonth() {
         currentCDMonth++;
-        // Apply monthly interest
         balance += (balance * (interestRate / 12.0));
         std::cout << "Month " << currentCDMonth << " advanced. New balance: " << balance << std::endl;
     }
@@ -56,12 +54,11 @@ public:
     void withdraw(double amount) override {
         if (currentCDMonth < maturityMonths) {
             std::cout << "Early withdrawal penalty applied." << std::endl;
-            // Implement penalty logic here, e.g., reduce interest or a fixed fee
-            double penalty = balance * 0.05; // Example penalty
+            double penalty = balance * 0.05; 
             balance -= penalty;
-            BankAccount::withdraw(amount); // Call base class withdraw after penalty
+            BankAccount::withdraw(amount); 
         } else {
-            BankAccount::withdraw(amount); // No penalty if mature
+            BankAccount::withdraw(amount); 
         }
     }
 
@@ -78,20 +75,18 @@ public:
     }
 };
 
-// Example usage in main function
 int main() {
-    CDAccount myCD("CD12345", "Jane Doe", 10000.0, 12, 0.04); // 1-year CD, 4% interest
+    CDAccount myCD("CD12345", "Jane Doe", 10000.0, 12, 0.04); 
     myCD.printDetails();
 
     myCD.advanceMonth();
     myCD.advanceMonth();
-    myCD.withdraw(500); // Early withdrawal
+    myCD.withdraw(500); 
 
     for (int i = 0; i < 10; ++i) {
         myCD.advanceMonth();
     }
-    myCD.withdraw(5000); // Withdrawal after maturity
-
+    myCD.withdraw(5000); 
     myCD.printDetails();
 
     return 0;
