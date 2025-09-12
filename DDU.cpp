@@ -3,13 +3,13 @@
 
     class MyClass {
     public:
-        MyClass(); // Constructor
-        void doSomething(); // Member function
+        MyClass(); 
+        void doSomething(); 
     private:
-        int data; // Member variable
+        int data; 
     };
 
-    #endif // MYCLASS_H
+    #endif
     #include "MyClass.h"
     #include <iostream>
 
