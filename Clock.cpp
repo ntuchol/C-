@@ -92,7 +92,7 @@ int main() {
     std::cout << "Default Clock (12-hour format): ";
     myClock.displayTime12Hour(); 
 
-    Clock specificTime(14, 30, 45); // 2:30:45 PM
+    Clock specificTime(14, 30, 45); 
     std::cout << "Specific Time (24-hour format): ";
     specificTime.displayTime24Hour(); 
 
