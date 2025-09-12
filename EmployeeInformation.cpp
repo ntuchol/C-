@@ -6,19 +6,16 @@ private:
     std::string department;
 
 public:
-    // Constructor
     Employee(int id, const std::string& n, double s, const std::string& d) :
         employeeID(id), name(n), salary(s), department(d) {}
 
-    // Accessor (getter) functions
     int getEmployeeID() const { return employeeID; }
     std::string getName() const { return name; }
     double getSalary() const { return salary; }
     std::string getDepartment() const { return department; }
 
-    // Mutator (setter) functions
     void setSalary(double newSalary) {
-        if (newSalary >= 0) { // Input validation
+        if (newSalary >= 0) { 
             salary = newSalary;
         }
     }
