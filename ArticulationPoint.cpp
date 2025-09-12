@@ -16,15 +16,13 @@ void findArticulationPointsDFS(int u, int p = -1) {
 
     int children = 0;
     for (int v : adj[u]) {
-        if (v == p) continue; // Skip parent
+        if (v == p) continue; 
 
         if (visited[v]) {
-            low[u] = std::min(low[u], disc[v]); // Back-edge
+            low[u] = std::min(low[u], disc[v]); 
         } else {
             findArticulationPointsDFS(v, u);
-            low[u] = std::min(low[u], low[v]); // Update low based on child's low
-
-            // Articulation point conditions
+            low[u] = std::min(low[u], low[v]); 
             if (parent[u] != -1 && low[v] >= disc[u]) {
                 isArticulationPoint[u] = true;
             }
@@ -32,18 +30,8 @@ void findArticulationPointsDFS(int u, int p = -1) {
         }
     }
 
-    // Root node condition
     if (parent[u] == -1 && children > 1) {
         isArticulationPoint[u] = true;
     }
 }
 
-// In main or a wrapper function:
-// Initialize arrays, build adjacency list
-// Call findArticulationPointsDFS for all unvisited nodes to handle disconnected graphs
-// For example:
-// for (int i = 0; i < V; ++i) {
-//     if (!visited[i]) {
-//         findArticulationPointsDFS(i);
-//     }
-// }
