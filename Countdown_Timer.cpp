@@ -1,7 +1,6 @@
 #include <iostream>
-#include <chrono> // For std::chrono::seconds
-#include <thread> // For std::this_thread::sleep_for
-
+#include <chrono> 
+#include <thread> 
 int main() {
     int countdown_seconds;
 
@@ -10,7 +9,7 @@ int main() {
 
     while (countdown_seconds >= 0) {
         std::cout << "Time remaining: " << countdown_seconds << " seconds\n";
-        std::this_thread::sleep_for(std::chrono::seconds(1)); // Pause for 1 second
+        std::this_thread::sleep_for(std::chrono::seconds(1)); 
         countdown_seconds--;
     }
 
