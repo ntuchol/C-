@@ -1,12 +1,9 @@
 #include <iostream>
 
-// Recursive function to calculate the nth Fibonacci number
 int fibonacci(int n) {
-    // Base cases: F(0) = 0, F(1) = 1
     if (n <= 1) {
         return n;
     }
-    // Recursive case: F(n) = F(n-1) + F(n-2)
     return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
@@ -29,12 +26,11 @@ int main() {
         std::cout << std::endl;
     }
 
-    // Test cases for individual Fibonacci numbers
     std::cout << "\nTesting individual Fibonacci numbers:" << std::endl;
-    std::cout << "fibonacci(0) = " << fibonacci(0) << std::endl; // Expected: 0
-    std::cout << "fibonacci(1) = " << fibonacci(1) << std::endl; // Expected: 1
-    std::cout << "fibonacci(5) = " << fibonacci(5) << std::endl; // Expected: 5
-    std::cout << "fibonacci(10) = " << fibonacci(10) << std::endl; // Expected: 55
+    std::cout << "fibonacci(0) = " << fibonacci(0) << std::endl; 
+    std::cout << "fibonacci(1) = " << fibonacci(1) << std::endl; 
+    std::cout << "fibonacci(5) = " << fibonacci(5) << std::endl; 
+    std::cout << "fibonacci(10) = " << fibonacci(10) << std::endl; 
 
     return 0;
 }
