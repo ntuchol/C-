@@ -1,22 +1,20 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <limits> // Required for numeric_limits
+#include <limits> 
 
-// Define a structure to represent a Person
 struct Person {
     int id;
     std::string name;
     int age;
 };
 
-// Function to add a new person to the database
 void addPerson(std::vector<Person>& people) {
     Person newPerson;
-    newPerson.id = people.empty() ? 1 : people.back().id + 1; // Auto-increment ID
+    newPerson.id = people.empty() ? 1 : people.back().id + 1; 
 
     std::cout << "Enter Name: ";
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Clear buffer
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
     std::getline(std::cin, newPerson.name);
 
     std::cout << "Enter Age: ";
@@ -29,7 +27,6 @@ void addPerson(std::vector<Person>& people) {
     std::cout << "Person added successfully with ID: " << newPerson.id << std::endl;
 }
 
-// Function to display all people in the database
 void viewPeople(const std::vector<Person>& people) {
     if (people.empty()) {
         std::cout << "No people in the database." << std::endl;
@@ -42,7 +39,6 @@ void viewPeople(const std::vector<Person>& people) {
     std::cout << "-----------------------" << std::endl;
 }
 
-// Function to search for a person by ID
 void searchPerson(const std::vector<Person>& people) {
     if (people.empty()) {
         std::cout << "No people in the database to search." << std::endl;
