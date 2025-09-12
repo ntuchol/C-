@@ -9,7 +9,7 @@ struct GuestbookEntry {
 };
 
 void addEntry(const GuestbookEntry& entry) {
-    std::ofstream outFile("guestbook.txt", std::ios::app); // Open in append mode
+    std::ofstream outFile("guestbook.txt", std::ios::app); 
     if (outFile.is_open()) {
         outFile << entry.name << "\n";
         outFile << entry.message << "\n";
@@ -45,8 +45,8 @@ int main() {
         std::cout << "3. Exit\n";
         std::cout << "Enter your choice: ";
         std::cin >> choice;
-        std::cin.ignore(); // Consume the newline character
-
+        std::cin.ignore(); 
+        
         switch (choice) {
             case 1: {
                 GuestbookEntry newEntry;
