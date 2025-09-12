@@ -4,7 +4,7 @@ private:
     int front;
     int rear;
     int capacity;
-    int currentSize; // To keep track of the number of elements
+    int currentSize; 
 
 public:
     CircularQueue(int size) {
@@ -29,7 +29,6 @@ public:
 
     void enQueue(int value) {
         if (isFull()) {
-            // Handle full queue condition (e.g., print error or throw exception)
             return;
         }
         if (isEmpty()) {
@@ -42,11 +41,10 @@ public:
 
     int deQueue() {
         if (isEmpty()) {
-            // Handle empty queue condition (e.g., print error or throw exception)
-            return -1; // Or a sentinel value
+            return -1; 
         }
         int dequeuedValue = arr[front];
-        if (front == rear) { // Last element
+        if (front == rear) { 
             front = -1;
             rear = -1;
         } else {
@@ -58,7 +56,6 @@ public:
 
     int Front() {
         if (isEmpty()) {
-            // Handle empty queue condition
             return -1;
         }
         return arr[front];
