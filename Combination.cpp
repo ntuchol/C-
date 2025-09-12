@@ -11,13 +11,13 @@
 
     long long combinations(int n, int r) {
         if (r < 0 || r > n)
-            return 0; // Invalid input
+            return 0; 
         return factorial(n) / (factorial(r) * factorial(n - r));
     }
 
     int main() {
         int n = 5;
         int r = 2;
-        std::cout << "Number of combinations (5 choose 2): " << combinations(n, r) << std::endl; // Output: 10
+        std::cout << "Number of combinations (5 choose 2): " << combinations(n, r) << std::endl; 
         return 0;
     }
