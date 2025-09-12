@@ -4,15 +4,13 @@ double half(double number) {
 }
 
 double half(int number) {
-    double result = static_cast<double>(number) / 2.0; // Cast to double for accurate division
+    double result = static_cast<double>(number) / 2.0; 
     return result;
 }
 
-void halveUntilOne(double& number) { // Pass by reference to modify the original number
+void halveUntilOne(double& number) { 
     while (number > 1.0) {
         number /= 2.0;
-        // Optional: print the current halved value
-        // std::cout << "Current half: " << number << std::endl;
     }
 }
 
