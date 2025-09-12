@@ -1,8 +1,8 @@
 double original_value = 10.5;
-double first_half = original_value / 2.0; // first_half will be 5.25
+double first_half = original_value / 2.0; 
 
 #include <vector>
-    #include <iostream>
+#include <iostream>
 
     int main() {
         std::vector<double> numbers = {1.0, 2.0, 3.0, 4.0, 5.0, 6.0};
