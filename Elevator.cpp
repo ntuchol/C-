@@ -1,18 +1,17 @@
 #include <iostream>
-#include <set> // Using set for ordered, unique destination floors
-
+#include <set> 
 enum Direction { UP, DOWN, IDLE };
 
 class Elevator {
 public:
     int currentFloor;
     Direction direction;
-    std::set<int> destinationFloors; // Stores floors to visit
+    std::set<int> destinationFloors; 
 
     Elevator(int initialFloor = 1) : currentFloor(initialFloor), direction(IDLE) {}
 
     void requestFloor(int floor) {
-        if (floor >= 1) { // Basic validation
+        if (floor >= 1) { 
             destinationFloors.insert(floor);
             std::cout << "Request received for floor " << floor << std::endl;
         }
@@ -24,7 +23,6 @@ public:
             return;
         }
 
-        // Determine direction based on closest requested floor
         if (direction == IDLE) {
             if (*destinationFloors.begin() > currentFloor) {
                 direction = UP;
@@ -41,11 +39,9 @@ public:
             std::cout << "Moving DOWN to floor " << currentFloor << std::endl;
         }
 
-        // Check if current floor is a destination
         if (destinationFloors.count(currentFloor)) {
             std::cout << "Arrived at floor " << currentFloor << ". Doors opening..." << std::endl;
-            // Simulate door open/close delay
-            destinationFloors.erase(currentFloor); // Remove visited floor
+            destinationFloors.erase(currentFloor); 
             std::cout << "Doors closing." << std::endl;
         }
     }
@@ -67,7 +63,7 @@ int main() {
     myElevator.requestFloor(2);
     myElevator.requestFloor(8);
 
-    for (int i = 0; i < 10; ++i) { // Simulate some time steps
+    for (int i = 0; i < 10; ++i) { 
         myElevator.move();
         myElevator.displayStatus();
     }
