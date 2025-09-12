@@ -66,7 +66,7 @@ const std::array<std::string, 12> Date::monthNames = {
     "July", "August", "September", "October", "November", "December"
 };
 
-/*
+
 int main() {
     Date myDate(7, 10, 2025);
     myDate.displayDate(); 
@@ -78,4 +78,4 @@ int main() {
 
     return 0;
 }
-*/
+
