@@ -7,7 +7,7 @@
         for (int i = 0; i < arraySize; ++i) {
             if (validAccountNumbers[i] == userAccountNumber) {
                 isValid = true;
-                break; // Found the number, no need to continue searching
+                break; 
             }
         }
     if (isValid) {
