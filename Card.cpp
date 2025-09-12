@@ -1,7 +1,6 @@
 #include <iostream>
-#include <string> // Required if using std::string for suit representation
+#include <string> 
 
-// Define enums for Suits and Ranks for better readability and type safety
 enum class Suit {
     Clubs,
     Diamonds,
@@ -27,32 +26,28 @@ enum class Rank {
 
 class Card {
 private:
-    const Suit suit;  // Declare suit as a private constant data member
-    const Rank pips;  // Declare pips as a private constant data member
+    const Suit suit;  
+    const Rank pips;  
 
 public:
-    // Constructor to initialize the constant data members using an initializer list
     Card(Suit s, Rank p) : suit(s), pips(p) {
-        // No other actions are required within the constructor body
-        // as the members are already initialized
+        
     }
 
-    // Accessor methods to retrieve the constant data members
-    Suit getSuit() const { // Mark as const since it doesn't modify the object
+    Suit getSuit() const { 
         return suit;
     }
 
-    Rank getPips() const { // Mark as const since it doesn't modify the object
+    Rank getPips() const { 
         return pips;
     }
 };
 
 int main() {
-    // Example usage of the Card class
-    Card myCard(Suit::Hearts, Rank::Ace); // Create a card (Ace of Hearts)
+    Card myCard(Suit::Hearts, Rank::Ace); 
 
-    std::cout << "My card's suit: " << static_cast<int>(myCard.getSuit()) << std::endl; // Output the numerical enum value
-    std::cout << "My card's pips: " << static_cast<int>(myCard.getPips()) << std::endl; // Output the numerical enum value
+    std::cout << "My card's suit: " << static_cast<int>(myCard.getSuit()) << std::endl; 
+    std::cout << "My card's pips: " << static_cast<int>(myCard.getPips()) << std::endl; 
 
     return 0;
 }
