@@ -1,21 +1,18 @@
 #include <iostream>
-#include <vector> // For using std::vector
+#include <vector> 
 
 void bubbleSort(std::vector<int>& arr) {
     int n = arr.size();
-    bool swapped; // Flag to optimize the sort
-
+    bool swapped; 
+    
     for (int i = 0; i < n - 1; ++i) {
-        swapped = false; // Reset swapped flag for each pass
+        swapped = false; 
         for (int j = 0; j < n - 1 - i; ++j) {
-            // Compare adjacent elements
             if (arr[j] > arr[j + 1]) {
-                // Swap if they are in the wrong order
                 std::swap(arr[j], arr[j + 1]); 
-                swapped = true; // Indicate a swap occurred
+                swapped = true; 
             }
         }
-        // If no two elements were swapped in inner loop, array is sorted
         if (!swapped) {
             break; 
         }
