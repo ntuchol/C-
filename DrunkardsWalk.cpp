@@ -1,38 +1,36 @@
 #include <iostream>
-#include <cstdlib> // For rand() and srand()
-#include <ctime>   // For time()
+#include <cstdlib> 
+#include <ctime>   
 
-// Function to take a random step
 void takeStep(int& x, int& y) {
-    int direction = rand() % 4; // 0: North, 1: East, 2: South, 3: West
-
-    if (direction == 0) { // North
+    int direction = rand() % 4; 
+    
+    if (direction == 0) { 
         y++;
-    } else if (direction == 1) { // East
+    } else if (direction == 1) { 
         x++;
-    } else if (direction == 2) { // South
+    } else if (direction == 2) { 
         y--;
-    } else { // West
+    } else { 
         x--;
     }
 }
 
 int main() {
-    srand(time(0)); // Seed the random number generator
-
-    int N; // Number of steps
+    srand(time(0)); 
+    
+    int N; 
     std::cout << "Enter the number of steps (N): ";
     std::cin >> N;
 
-    int x = 0; // Initial x-coordinate
-    int y = 0; // Initial y-coordinate
+    int x = 0; 
+    int y = 0; 
 
     std::cout << "Initial location: (" << x << ", " << y << ")\n";
 
     for (int i = 0; i < N; ++i) {
         takeStep(x, y);
-        // Optional: Print current location after each step or every few steps
-        // std::cout << "Step " << i + 1 << ": (" << x << ", " << y << ")\n";
+        std::cout << "Step " << i + 1 << ": (" << x << ", " << y << ")\n";
     }
 
     std::cout << "Final location: (" << x << ", " << y << ")\n";
