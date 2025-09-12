@@ -1,4 +1,4 @@
-  #include <iostream>
+#include <iostream>
 #include <vector>
 #include <map>
 #include <cmath>
@@ -6,7 +6,6 @@
 
 using namespace std;
 
-// Function to calculate the nth prime number (simple implementation for demonstration)
 long long nth_prime(int n) {
     if (n <= 0) return -1;
     long long num = 2;
@@ -29,7 +28,6 @@ long long nth_prime(int n) {
     return num;
 }
 
-// Function to encode a string (formula) using Gödel numbering
 long long encode_formula(const string& formula, const map<char, int>& symbol_map) {
     long long encoded_number = 1;
     for (size_t i = 0; i < formula.length(); ++i) {
@@ -39,16 +37,14 @@ long long encode_formula(const string& formula, const map<char, int>& symbol_map
             long long prime = nth_prime(i + 1);
             encoded_number *= pow(prime, symbol_code);
         } else {
-            // Handle unknown symbols (e.g., return an error code or throw an exception)
             cerr << "Error: Unknown symbol: " << symbol << endl;
-            return -1; // Or throw an exception
+            return -1; 
         }
     }
     return encoded_number;
 }
 
 int main() {
-    // Define a simple symbol map
     map<char, int> symbol_map = {
         {'0', 2},
         {'s', 3},
