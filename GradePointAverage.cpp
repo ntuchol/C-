@@ -2,15 +2,14 @@
 #include <string>
 #include <vector>
 
-// Function to get the grade point value for a letter grade
 double getGradePoint(char letterGrade) {
-    switch (toupper(letterGrade)) { // Convert to uppercase for case-insensitivity
+    switch (toupper(letterGrade)) { 
         case 'A': return 4.0;
         case 'B': return 3.0;
         case 'C': return 2.0;
         case 'D': return 1.0;
         case 'F': return 0.0;
-        default: return -1.0; // Indicate an invalid grade
+        default: return -1.0; 
     }
 }
 
@@ -21,8 +20,8 @@ int main() {
     double totalCredits = 0.0;
 
     std::cout << "Enter student name: ";
-    std::getline(std::cin, studentName); // Read full line for name
-
+    std::getline(std::cin, studentName); 
+    
     std::cout << "Enter number of courses: ";
     std::cin >> numCourses;
 
