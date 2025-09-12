@@ -1,11 +1,9 @@
 #include <iostream>
 #include <vector>
 
-// Define board dimensions
 const int ROWS = 6;
 const int COLS = 7;
 
-// Function prototypes
 void initializeBoard(std::vector<std::vector<char>>& board);
 void displayBoard(const std::vector<std::vector<char>>& board);
 bool dropPiece(std::vector<std::vector<char>>& board, int col, char playerPiece);
@@ -13,10 +11,10 @@ bool checkWin(const std::vector<std::vector<char>>& board, char playerPiece);
 bool checkDraw(const std::vector<std::vector<char>>& board);
 
 int main() {
-    std::vector<std::vector<char>> board(ROWS, std::vector<char>(COLS, ' ')); // Initialize with empty spaces
+    std::vector<std::vector<char>> board(ROWS, std::vector<char>(COLS, ' ')); 
     initializeBoard(board);
 
-    char currentPlayer = 'X'; // Player 1 starts
+    char currentPlayer = 'X'; 
     bool gameOver = false;
 
     while (!gameOver) {
@@ -41,7 +39,6 @@ int main() {
                 std::cout << "It's a draw!" << std::endl;
                 gameOver = true;
             } else {
-                // Switch player
                 currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
             }
         } else {
