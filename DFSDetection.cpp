@@ -7,20 +7,20 @@ bool detectCycleDFS(int u, int parent, const std::vector<std::vector<int>>& adj,
     for (int v : adj[u]) {
         if (!visited[v]) {
             if (detectCycleDFS(v, u, adj, visited)) {
-                return true; // Cycle found in a deeper recursion
+                return true; 
             }
         } else if (v != parent) {
-            return true; // Cycle detected: visited node is not the parent
+            return true; 
         }
     }
-    return false; // No cycle found in this branch
+    return false; 
 }
 
 bool hasCycleUndirected(int numNodes, const std::vector<std::vector<int>>& adj) {
     std::vector<bool> visited(numNodes, false);
     for (int i = 0; i < numNodes; ++i) {
         if (!visited[i]) {
-            if (detectCycleDFS(i, -1, adj, visited)) { // -1 as initial parent
+            if (detectCycleDFS(i, -1, adj, visited)) { 
                 return true;
             }
         }
@@ -32,23 +32,22 @@ bool hasCycleUndirected(int numNodes, const std::vector<std::vector<int>>& adj) 
 #include <iostream>
 
 bool detectCycleDFS_Directed(int u, const std::vector<std::vector<int>>& adj, std::vector<int>& visited) {
-    visited[u] = 1; // Mark as currently visiting (in recursion stack)
-
+    visited[u] = 1; 
     for (int v : adj[u]) {
-        if (visited[v] == 0) { // Not visited
+        if (visited[v] == 0) { 
             if (detectCycleDFS_Directed(v, adj, visited)) {
-                return true; // Cycle found in a deeper recursion
+                return true; 
             }
-        } else if (visited[v] == 1) { // Visited and in current recursion stack
-            return true; // Cycle detected (back edge)
+        } else if (visited[v] == 1) { 
+            return true; 
         }
     }
-    visited[u] = 2; // Mark as finished visiting
-    return false; // No cycle found in this branch
+    visited[u] = 2; 
+    return false;
 }
 
 bool hasCycleDirected(int numNodes, const std::vector<std::vector<int>>& adj) {
-    std::vector<int> visited(numNodes, 0); // 0: unvisited, 1: visiting, 2: visited
+    std::vector<int> visited(numNodes, 0); 
     for (int i = 0; i < numNodes; ++i) {
         if (visited[i] == 0) {
             if (detectCycleDFS_Directed(i, adj, visited)) {
