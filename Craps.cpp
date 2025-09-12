@@ -1,13 +1,9 @@
 #include <iostream>
-#include <cstdlib> // For rand() and srand()
-#include <ctime>   // For time()
-
-// Function to simulate a single dice roll
+#include <cstdlib> 
+#include <ctime>   
 int rollDie() {
-    return (rand() % 6) + 1; // Generates a random number between 1 and 6
+    return (rand() % 6) + 1; 
 }
-
-// Function to simulate a game of Craps
 void playCraps() {
     int die1 = rollDie();
     int die2 = rollDie();
@@ -41,8 +37,7 @@ void playCraps() {
 }
 
 int main() {
-    srand(time(0)); // Seed the random number generator once
-
+    srand(time(0)); 
     playCraps();
 
     return 0;
