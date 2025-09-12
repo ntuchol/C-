@@ -8,7 +8,6 @@
         std::cout << "Machine epsilon for double: " << epsilon_d << std::endl;
         std::cout << "Machine epsilon for float: " << epsilon_f << std::endl;
 
-        // Example of approximate comparison
         double a = 0.1 + 0.2;
         double b = 0.3;
 
