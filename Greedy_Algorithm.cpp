@@ -3,7 +3,7 @@
 #include <algorithm>
 
 int main() {
-    std::vector<int> denominations = {1000, 500, 100, 50, 20, 10, 5, 2, 1}; // Sorted in descending order
+    std::vector<int> denominations = {1000, 500, 100, 50, 20, 10, 5, 2, 1}; 
     int amount = 770;
     int coins_needed = 0;
 
