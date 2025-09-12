@@ -16,9 +16,7 @@ int main() {
         }
     }
 
-    // Print the modified string with reversed case
     std::cout << "String with reversed case: " << inputString << std::endl;
 
-    return 0; // Indicate successful program execution
+    return 0; 
 }
-AI r
