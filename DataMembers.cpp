@@ -11,7 +11,7 @@ public:
 };
 
 int main() {
-    MyClass obj(10, 20); // 'a' initialized to 10, 'b' initialized to 20
+    MyClass obj(10, 20); 
 
     std::cout << "Value of obj.a: " << obj.a << std::endl;
     std::cout << "Value of obj.b: " << obj.b << std::endl;
