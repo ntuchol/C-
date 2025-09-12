@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 
-// Function to display car wash options
 void displayWashOptions() {
     std::cout << "\n--- Car Wash Services ---" << std::endl;
     std::cout << "1. Basic Wash - $10" << std::endl;
@@ -10,13 +9,12 @@ void displayWashOptions() {
     std::cout << "Enter your choice: ";
 }
 
-// Function to calculate wash fee
 double calculateFee(int choice) {
     switch (choice) {
         case 1: return 10.0;
         case 2: return 15.0;
         case 3: return 20.0;
-        default: return 0.0; // Invalid choice
+        default: return 0.0; 
     }
 }
 
