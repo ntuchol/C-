@@ -1,8 +1,7 @@
 #include <iostream>
 #include <string>
-#include <iomanip> // For formatting output
+#include <iomanip> 
 
-// Structure to hold employee data
 struct Employee {
     std::string name;
     double hourlyRate;
@@ -10,7 +9,6 @@ struct Employee {
     double grossPay;
 };
 
-// Function to calculate gross pay for an employee
 void calculateGrossPay(Employee& emp) {
     if (emp.hoursWorked <= 40) {
         emp.grossPay = emp.hourlyRate * emp.hoursWorked;
@@ -21,9 +19,8 @@ void calculateGrossPay(Employee& emp) {
     }
 }
 
-// Function to display employee details and gross pay
 void displayEmployeePay(const Employee& emp) {
-    std::cout << std::fixed << std::setprecision(2); // Format output to 2 decimal places
+    std::cout << std::fixed << std::setprecision(2); 
     std::cout << "Employee: " << emp.name << std::endl;
     std::cout << "Hourly Rate: $" << emp.hourlyRate << std::endl;
     std::cout << "Hours Worked: " << emp.hoursWorked << std::endl;
@@ -31,12 +28,10 @@ void displayEmployeePay(const Employee& emp) {
 }
 
 int main() {
-    // Create an Employee object
     Employee emp1;
 
-    // Input employee data
     std::cout << "Enter employee name: ";
-    std::getline(std::cin, emp1.name); // Use getline for names with spaces
+    std::getline(std::cin, emp1.name); 
 
     std::cout << "Enter hourly rate: $";
     std::cin >> emp1.hourlyRate;
@@ -44,7 +39,6 @@ int main() {
     std::cout << "Enter hours worked: ";
     std::cin >> emp1.hoursWorked;
 
-    // Calculate and display gross pay
     calculateGrossPay(emp1);
     displayEmployeePay(emp1);
 
