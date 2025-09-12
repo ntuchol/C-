@@ -1,12 +1,12 @@
 #include <iostream>
-#include <cctype> // Required for toupper()
+#include <cctype> 
 
 int main() {
     char ch = 'a';
     char uppercase_ch = toupper(ch);
     std::cout << "Original: " << ch << ", Uppercase: " << uppercase_ch << std::endl;
 
-    ch = 'B'; // Already uppercase
+    ch = 'B'; 
     uppercase_ch = toupper(ch);
     std::cout << "Original: " << ch << ", Uppercase: " << uppercase_ch << std::endl;
 
@@ -15,14 +15,11 @@ int main() {
 
 #include <iostream>
 #include <string>
-#include <algorithm> // Required for std::transform
-#include <cctype>    // Required for toupper()
-
+#include <algorithm> 
+#include <cctype>   
 int main() {
     std::string text = "Hello World!";
     std::transform(text.begin(), text.end(), text.begin(), ::toupper);
-    // Note: Use ::toupper to explicitly refer to the global namespace version of toupper
-    // to avoid ambiguity with potential overloads in std::.
 
     std::cout << "Uppercase string: " << text << std::endl;
 
