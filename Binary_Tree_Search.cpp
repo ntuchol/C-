@@ -1,6 +1,5 @@
 #include <iostream>
 
-// Node structure for the Binary Search Tree
 struct Node {
     int data;
     Node* left;
@@ -9,25 +8,20 @@ struct Node {
     Node(int val) : data(val), left(nullptr), right(nullptr) {}
 };
 
-// Function to search for a value in the BST recursively
 Node* searchBST(Node* root, int key) {
-    // Base cases: root is null or key is found at root
     if (root == nullptr || root->data == key) {
         return root;
     }
 
-    // If key is smaller, search in left subtree
     if (key < root->data) {
         return searchBST(root->left, key);
     }
-    // If key is larger, search in right subtree
     else {
         return searchBST(root->right, key);
     }
 }
 
 int main() {
-    // Example BST creation
     Node* root = new Node(50);
     root->left = new Node(30);
     root->right = new Node(70);
@@ -45,7 +39,6 @@ int main() {
         std::cout << "Value " << keyToFind << " not found in the BST." << std::endl;
     }
 
-    // Clean up memory (for demonstration purposes, a full deletion function would be needed for a real application)
     delete root->left->left;
     delete root->left->right;
     delete root->right->left;
