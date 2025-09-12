@@ -23,7 +23,7 @@ int calculateHandValue(const std::vector<Card>& hand) {
     }
 
     while (score > 21 && aceCount > 0) {
-        score -= 10; // Treat an Ace as 1 instead of 11
+        score -= 10; 
         aceCount--;
     }
 
