@@ -1,8 +1,7 @@
 #include <iostream>
 #include <string>
-#include <cctype> // For isalpha, isspace, ispunct
+#include <cctype> 
 
-// Define states
 enum class State {
     Start,
     Word,
@@ -12,7 +11,6 @@ enum class State {
     End
 };
 
-// FSM class
 class SentenceFSM {
 public:
     SentenceFSM() : currentState(State::Start) {}
@@ -25,7 +23,7 @@ public:
                 return;
             }
         }
-        handleEvent('\0'); // Signal end of input
+        handleEvent('\0'); 
     }
 
     void printCurrentState() const {
@@ -52,20 +50,18 @@ private:
                 if (std::isalpha(inputChar)) {
                     currentState = State::Word;
                 } else if (std::isspace(inputChar)) {
-                    // Ignore leading spaces or transition to error if not expected
-                    // For this example, we'll allow leading spaces but ideally might require a word
+                   
                 } else {
                     currentState = State::Error;
                 }
                 break;
             case State::Word:
                 if (std::isalpha(inputChar)) {
-                    // Stay in Word state
                 } else if (std::isspace(inputChar)) {
                     currentState = State::Space;
                 } else if (std::ispunct(inputChar)) {
                     currentState = State::Punctuation;
-                } else if (inputChar == '\0') { // End of input
+                } else if (inputChar == '\0') { 
                     currentState = State::End;
                 } else {
                     currentState = State::Error;
@@ -75,27 +71,24 @@ private:
                 if (std::isalpha(inputChar)) {
                     currentState = State::Word;
                 } else if (std::isspace(inputChar)) {
-                    // Stay in Space state (multiple spaces are fine)
                 } else if (std::ispunct(inputChar)) {
                     currentState = State::Punctuation;
-                } else if (inputChar == '\0') { // End of input
+                } else if (inputChar == '\0') { 
                     currentState = State::End;
                 } else {
                     currentState = State::Error;
                 }
                 break;
             case State::Punctuation:
-                if (inputChar == '\0') { // End of input
+                if (inputChar == '\0') { 
                     currentState = State::End;
                 } else {
-                    currentState = State::Error; // Punctuation should be the end of the sentence
+                    currentState = State::Error; 
                 }
                 break;
             case State::Error:
-                // Once in an error state, stay in error
                 break;
             case State::End:
-                // Once in an end state, stay in end
                 break;
         }
     }
@@ -113,13 +106,13 @@ int main() {
     std::cout << std::endl;
 
     std::cout << "Processing sentence 2: \"" << sentence2 << "\"" << std::endl;
-    fsm = SentenceFSM(); // Reset FSM for new sentence
+    fsm = SentenceFSM(); 
     fsm.processInput(sentence2);
     fsm.printCurrentState();
     std::cout << std::endl;
 
     std::cout << "Processing sentence 3: \"" << sentence3 << "\"" << std::endl;
-    fsm = SentenceFSM(); // Reset FSM for new sentence
+    fsm = SentenceFSM(); 
     fsm.processInput(sentence3);
     fsm.printCurrentState();
     std::cout << std::endl;
