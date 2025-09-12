@@ -1,12 +1,9 @@
 #include <iostream>
 
-// Recursive function to calculate the sum of the first n natural numbers
 int sumNaturalNumbers(int n) {
-    // Base case: If n is 0 or less, the sum is 0
     if (n <= 0) { 
         return 0;
     }
-    // Recursive case: Return n + the sum of the first (n-1) numbers
     else { 
         return n + sumNaturalNumbers(n - 1);
     }
