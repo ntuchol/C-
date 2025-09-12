@@ -1,9 +1,8 @@
 struct Node {
-    int key; // Or any other data type
+    int key;
     Node* left;
     Node* right;
 
-    // Constructor to initialize a new node
     Node(int value) : key(value), left(nullptr), right(nullptr) {}
 };
 
