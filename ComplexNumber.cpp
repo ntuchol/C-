@@ -4,7 +4,6 @@
 int main() {
     std::complex<double> z1(3.0, 4.0);
     std::complex<double> z2 = 1.0 + 2.0i; 
-
     std::complex<double> sum = z1 + z2;
     std::complex<double> product = z1 * z2;
 
