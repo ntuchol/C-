@@ -29,7 +29,7 @@ int main() {
 }
 
 #include <iostream>
-#include <numeric> // For std::gcd
+#include <numeric> 
 
 int main() {
     std::cout << "GCD of 56 and 98 is " << std::gcd(56, 98) << std::endl;
