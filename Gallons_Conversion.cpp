@@ -1,8 +1,8 @@
 #include <iostream>
-#include <iomanip> // For output formatting
+#include <iomanip> 
 
 int main() {
-    const double GALLON_TO_LITER = 3.78541; // Conversion factor
+    const double GALLON_TO_LITER = 3.78541; 
     double gallons;
     double liters;
 
