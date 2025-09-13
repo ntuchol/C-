@@ -1,4 +1,4 @@
-#include <cmath> // For std::sqrt
+#include <cmath> 
 
 class Point {
 public:
@@ -22,5 +22,4 @@ public:
         return std::sqrt(dx * dx + dy * dy);
     }
 
-    // Add other member functions for slope, intersection, etc.
 };
