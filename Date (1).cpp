@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <array>
-
 class Date {
 private:
     int month;
