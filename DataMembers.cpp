@@ -9,7 +9,6 @@ public:
         std::cout << "Constructor called." << std::endl;
     }
 };
-
 int main() {
     MyClass obj(10, 20); 
 
