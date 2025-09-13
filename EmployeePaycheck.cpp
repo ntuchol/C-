@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <iomanip> 
-
 struct Employee {
     std::string name;
     double hourlyRate;
