@@ -30,7 +30,7 @@
         myMap[2] = "Banana";
 
         int key_to_check = 2;
-        if (myMap.count(key_to_check) > 0) { // Or simply myMap.count(key_to_check) == 1
+        if (myMap.count(key_to_check) > 0) { 
             std::cout << "Key " << key_to_check << " found." << std::endl;
         } else {
             std::cout << "Key " << key_to_check << " not found." << std::endl;
