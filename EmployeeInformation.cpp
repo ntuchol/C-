@@ -4,7 +4,6 @@ private:
     std::string name;
     double salary;
     std::string department;
-
 public:
     Employee(int id, const std::string& n, double s, const std::string& d) :
         employeeID(id), name(n), salary(s), department(d) {}
