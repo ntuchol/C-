@@ -4,7 +4,6 @@ struct Point {
     double x;
     double y;
 };
-
 class Rectangle {
 public:
     Point topLeft;
