@@ -1,7 +1,6 @@
 #include <iostream> 
 #include <random>  
 #include <ctime>    
-
 int main() {
     int min_val = 1;
     int max_val = 6;
