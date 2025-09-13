@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <numeric> 
-
 void firstFit(std::vector<int>& blockSize, const std::vector<int>& processSize) {
     int m = blockSize.size();
     int n = processSize.size();
