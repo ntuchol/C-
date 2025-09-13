@@ -1,17 +1,14 @@
 #include <vector>
-#include <algorithm> // For std::sort
+#include <algorithm> 
 
-// Structure to represent an edge
 struct Edge {
     int u, v, weight;
-    // Constructor and comparison operator for sorting
     Edge(int u, int v, int weight) : u(u), v(v), weight(weight) {}
     bool operator<(const Edge& other) const {
         return weight < other.weight;
     }
 };
 
-// Disjoint Set Union (DSU) implementation
 struct DisjointSet {
     std::vector<int> parent;
     DisjointSet(int n) {
@@ -36,20 +33,18 @@ struct DisjointSet {
     }
 };
 
-// Kruskal's Algorithm function
 int kruskalMST(int V, std::vector<Edge>& edges) {
-    std::sort(edges.begin(), edges.end()); // Sort edges by weight
+    std::sort(edges.begin(), edges.end()); 
     DisjointSet ds(V);
     int mst_weight = 0;
     int edges_count = 0;
 
     for (const auto& edge : edges) {
-        if (ds.find(edge.u) != ds.find(edge.v)) { // Check for cycle
+        if (ds.find(edge.u) != ds.find(edge.v)) { 
             ds.unite(edge.u, edge.v);
             mst_weight += edge.weight;
             edges_count++;
-            // Optional: Store the edge as part of the MST
-            // mst_edges.push_back(edge); 
+            mst_edges.push_back(edge); 
         }
     }
     return mst_weight;
