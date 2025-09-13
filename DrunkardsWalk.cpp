@@ -36,6 +36,5 @@ int main() {
     std::cout << "Final location: (" << x << ", " << y << ")\n";
     long long squared_distance = static_cast<long long>(x) * x + static_cast<long long>(y) * y;
     std::cout << "Squared distance from origin: " << squared_distance << "\n";
-
     return 0;
 }
