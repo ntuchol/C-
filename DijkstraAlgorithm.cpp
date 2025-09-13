@@ -4,7 +4,6 @@
 #include <limits> 
 
 const int INF = std::numeric_limits<int>::max();
-
 void dijkstra(int source, int num_nodes, const std::vector<std::vector<std::pair<int, int>>>& adj, std::vector<int>& dist) {
     dist.assign(num_nodes, INF);
     dist[source] = 0;
