@@ -1,15 +1,14 @@
 #include <iostream>
 #include <vector>
-#include <cstdlib> // For rand() and srand()
-#include <ctime>   // For time()
+#include <cstdlib>
+#include <ctime>   
 
-// Function to generate unique lottery numbers
 std::vector<int> generateLotteryNumbers(int count, int max_value) {
     std::vector<int> numbers;
-    srand(time(0)); // Seed the random number generator
-
+    srand(time(0)); 
+    
     while (numbers.size() < count) {
-        int num = (rand() % max_value) + 1; // Generate number in range [1, max_value]
+        int num = (rand() % max_value) + 1; 
         bool is_duplicate = false;
         for (int existing_num : numbers) {
             if (existing_num == num) {
@@ -37,6 +36,5 @@ int main() {
     }
     std::cout << std::endl;
 
-    // Further implementation can include user input and win checking
     return 0;
 }
