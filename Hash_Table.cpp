@@ -3,20 +3,18 @@
 #include <random>
 #include <chrono>
 
-// Hash table class
 class HashTable {
 public:
     HashTable(int size) : table_size(size), collisions(0) {
-        table.resize(size, -1); // Initialize with -1 to indicate empty slots
+        table.resize(size, -1); 
     }
 
     void insert(int key) {
         int hash_index = key % table_size;
 
-        // Linear probing
         while (table[hash_index] != -1) {
-            collisions++; // Collision occurred
-            hash_index = (hash_index + 1) % table_size; // Move to the next slot
+            collisions++; 
+            hash_index = (hash_index + 1) % table_size; 
         }
         table[hash_index] = key;
     }
@@ -32,14 +30,13 @@ private:
 };
 
 int main() {
-    const int TABLE_SIZE = 1000; // Size of the hash table
-    const int NUM_INSERTIONS = 5000; // Number of random insertions
+    const int TABLE_SIZE = 1000; 
+    const int NUM_INSERTIONS = 5000; 
 
     HashTable ht(TABLE_SIZE);
 
-    // Seed the random number generator
     std::mt19937 rng(std::chrono::steady_clock::now().time_since_epoch().count());
-    std::uniform_int_distribution<int> dist(0, 1000000); // Range of random numbers
+    std::uniform_int_distribution<int> dist(0, 1000000); 
 
     for (int i = 0; i < NUM_INSERTIONS; ++i) {
         int random_value = dist(rng);
