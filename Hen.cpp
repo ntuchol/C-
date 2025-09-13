@@ -1,34 +1,28 @@
 #include <iostream>
 #include <string>
 
-// Define the Egg class
 class Egg {
 public:
-    // Constructor for the Egg class
     Egg(std::string color) : color_(color) {
-        std::cout << "Egg constructor called. Color: " << color_ << std::endl; // Displays a message when the constructor is called.
+        std::cout << "Egg constructor called. Color: " << color_ << std::endl; 
     }
 
-    // Display function for the Egg
     void display() {
-        std::cout << "This is a " << color_ << " egg." << std::endl; // Displays the egg's color.
+        std::cout << "This is a " << color_ << " egg." << std::endl; 
     }
 
-    // Destructor for the Egg class
     ~Egg() {
-        std::cout << "Egg destructor called. Color: " << color_ << std::endl; // Displays a message when the destructor is called.
+        std::cout << "Egg destructor called. Color: " << color_ << std::endl; 
     }
 
 private:
     std::string color_;
 };
 
-// Define the Hen class
 class Hen {
 public:
-    // Constructor for the Hen class
     Hen(std::string name) : name_(name) {
-        std::cout << "Hen constructor called. Name: " << name_ << std::endl; // Displays a message when the constructor is called.
+        std::cout << "Hen constructor called. Name: " << name_ << std::endl; 
     }
 
     // Function for the Hen to lay an egg
