@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <cctype> 
-
 enum class State {
     Start,
     Word,
