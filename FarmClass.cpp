@@ -40,7 +40,7 @@ private:
     std::string name;
     std::vector<Animal> animals;
     std::vector<Crop> crops;
-    double landArea; // in acres
+    double landArea; 
 
 public:
     Farm(std::string n, double area) : name(n), landArea(area) {}
