@@ -9,7 +9,6 @@ int main() {
     delete singleIntPtr; 
     singleIntPtr = nullptr; 
     std::cout << "\nMemory for single integer deallocated." << std::endl;
-
     int* intArrayPtr = new int[5]; 
 
     std::cout << "\nDynamically allocated array of integers:" << std::endl;
