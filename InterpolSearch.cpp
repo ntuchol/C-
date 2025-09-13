@@ -5,17 +5,16 @@ int interpolationSearch(int arr[], int n, int x) {
     int high = n - 1;
 
     while (low <= high && x >= arr[low] && x <= arr[high]) {
-        // Calculate the estimated position
         int pos = low + ((double)(high - low) / (arr[high] - arr[low])) * (x - arr[low]);
 
         if (arr[pos] == x) {
-            return pos; // Target found
+            return pos; 
         }
         if (arr[pos] < x) {
-            low = pos + 1; // Search in the upper part
+            low = pos + 1; 
         } else {
-            high = pos - 1; // Search in the lower part
+            high = pos - 1; 
         }
     }
-    return -1; // Target not found
+    return -1; 
 }
