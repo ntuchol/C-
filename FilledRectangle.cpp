@@ -1,5 +1,4 @@
 #include <windows.h> 
-
     HDC hdc = GetDC(hwnd);
     RECT rect = {10, 10, 100, 50}; 
     HBRUSH hBrush = CreateSolidBrush(RGB(255, 0, 0)); 
