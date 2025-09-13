@@ -7,7 +7,6 @@ public:
     int currentFloor;
     Direction direction;
     std::set<int> destinationFloors; 
-
     Elevator(int initialFloor = 1) : currentFloor(initialFloor), direction(IDLE) {}
 
     void requestFloor(int floor) {
