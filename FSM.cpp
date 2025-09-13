@@ -2,7 +2,6 @@
     enum class Event { Start, Stop, Pause, Resume };
 
     State currentState = State::Idle;
-
     void handleEvent(Event event) {
         switch (currentState) {
             case State::Idle:
