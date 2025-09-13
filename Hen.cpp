@@ -25,20 +25,17 @@ public:
         std::cout << "Hen constructor called. Name: " << name_ << std::endl; 
     }
 
-    // Function for the Hen to lay an egg
     Egg layEgg(std::string eggColor) {
         std::cout << name_ << " is laying a " << eggColor << " egg." << std::endl;
-        return Egg(eggColor); // Creates a new Egg object and returns it.
+        return Egg(eggColor); 
     }
 
-    // Display function for the Hen
     void display() {
-        std::cout << "This is " << name_ << ", a happy hen." << std::endl; // Displays the hen's name.
+        std::cout << "This is " << name_ << ", a happy hen." << std::endl; 
     }
 
-    // Destructor for the Hen class
     ~Hen() {
-        std::cout << "Hen destructor called. Name: " << name_ << std::endl; // Displays a message when the destructor is called.
+        std::cout << "Hen destructor called. Name: " << name_ << std::endl; 
     }
 
 private:
@@ -46,21 +43,15 @@ private:
 };
 
 int main() {
-    // Create a Hen object dynamically using 'new'
-    Hen* myHen = new Hen("Henrietta"); // Dynamically allocates memory for a Hen object.
-
-    // Call the display function for the Hen
+    Hen* myHen = new Hen("Henrietta"); 
     myHen->display();
 
-    // Have the Hen lay an Egg
-    Egg myEgg = myHen->layEgg("brown"); // The Hen lays a brown egg.
+    Egg myEgg = myHen->layEgg("brown"); 
 
-    // Call the display function for the Egg
     myEgg.display();
 
-    // Free the dynamically allocated memory using 'delete'
-    delete myHen; // Frees the memory allocated for the Hen object.
-    myHen = nullptr; // Sets the pointer to nullptr to prevent dangling pointers.
+    delete myHen; 
+    myHen = nullptr; 
 
     return 0;
 }
