@@ -25,5 +25,5 @@ int main() {
     }
     std::cout << std::endl;
 
-    return 0; // Indicate successful execution
+    return 0; 
 }
