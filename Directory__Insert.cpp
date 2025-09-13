@@ -3,7 +3,6 @@
 
     int main() {
         std::filesystem::path new_dir_path = "my_new_directory";
-
         if (std::filesystem::create_directory(new_dir_path)) {
             std::cout << "Directory 'my_new_directory' created successfully." << std::endl;
         } else {
