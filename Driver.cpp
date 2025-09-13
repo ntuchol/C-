@@ -2,7 +2,6 @@
     public:
         int add(int a, int b);
     };
-
     #include "calculator.h"
     #include <iostream>
 
