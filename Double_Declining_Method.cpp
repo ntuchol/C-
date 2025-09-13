@@ -4,7 +4,6 @@
 int main() {
     double cost, salvageValue;
     int usefulLife;
-
     std::cout << "Enter asset cost: ";
     std::cin >> cost;
     std::cout << "Enter salvage value: ";
