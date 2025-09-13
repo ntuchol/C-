@@ -1,7 +1,6 @@
 std::vector<int> v(10, 0); 
 #include <algorithm> 
 #include <vector>
-
     std::vector<int> v = {1, 2, 3, 4, 5};
     std::fill(v.begin(), v.end(), 0); 
     std::vector<int> v;
