@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <algorithm> 
-
 bool containsPair(const std::vector<int>& hand) {
     for (size_t i = 0; i < hand.size() - 1; ++i) {
         if (hand[i] == hand[i+1]) {
