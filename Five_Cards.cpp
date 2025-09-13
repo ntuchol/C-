@@ -1,8 +1,7 @@
 #include <iostream>
 #include <vector>
-#include <algorithm> // For std::sort
+#include <algorithm> 
 
-// Function to check for a pair (simplified, no suits)
 bool containsPair(const std::vector<int>& hand) {
     for (size_t i = 0; i < hand.size() - 1; ++i) {
         if (hand[i] == hand[i+1]) {
@@ -21,7 +20,7 @@ int main() {
         std::cin >> hand[i];
     }
 
-    std::sort(hand.begin(), hand.end()); // Sort the hand for easier evaluation
+    std::sort(hand.begin(), hand.end()); 
 
     if (containsPair(hand)) {
         std::cout << "This is a pair." << std::endl;
