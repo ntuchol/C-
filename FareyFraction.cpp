@@ -1,12 +1,11 @@
 #include <vector>
 #include <numeric> 
 #include <algorithm> 
-
 std::vector<Fraction> generateFareySequence(int n) {
     std::vector<Fraction> farey_sequence;
 
     farey_sequence.push_back({0, 1});
-    if (n >= 1) { // 1/1 is only valid if n >= 1
+    if (n >= 1) { 
         farey_sequence.push_back({1, 1});
     }
 
