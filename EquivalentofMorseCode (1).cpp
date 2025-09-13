@@ -55,6 +55,5 @@ int main() {
 
     std::string decodedText = morseToEnglish(morse);
     std::cout << "Morse to English: " << decodedText << std::endl;
-
     return 0;
 }
