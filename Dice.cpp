@@ -1,7 +1,6 @@
 #include <random> 
 #include <chrono> 
 #include <stdexcept> 
-
 class Dice {
 private:
     int numSides;
