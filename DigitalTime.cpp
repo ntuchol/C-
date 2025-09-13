@@ -1,7 +1,6 @@
 #include <iostream>
 #include <ctime>
 #include <windows.h> 
-
 int main() {
     while (true) {
         system("CLS"); 
