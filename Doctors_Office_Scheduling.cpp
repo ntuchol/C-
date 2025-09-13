@@ -7,7 +7,6 @@ public:
     Doctor(int id, const std::string& n, const std::string& spec)
         : doctorID(id), name(n), specialization(spec) {}
 };
-
 class Appointment {
 public:
     int appointmentID;
