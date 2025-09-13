@@ -7,7 +7,6 @@ void replaceAll(std::string& text, const std::string& findStr, const std::string
         pos += replaceStr.length(); 
     }
 }
-
 int main() {
     std::string text;
     std::string findString;
