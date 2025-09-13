@@ -10,7 +10,7 @@
         IntStack(int size) {
             capacity = size;
             arr = new int[capacity];
-            top = -1; // Indicates an empty stack
+            top = -1; 
         }
 
         ~IntStack() {
@@ -28,7 +28,7 @@
         int pop() {
             if (top == -1) {
                 std::cout << "Stack Underflow\n";
-                return -1; // Or throw an exception
+                return -1; 
             }
             return arr[top--];
         }
@@ -36,7 +36,7 @@
         int peek() {
             if (top == -1) {
                 std::cout << "Stack is empty\n";
-                return -1; // Or throw an exception
+                return -1; 
             }
             return arr[top];
         }
@@ -51,13 +51,13 @@
     };
 
     int main() {
-        IntStack myStack(5); // Create a stack with capacity 5
+        IntStack myStack(5); 
 
         myStack.push(10);
         myStack.push(20);
-        std::cout << "Top element: " << myStack.peek() << std::endl; // Output: 20
+        std::cout << "Top element: " << myStack.peek() << std::endl; 
         myStack.pop();
-        std::cout << "Top element after pop: " << myStack.peek() << std::endl; // Output: 10
+        std::cout << "Top element after pop: " << myStack.peek() << std::endl; 
 
         return 0;
     }
