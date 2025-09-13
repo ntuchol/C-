@@ -5,7 +5,6 @@ void printRow(char colorChar, int length) {
         std::cout << colorChar;
     }
 }
-
 int main() {
     char blueChar = '#'; 
     char whiteChar = ' '; 
