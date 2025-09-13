@@ -7,15 +7,12 @@ private:
     std::deque<T> data;
 
 public:
-    // Constructor
     InputRestrictedDeque() {}
 
-    // Insertion only allowed at the rear
     void push_back(const T& value) {
         data.push_back(value);
     }
 
-    // Deletion allowed from both ends
     void pop_front() {
         if (!data.empty()) {
             data.pop_front();
@@ -32,7 +29,6 @@ public:
         }
     }
 
-    // Accessors
     T& front() {
         return data.front();
     }
@@ -65,9 +61,7 @@ int main() {
     myDeque.pop_back();
     std::cout << "After pop_back, Front: " << myDeque.front() << ", Back: " << myDeque.back() << std::endl;
 
-    // myDeque.push_front(5); // This would be a compile-time error if push_front wasn't defined
-                             // or a conceptual restriction if using an underlying std::deque
-                             // and only calling push_back.
+    myDeque.push_front(5); 
 
     return 0;
 }
