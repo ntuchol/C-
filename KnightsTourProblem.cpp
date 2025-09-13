@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-const int N = 8; // Board size
+const int N = 8; 
 
 int board[N][N];
 int xMove[] = {2, 1, -1, -2, -2, -1, 1, 2};
@@ -22,7 +22,7 @@ void printSolution() {
 
 bool solveKnightTour(int x, int y, int moveCount) {
     if (moveCount == N * N) {
-        return true; // All squares visited
+        return true; 
     }
 
     for (int i = 0; i < 8; i++) {
@@ -34,7 +34,7 @@ bool solveKnightTour(int x, int y, int moveCount) {
             if (solveKnightTour(nextX, nextY, moveCount + 1)) {
                 return true;
             } else {
-                board[nextX][nextY] = 0; // Backtrack
+                board[nextX][nextY] = 0; 
             }
         }
     }
@@ -48,7 +48,7 @@ int main() {
         }
     }
 
-    int startX = 0, startY = 0; // Starting position
+    int startX = 0, startY = 0; 
     board[startX][startY] = 1;
 
     if (solveKnightTour(startX, startY, 1)) {
