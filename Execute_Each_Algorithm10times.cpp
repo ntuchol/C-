@@ -1,6 +1,5 @@
 #include <iostream> 
 #include <chrono>   
-
 long long sum_algorithm(int N) {
     long long sum = 0;
     for (int i = 1; i <= N; ++i) {
