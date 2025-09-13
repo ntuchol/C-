@@ -3,7 +3,6 @@ double first_half = original_value / 2.0;
 
 #include <vector>
 #include <iostream>
-
     int main() {
         std::vector<double> numbers = {1.0, 2.0, 3.0, 4.0, 5.0, 6.0};
         size_t half_size = numbers.size() / 2;
