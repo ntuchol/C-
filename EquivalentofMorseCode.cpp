@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <map>
-
 std::string englishToMorse(const std::string& text) {
     std::map<char, std::string> morseMap = {
         {'A', ".-"}, {'B', "-..."}, {'C', "-.-."}, {'D', "-.."}, {'E', "."},
