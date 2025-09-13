@@ -17,7 +17,7 @@ int main() {
         if (i >= crossArmLength && i < crossArmLength + stripeHeight) { 
             printRow(whiteChar, crossArmLength * 2 + stripeHeight); 
             printRow(blueChar, stripeWidth - (crossArmLength * 2 + stripeHeight)); 
-        } else { // Blue rows around the cross
+        } else { 
             printRow(blueChar, crossArmLength);
             printRow(whiteChar, stripeHeight); 
             printRow(blueChar, crossArmLength);
