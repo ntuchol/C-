@@ -1,7 +1,6 @@
 class ExprTreeNode {
 public:
     ExprTreeNode(double val); 
-
     ExprTreeNode(char op, ExprTreeNode* left, ExprTreeNode* right); 
 
     bool is_operand; 
