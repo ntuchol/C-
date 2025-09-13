@@ -7,8 +7,7 @@ Node* deleteNode(Node* root, int key) {
         root->left = deleteNode(root->left, key);
     } else if (key > root->data) {
         root->right = deleteNode(root->right, key);
-    } else { // Found the node to delete
-        // Case 1: No child or one child
+    } else { 
         if (root->left == nullptr) {
             Node* temp = root->right;
             delete root;
@@ -19,15 +18,13 @@ Node* deleteNode(Node* root, int key) {
             return temp;
         }
 
-        // Case 3: Two children (Hibbard's specific step)
-        Node* successor = findMin(root->right); // find smallest in right subtree
+        Node* successor = findMin(root->right); 
         root->data = successor->data;
-        root->right = deleteNode(root->right, successor->data); // delete successor
+        root->right = deleteNode(root->right, successor->data); 
     }
     return root;
 }
 
-// Helper function to find the minimum node in a subtree
 Node* findMin(Node* node) {
     while (node->left != nullptr) {
         node = node->left;
