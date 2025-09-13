@@ -1,4 +1,4 @@
-#include <vector>
+#include <vector> 
 #include <iostream>
 
 bool detectCycleDFS(int u, int parent, const std::vector<std::vector<int>>& adj, std::vector<bool>& visited) {
