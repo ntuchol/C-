@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector> 
-
 double calculateAverage(const std::vector<int>& numbers) {
     if (numbers.empty()) {
         return 0.0; 
