@@ -1,9 +1,8 @@
-int hexValue = 0xFF; // Represents 255 in decimal
-int anotherHex = 0xA5; // Represents 165 in decimal
-
+int hexValue = 0xFF; 
+int anotherHex = 0xA5; 
 
  #include <iostream>
-    #include <iomanip> // For std::hex
+ #include <iomanip> 
 
     int main() {
         int decimalValue = 255;
