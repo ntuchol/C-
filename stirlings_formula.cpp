@@ -1,17 +1,15 @@
 #include <iostream>
-#include <cmath> // For sqrt, pow, exp
-#include <numbers> // For std::numbers::pi (C++20 onwards) or define manually
+#include <cmath> 
+#include <numbers> 
 
-// Function to calculate factorial using Stirling's Approximation
 double stirlingApproximation(int n) {
     if (n < 0) {
-        return 0; // Factorial is not defined for negative numbers
+        return 0;
     }
     if (n == 0 || n == 1) {
         return 1; // 0! = 1, 1! = 1
     }
 
-    // Use std::numbers::pi for C++20 and later, otherwise define PI manually
     const double PI = std::numbers::pi; 
     const double E = std::exp(1.0); // Euler's number
 
