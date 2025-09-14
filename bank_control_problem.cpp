@@ -1,10 +1,8 @@
-// BankAccount class definition
 class BankAccount {
 private:
     std::string accountNumber;
     std::string accountHolderName;
     double accountBalance;
-    // ... other members like PIN, transaction history etc.
 
 public:
     BankAccount(const std::string& accNum, const std::string& holderName, double initialBalance) {
@@ -16,7 +14,6 @@ public:
     void deposit(double amount) {
         if (amount > 0) {
             accountBalance += amount;
-            // Record transaction in history (if implemented)
             std::cout << "Deposit successful. Current balance: " << accountBalance << std::endl;
         } else {
             std::cout << "Invalid deposit amount." << std::endl;
@@ -26,7 +23,6 @@ public:
     void withdraw(double amount) {
         if (amount > 0 && amount <= accountBalance) {
             accountBalance -= amount;
-            // Record transaction in history (if implemented)
             std::cout << "Withdrawal successful. Current balance: " << accountBalance << std::endl;
         } else if (amount > accountBalance) {
             std::cout << "Insufficient balance. Cannot withdraw." << std::endl;
@@ -45,5 +41,4 @@ public:
         std::cout << "Balance: " << accountBalance << std::endl;
     }
 
-    // ... other member functions like getAccountNumber, verifyPin, etc.
 };
