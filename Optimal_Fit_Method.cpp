@@ -3,11 +3,10 @@
 #include <algorithm>
 
 void bestFit(std::vector<int>& blockSize, int m, const std::vector<int>& processSize, int n) {
-    std::vector<int> allocation(n, -1); // Stores block id of the block allocated to a process
-
-    for (int i = 0; i < n; i++) { // For each process
+    std::vector<int> allocation(n, -1); 
+    for (int i = 0; i < n; i++) { 
         int bestIdx = -1;
-        for (int j = 0; j < m; j++) { // Find the best fit block
+        for (int j = 0; j < m; j++) { 
             if (blockSize[j] >= processSize[i]) {
                 if (bestIdx == -1 || blockSize[bestIdx] > blockSize[j]) {
                     bestIdx = j;
@@ -15,9 +14,9 @@ void bestFit(std::vector<int>& blockSize, int m, const std::vector<int>& process
             }
         }
 
-        if (bestIdx != -1) { // If a suitable block is found
+        if (bestIdx != -1) { 
             allocation[i] = bestIdx;
-            blockSize[bestIdx] -= processSize[i]; // Reduce available memory
+            blockSize[bestIdx] -= processSize[i]; 
         }
     }
 
