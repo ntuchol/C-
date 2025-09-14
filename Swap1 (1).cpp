@@ -1,6 +1,5 @@
 #include <iostream>
 
-// Function to swap the content of two integers using pointers
 void swap1(int* num1_ptr, int* num2_ptr) {
     int temp = *num1_ptr;  
     *num1_ptr = *num2_ptr; 
