@@ -17,7 +17,6 @@ int main(int argc, char* argv[]) {
     std::string line;
     int lineNum = 1;
     while (std::getline(file, line)) {
-        // Simple check for if (x = y)  -- This is extremely rudimentary and prone to false positives.
         if (line.find("if (") != std::string::npos && line.find(" = ") != std::string::npos && line.find(" == ") == std::string::npos) {
             std::cout << "Warning: Possible suspicious assignment on line " << lineNum << ": " << line << std::endl;
         }
