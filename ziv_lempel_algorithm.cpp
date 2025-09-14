@@ -1,9 +1,7 @@
 include <iostream>
 #include <string>
 #include <vector>
-#include <map> // Or unordered_map for potentially better performance
-
-// Encoding function
+#include <map> 
 std::vector<int> lzw_encode(const std::string& s) {
     std::map<std::string, int> dictionary;
     for (int i = 0; i <= 255; ++i) {
@@ -25,11 +23,10 @@ std::vector<int> lzw_encode(const std::string& s) {
             current_string = std::string(1, next_char);
         }
     }
-    output_codes.push_back(dictionary[current_string]); // Output the last code
+    output_codes.push_back(dictionary[current_string]); 
     return output_codes;
 }
 
-// Decoding function
 std::string lzw_decode(const std::vector<int>& encoded_codes) {
     std::map<int, std::string> dictionary;
     for (int i = 0; i <= 255; ++i) {
@@ -49,7 +46,6 @@ std::string lzw_decode(const std::vector<int>& encoded_codes) {
         } else if (new_code == next_code) {
             s = dictionary[old_code] + dictionary[old_code][0];
         } else {
-            // Error handling for invalid codes
             return "";
         }
         decoded_string += s;
@@ -59,17 +55,17 @@ std::string lzw_decode(const std::vector<int>& encoded_codes) {
     return decoded_string;
 }
 
-// int main() {
-//     std::string original_text = "WYS*WYGWYS*WYSWYSG";
-//     std::vector<int> encoded = lzw_encode(original_text);
-//     std::cout << "Encoded codes: ";
-//     for (int code : encoded) {
-//         std::cout << code << " ";
-//     }
-//     std::cout << std::endl;
-//
-//     std::string decoded_text = lzw_decode(encoded);
-//     std::cout << "Decoded text: " << decoded_text << std::endl;
-//
-//     return 0;
+ int main() {
+     std::string original_text = "WYS*WYGWYS*WYSWYSG";
+     std::vector<int> encoded = lzw_encode(original_text);
+     std::cout << "Encoded codes: ";
+     for (int code : encoded) {
+        std::cout << code << " ";
+     }
+     std::cout << std::endl;
+
+     std::string decoded_text = lzw_decode(encoded);
+     std::cout << "Decoded text: " << decoded_text << std::endl;
+
+    return 0;
 // }
