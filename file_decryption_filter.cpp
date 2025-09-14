@@ -2,25 +2,24 @@
 #include <fstream>
 #include <string>
 
-// A very simple decryption function (for demonstration purposes only)
 char decryptChar(char encryptedChar, int key) {
-    return encryptedChar - key; // Simple shift cipher decryption
+    return encryptedChar - key; 
 }
 
 int main() {
-    std::ifstream inputFile("encrypted.txt", std::ios::binary); // Open encrypted file
+    std::ifstream inputFile("encrypted.txt", std::ios::binary); 
     if (!inputFile.is_open()) {
         std::cerr << "Error opening encrypted file." << std::endl;
         return 1;
     }
 
-    std::ofstream outputFile("decrypted.txt", std::ios::binary); // Open output file
+    std::ofstream outputFile("decrypted.txt", std::ios::binary); 
     if (!outputFile.is_open()) {
         std::cerr << "Error opening output file." << std::endl;
         return 1;
     }
 
-    int decryptionKey = 10; // Example key (should be securely managed in real applications)
+    int decryptionKey = 10; 
     char ch;
 
     while (inputFile.get(ch)) {
