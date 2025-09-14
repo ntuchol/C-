@@ -11,7 +11,7 @@ double power(double base, int exponent) {
 
     double halfPower = power(base, exponent / 2);
 
-    if (exponent % 2 == 0) { // Even exponent
+    if (exponent % 2 == 0) { 
         return halfPower * halfPower;
     } else { 
         return base * halfPower * halfPower;
