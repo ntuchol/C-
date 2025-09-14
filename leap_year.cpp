@@ -2,13 +2,13 @@
 
 bool isLeapYear(int year) {
     if (year % 400 == 0) {
-        return true; // Divisible by 400, so it's a leap year
+        return true; 
     } else if (year % 100 == 0) {
-        return false; // Divisible by 100 but not 400, so not a leap year
+        return false; 
     } else if (year % 4 == 0) {
-        return true; // Divisible by 4 but not 100, so it's a leap year
+        return true; 
     } else {
-        return false; // Not divisible by 4, so not a leap year
+        return false; 
     }
 }
 
