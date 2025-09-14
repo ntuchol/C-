@@ -1,19 +1,15 @@
 #include <iostream>
-#include <cmath> // For std::sqrt and std::pow
-
-// Function to calculate the average of four scores
+#include <cmath> 
 double calculateAverage(double score1, double score2, double score3, double score4) {
     return (score1 + score2 + score3 + score4) / 4.0;
 }
 
-// Function to calculate the standard deviation of four scores
 double calculateStandardDeviation(double score1, double score2, double score3, double score4) {
     double mean = calculateAverage(score1, score2, score3, score4);
     double sumSquaredDiff = std::pow(score1 - mean, 2) +
                             std::pow(score2 - mean, 2) +
                             std::pow(score3 - mean, 2) +
                             std::pow(score4 - mean, 2);
-    // Using '4.0' for population standard deviation, use '3.0' for sample standard deviation
     return std::sqrt(sumSquaredDiff / 4.0); 
 }
 
