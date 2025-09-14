@@ -6,17 +6,14 @@ public:
     MyClass(int v) : value(v) {}
 };
 
-// Function taking a constant reference
 void printValue(const MyClass& obj) {
     std::cout << "Value: " << obj.value << std::endl;
-    // obj.value = 10; // This would cause a compile-time error
+    obj.value = 10; 
 }
 
 int main() {
     MyClass obj1(5);
-    printValue(obj1); // Pass by constant reference
-
-    // You can also pass a temporary object
+    printValue(obj1); 
     printValue(MyClass(7)); 
 
     return 0;
