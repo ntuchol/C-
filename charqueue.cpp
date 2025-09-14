@@ -12,7 +12,7 @@ int main() {
     std::cout << "Back element: " << charQueue.back() << std::endl;
     std::cout << "Queue size: " << charQueue.size() << std::endl;
 
-    charQueue.pop(); // Remove 'X'
+    charQueue.pop(); 
 
     std::cout << "Front element after pop: " << charQueue.front() << std::endl;
 
