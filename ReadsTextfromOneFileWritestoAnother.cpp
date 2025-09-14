@@ -30,5 +30,5 @@ int main() {
 
     std::cout << "Content copied from input.txt to output.txt successfully." << std::endl;
 
-    return 0; // Indicate successful execution
+    return 0; 
 }
