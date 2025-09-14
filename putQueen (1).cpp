@@ -23,10 +23,9 @@ void placeQueens(int n, int row, std::vector<int>& board, std::vector<std::vecto
     }
 }
 
-// Main function to solve N-Queens
 std::vector<std::vector<int>> solveNQueens(int n) {
     std::vector<std::vector<int>> solutions;
-    std::vector<int> board(n); // board[i] stores the column of the queen in row i
-    placeQueens(n, 0, board, solutions); // Start placing from row 0
+    std::vector<int> board(n); 
+    placeQueens(n, 0, board, solutions); 
     return solutions;
 }
