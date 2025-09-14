@@ -13,8 +13,7 @@ int main() {
     std::cout << "Enter time in years: ";
     std::cin >> time;
 
-    double simpleInterest = (principal * rate * time) / 100.0; // Use 100.0 for double division
-
+    double simpleInterest = (principal * rate * time) / 100.0; 
     std::cout << "Simple Interest: " << simpleInterest << std::endl;
 
     return 0;
