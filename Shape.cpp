@@ -19,4 +19,4 @@
     Shape* myShape = new Circle(5.0);
     double calculatedArea = myShape->area(); 
     Circle::area()
-    delete myShape; // Important for memory management
+    delete myShape; 
