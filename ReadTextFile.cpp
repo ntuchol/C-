@@ -1,20 +1,18 @@
-#include <iostream> // For console output (e.g., printing file content)
-    #include <fstream>  // For file stream operations
-    #include <string>   // For using std::string
-        std::ifstream inputFile("filename.txt"); // Replace "filename.txt" with your file's path
+#include <iostream> 
+#include <fstream>  
+#include <string>   
+        std::ifstream inputFile("filename.txt"); 
 if (inputFile.is_open()) {
-        // File opened successfully, proceed with reading
     } else {
         std::cerr << "Error: Unable to open file." << std::endl;
-        // Handle the error (e.g., exit, return an error code)
     }
     std::string line;
     while (std::getline(inputFile, line)) {
-        std::cout << line << std::endl; // Process or print each line
+        std::cout << line << std::endl; 
     } 
     std::string word;
     while (inputFile >> word) {
-        std::cout << word << std::endl; // Process or print each word
+        std::cout << word << std::endl; 
     }
         inputFile.close();
 #include <iostream>
@@ -22,7 +20,7 @@ if (inputFile.is_open()) {
 #include <string>
 
 int main() {
-    std::ifstream inputFile("my_text_file.txt"); // Assuming 'my_text_file.txt' is in the same directory
+    std::ifstream inputFile("my_text_file.txt"); 
 
     if (inputFile.is_open()) {
         std::string line;
