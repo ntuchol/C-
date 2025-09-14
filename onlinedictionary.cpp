@@ -1,5 +1,5 @@
 #include <map>
-    #include <string>
+#include <string>
 
     std::map<std::string, std::string> myDictionary;
     myDictionary["apple"] = "a common fruit";
