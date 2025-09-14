@@ -1,5 +1,5 @@
 struct TernaryTreeNode {
-    char data; // Or any other data type
+    char data; 
     TernaryTreeNode* left;
     TernaryTreeNode* middle;
     TernaryTreeNode* right;
