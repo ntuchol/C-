@@ -1,6 +1,6 @@
 class FileFilter {
 public:
-    virtual char transform(char ch) = 0; // Pure virtual function for transformation
+    virtual char transform(char ch) = 0; 
 
     void doFilter(std::ifstream &in, std::ofstream &out) {
         char ch;
@@ -18,7 +18,6 @@ public:
     EncryptionFilter(int key) : encryptionKey(key) {}
 
     char transform(char ch) override {
-        // Simple Caesar cipher for demonstration
         return ch + encryptionKey;
     }
 };
