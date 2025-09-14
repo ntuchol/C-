@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <algorithm> // For std::swap
-
+#include <algorithm> 
 void oddEvenSort(std::vector<int>& arr) {
     int n = arr.size();
     bool sortedFlag = false;
@@ -9,7 +8,6 @@ void oddEvenSort(std::vector<int>& arr) {
     while (!sortedFlag) {
         sortedFlag = true;
 
-        // Odd Phase
         for (int i = 1; i <= n - 2; i += 2) {
             if (arr[i] > arr[i + 1]) {
                 std::swap(arr[i], arr[i + 1]);
@@ -17,7 +15,6 @@ void oddEvenSort(std::vector<int>& arr) {
             }
         }
 
-        // Even Phase
         for (int i = 0; i <= n - 2; i += 2) {
             if (arr[i] > arr[i + 1]) {
                 std::swap(arr[i], arr[i + 1]);
