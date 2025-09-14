@@ -1,8 +1,8 @@
 #include <iostream>
-    #include <vector>
-    #include <algorithm>
-    #include <random>    
-    #include <chrono>    
+#include <vector>
+#include <algorithm>
+#include <random>    
+#include <chrono>    
 
     int main() {
         std::mt19937 generator(std::chrono::high_resolution_clock::now().time_since_epoch().count());
