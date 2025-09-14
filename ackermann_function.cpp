@@ -11,13 +11,10 @@ long long ackermann(long long m, long long n) {
 }
 
 int main() {
-    // Example usage
     std::cout << "Ackermann(0, 0) = " << ackermann(0, 0) << std::endl; // Expected: 1
     std::cout << "Ackermann(1, 0) = " << ackermann(1, 0) << std::endl; // Expected: 2
     std::cout << "Ackermann(1, 1) = " << ackermann(1, 1) << std::endl; // Expected: 3
     std::cout << "Ackermann(2, 2) = " << ackermann(2, 2) << std::endl; // Expected: 7
     std::cout << "Ackermann(3, 1) = " << ackermann(3, 1) << std::endl; // Expected: 13
-    // Note: Higher values of m and n will quickly lead to stack overflow or
-    // values exceeding standard integer types due to the rapid growth of the function.
     return 0;
 }
