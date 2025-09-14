@@ -9,7 +9,6 @@ public:
     Card(Suit suit, Rank rank);
     Suit getSuit() const;
     Rank getRank() const;
-    // Overload << for easy printing
     friend std::ostream& operator<<(std::ostream& os, const Card& card);
 
 private:
@@ -19,13 +18,13 @@ private:
 
 #include <vector>
 #include <random>
-#include <algorithm> // For std::shuffle
+#include <algorithm> 
 
 class Deck {
 public:
-    Deck(); // Constructor to populate the deck
+    Deck(); 
     void shuffle();
-    Card dealCard(); // Returns a Card object
+    Card dealCard(); 
     bool isEmpty() const;
     void reset();
 
