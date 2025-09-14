@@ -33,7 +33,6 @@ int main() {
             break;
     }
 
-    // Alternative using an array of strings
     std::string days[] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
     if (day_number >= 1 && day_number <= 7) {
         std::cout << "Using array: Day " << day_number << " is " << days[day_number - 1] << "." << std::endl;
