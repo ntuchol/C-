@@ -1,9 +1,8 @@
-#include <cstdlib> // For rand() and RAND_MAX
+#include <cstdlib> 
     #include <iostream>
 
     int main() {
-        // Generate a random double between 0.0 and 1.0
-        double random_double = static_cast<double>(rand()) / RAND_MAX;
+        double random_double = static_cast<double>(rand()) 
         std::cout << "Random double: " << random_double << std::endl;
         return 0;
     }
