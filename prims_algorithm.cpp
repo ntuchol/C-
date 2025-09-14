@@ -1,20 +1,18 @@
 #include <iostream>
 #include <vector>
 #include <queue>
-#include <limits> // For numeric_limits
+#include <limits> 
 
 const int INF = std::numeric_limits<int>::max();
 
-// Structure to represent an edge
 struct Edge {
     int to;
     int weight;
 };
 
-// Custom comparator for priority queue (min-heap)
 struct ComparePair {
     bool operator()(const std::pair<int, int>& a, const std::pair<int, int>& b) {
-        return a.first > b.first; // Min-heap based on weight
+        return a.first > b.first; 
     }
 };
 
@@ -24,16 +22,13 @@ void primMST(int V, const std::vector<std::vector<Edge>>& adj) {
     std::vector<bool> inMST(V, false);
     std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>, ComparePair> pq;
 
-    // Start with vertex 0
     key[0] = 0;
-    pq.push({0, 0}); // {weight, vertex}
-
+    pq.push({0, 0}); 
     for (int count = 0; count < V; ++count) {
         int u = pq.top().second;
         pq.pop();
 
-        if (inMST[u]) continue; // Already processed
-
+        if (inMST[u]) continue; 
         inMST[u] = true;
 
         for (const Edge& edge : adj[u]) {
@@ -48,20 +43,18 @@ void primMST(int V, const std::vector<std::vector<Edge>>& adj) {
         }
     }
 
-    // Print the MST edges
     std::cout << "Edges of MST:\n";
     for (int i = 1; i < V; ++i) {
-        if (parent[i] != -1) { // Check if a parent exists
+        if (parent[i] != -1) { 
             std::cout << parent[i] << " - " << i << " : " << key[i] << "\n";
         }
     }
 }
 
 int main() {
-    int V = 5; // Number of vertices
+    int V = 5; 
     std::vector<std::vector<Edge>> adj(V);
 
-    // Example graph (adjacency list)
     adj[0].push_back({1, 2});
     adj[0].push_back({3, 6});
 
