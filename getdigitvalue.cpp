@@ -4,10 +4,10 @@ int main() {
     int number = 12345;
 
     while (number > 0) {
-        int digit = number % 10; // Get the last digit
-        std::cout << digit << " "; // Print the digit
-        number /= 10;           // Remove the last digit
+        int digit = number % 10;
+        std::cout << digit << " "; 
+        number /= 10;           
     }
-    std::cout << std::endl; // Output: 5 4 3 2 1
+    std::cout << std::endl; 
     return 0;
 }
