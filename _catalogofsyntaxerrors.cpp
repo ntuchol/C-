@@ -1,7 +1,6 @@
-    std::cout << "Hello, World!" // Missing semicolon
-    if (x > 0 { // Missing closing parenthesis
-        // ...
+    std::cout << "Hello, World!" 
+    if (x > 0 { 
     }
-    myVariable = 10; // myVariable not declared
-    int x == 5; // Incorrect use of comparison operator for assignment
-    std::cout << Welcome!; // Missing quotation marks around string literal
+    myVariable = 10; 
+    int x == 5;
+    std::cout << Welcome!; 
