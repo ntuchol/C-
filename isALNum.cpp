@@ -1,6 +1,5 @@
 #include <iostream>
-#include <cctype> // For std::isalnum
-
+#include <cctype> 
 int main() {
     char char1 = 'k';
     char char2 = '7';
