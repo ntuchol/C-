@@ -1,18 +1,17 @@
 #include <iostream>
-#include <cmath> // For fabs
+#include <cmath> 
 
 double cubeRootNewton(double N, double epsilon = 1e-7, int maxIterations = 100) {
     if (N == 0.0) {
         return 0.0;
     }
 
-    double x = N; // Initial guess, can be refined for better performance
+    double x = N; 
     double prev_x;
     int iterations = 0;
 
     do {
         prev_x = x;
-        // Newton's method formula for cube root
         x = (2.0 * prev_x / 3.0) + (N / (3.0 * prev_x * prev_x));
         iterations++;
     } while (fabs(x - prev_x) > epsilon && iterations < maxIterations);
