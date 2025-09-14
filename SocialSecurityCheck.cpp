@@ -1,26 +1,22 @@
 #include <iostream>
 #include <string>
-#include <cctype> // For isdigit()
-
+#include <cctype> 
 int main() {
     std::string ssn;
     std::cout << "Enter SSN (ddd-dd-dddd): ";
     std::getline(std::cin, ssn);
 
-    bool isValid = true; // Assume valid until proven otherwise
-
-    // Check length
+    bool isValid = true; 
     if (ssn.length() != 11) {
         isValid = false;
     }
 
-    // Check dashes and digits
     if (isValid) {
         for (int i = 0; i < ssn.length(); ++i) {
-            if ((i == 3 || i == 6) && ssn[i] != '-') { // Check dash positions
+            if ((i == 3 || i == 6) && ssn[i] != '-') { 
                 isValid = false;
                 break;
-            } else if ((i != 3 && i != 6) && !isdigit(ssn[i])) { // Check digit positions
+            } else if ((i != 3 && i != 6) && !isdigit(ssn[i])) { 
                 isValid = false;
                 break;
             }
