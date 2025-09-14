@@ -40,5 +40,4 @@ public:
         return dealtCard;
     }
 
-    // void printDeck() const { /* ... */ }
 };
