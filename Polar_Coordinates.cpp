@@ -1,9 +1,9 @@
 #include <iostream>
-#include <cmath> // For sqrt and atan2
+#include <cmath> 
 
 void convertToPolar(double x, double y, double& r, double& theta) {
     r = std::sqrt(x*x + y*y);
-    theta = std::atan2(y, x); // Handles all quadrants
+    theta = std::atan2(y, x); 
 }
 
 int main() {
