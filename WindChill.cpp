@@ -14,7 +14,7 @@ int main() {
 
     wind_chill_index = 35.74 + (0.6215 * temperature_f) - (35.75 * std::pow(wind_speed_mph, 0.16)) + (0.4275 * temperature_f * std::pow(wind_speed_mph, 0.16));
 
-    std::cout << std::fixed << std::setprecision(2); // Format output to 2 decimal places
+    std::cout << std::fixed << std::setprecision(2); 
     std::cout << "The wind chill index is: " << wind_chill_index << " degrees Fahrenheit." << std::endl;
 
     return 0;
