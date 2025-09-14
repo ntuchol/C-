@@ -1,13 +1,12 @@
-#include <iostream> // Required for std::cout
-
+#include <iostream> 
 int main() {
-    int a = 10; // Declare and initialize an integer variable 'a'
-    std::cout << a << std::endl; // Print the value of 'a' followed by a newline
+    int a = 10; 
+    std::cout << a << std::endl; 
     return 0;
 }
 
 #include <iostream>
-#include <string> // Required for std::string
+#include <string> 
 
 int main() {
     int int_var = 5;
