@@ -1,6 +1,5 @@
  #include <iostream>
-    #include <iomanip> // Required for setprecision
-
+    #include <iomanip> 
     int main() {
         double pi = 3.1415926535;
         std::cout << "Default precision: " << pi << std::endl;
