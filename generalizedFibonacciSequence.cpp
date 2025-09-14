@@ -1,17 +1,16 @@
 #include <iostream>
 
-// Function to generate a generalized Fibonacci sequence
 void generateGeneralizedFibonacci(int a, int b, int n) {
     if (n <= 0) {
-        return; // Or handle the case as needed
+        return; 
     }
 
-    std::cout << a << " "; // Print the first term
+    std::cout << a << " "; 
     if (n == 1) {
         return;
     }
 
-    std::cout << b << " "; // Print the second term
+    std::cout << b << " "; 
     if (n == 2) {
         return;
     }
@@ -27,11 +26,9 @@ void generateGeneralizedFibonacci(int a, int b, int n) {
 }
 
 int main() {
-    // Example usage: Generate a Fibonacci sequence starting with 0 and 1
     std::cout << "Standard Fibonacci Sequence (0, 1): ";
     generateGeneralizedFibonacci(0, 1, 10);
 
-    // Example with different starting values
     std::cout << "Generalized Fibonacci Sequence (3, 5): ";
     generateGeneralizedFibonacci(3, 5, 8);
 
