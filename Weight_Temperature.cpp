@@ -1,10 +1,10 @@
- double mass = 75.5; // Weight in kilograms
-double force = 9.8 * mass; // Example: Force due to gravity (weight)
+ double mass = 75.5; 
+double force = 9.8 * mass; 
 
 #include <iostream>
 
     double calculateHeatEnergy(double mass, double initialTemp, double finalTemp) {
-        const double specificHeatCapacityOfWater = 4184.0; // Joules per kg per degree Celsius
+        const double specificHeatCapacityOfWater = 4184.0; 
         return mass * (finalTemp - initialTemp) * specificHeatCapacityOfWater;
     }
 
