@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <queue>
-#include <limits> // For numeric_limits
+#include <limits> 
 
 const int INF = std::numeric_limits<int>::max();
 
@@ -12,7 +12,7 @@ struct Edge {
 
 struct CompareEdges {
     bool operator()(const Edge& a, const Edge& b) {
-        return a.weight > b.weight; // Min-heap
+        return a.weight > b.weight; 
     }
 };
 
@@ -22,16 +22,14 @@ void primMST(int V, const std::vector<std::vector<Edge>>& adj) {
     std::vector<bool> inMST(V, false);
     std::priority_queue<Edge, std::vector<Edge>, CompareEdges> pq;
 
-    // Start from vertex 0 (or any other arbitrary vertex)
     key[0] = 0;
-    pq.push({0, 0}); // {weight, vertex}
+    pq.push({0, 0}); 
 
     while (!pq.empty()) {
         int u = pq.top().to;
         pq.pop();
 
-        if (inMST[u]) continue; // Already processed
-
+        if (inMST[u]) continue; 
         inMST[u] = true;
 
         for (const Edge& edge : adj[u]) {
@@ -46,9 +44,8 @@ void primMST(int V, const std::vector<std::vector<Edge>>& adj) {
         }
     }
 
-    // Print the MST
     std::cout << "Edges of MST:\n";
-    for (int i = 1; i < V; ++i) { // Start from 1 as 0 is root
+    for (int i = 1; i < V; ++i) { 
         if (parent[i] != -1) {
             std::cout << parent[i] << " - " << i << " : " << key[i] << std::endl;
         }
@@ -56,11 +53,9 @@ void primMST(int V, const std::vector<std::vector<Edge>>& adj) {
 }
 
 int main() {
-    // Example usage:
-    int V = 5; // Number of vertices
+    int V = 5; 
     std::vector<std::vector<Edge>> adj(V);
 
-    // Add edges (example graph)
     adj[0].push_back({1, 2});
     adj[1].push_back({0, 2});
     adj[0].push_back({3, 6});
