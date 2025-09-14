@@ -4,8 +4,7 @@ int main() {
     int n; 
     
     std::cout << "Enter a positive integer (n): ";
-    std::cin >> n; // Read the user's input into 'n'
-
+    std::cin >> n; 
     if (n <= 0) {
         std::cout << "Please enter a positive integer." << std::endl;
         return 1; 
