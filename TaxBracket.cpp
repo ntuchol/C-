@@ -18,7 +18,7 @@ int main() {
         taxOwed = (10000 * 0.10) + (20000 * 0.15) + (40000 * 0.20) + ((income - 70000) * 0.25); 
     }
 
-    std::cout << std::fixed << std::setprecision(2); // Set output to 2 decimal places
+    std::cout << std::fixed << std::setprecision(2); 
     std::cout << "Tax owed: $" << taxOwed << std::endl;
 
     return 0;
