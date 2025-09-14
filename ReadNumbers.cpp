@@ -5,33 +5,30 @@ int main() {
     double num2;
 
     std::cout << "Enter an integer: ";
-    std::cin >> num1; // Reads an integer from the console
-
+    std::cin >> num1; 
+    
     std::cout << "Enter a double: ";
-    std::cin >> num2; // Reads a double from the console
-
+    std::cin >> num2; 
     std::cout << "You entered: " << num1 << " and " << num2 << std::endl;
 
     return 0;
 }
 
 #include <iostream>
-#include <fstream> // Required for file operations
-
+#include <fstream> 
 int main() {
-    std::ifstream inputFile("numbers.txt"); // Open a file named "numbers.txt" for reading
-
-    if (!inputFile.is_open()) { // Check if the file opened successfully
+    std::ifstream inputFile("numbers.txt"); 
+    if (!inputFile.is_open()) { 
         std::cerr << "Error opening file!" << std::endl;
-        return 1; // Indicate an error
+        return 1; 
     }
 
     int numFromFile;
-    while (inputFile >> numFromFile) { // Read numbers until the end of the file is reached
+    while (inputFile >> numFromFile) { 
         std::cout << "Read from file: " << numFromFile << std::endl;
     }
 
-    inputFile.close(); // Close the file stream
+    inputFile.close(); 
 
     return 0;
 }
