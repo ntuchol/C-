@@ -1,9 +1,8 @@
 #include <iostream>
 #include <string>
-#include <cctype> // For isupper, islower, isdigit, ispunct
-
+#include <cctype> 
 bool verifyPassword(const std::string& password) {
-    if (password.length() < 8) { // Example: Minimum length 8
+    if (password.length() < 8) {
         std::cout << "Password must be at least 8 characters long." << std::endl;
         return false;
     }
@@ -42,7 +41,7 @@ bool verifyPassword(const std::string& password) {
         return false;
     }
 
-    return true; // Password meets all criteria
+    return true; 
 }
 
 int main() {
