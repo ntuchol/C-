@@ -2,7 +2,7 @@
 #include <string>
 
 int main() {
-    std::string storedPassword = "mySecretPassword"; // Insecure: never store plain text passwords
+    std::string storedPassword = "mySecretPassword"; 
     std::string enteredPassword;
 
     std::cout << "Enter password: ";
