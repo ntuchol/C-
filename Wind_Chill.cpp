@@ -1,12 +1,7 @@
 #include <iostream>
-#include <cmath> // For std::pow
-
-// Function to calculate wind chill
+#include <cmath> 
 double calculateWindChill(double temperatureFahrenheit, double windSpeedMph) {
-    // Wind chill is only defined for temperatures at or below 50°F and wind speeds above 3 mph.
     if (temperatureFahrenheit > 50.0 || windSpeedMph <= 3.0) {
-        // You might choose to return a specific value or throw an exception
-        // to indicate an invalid input range. For simplicity, we'll return the air temperature.
         return temperatureFahrenheit; 
     }
 
