@@ -1,6 +1,5 @@
 #include <iostream>
-#include <cmath> // For sqrt
-
+#include <cmath> 
 int main() {
     double a, b, c;
 
@@ -9,7 +8,6 @@ int main() {
 
     if (a == 0) {
         std::cout << "This is not a quadratic equation (a cannot be 0)." << std::endl;
-        // Handle linear case or exit
         return 1;
     }
 
@@ -25,7 +23,7 @@ int main() {
         double root = -b / (2 * a);
         std::cout << "Roots are real and equal:" << std::endl;
         std::cout << "Root = " << root << std::endl;
-    } else { // discriminant < 0
+    } else { 
         double realPart = -b / (2 * a);
         double imaginaryPart = sqrt(std::abs(discriminant)) / (2 * a);
         std::cout << "Roots are complex and different:" << std::endl;
