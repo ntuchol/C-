@@ -1,12 +1,9 @@
 #include <iostream>
-#include <cstdlib> // For rand() and srand()
-#include <ctime>   // For time()
-
+#include <cstdlib> 
+#include <ctime>  
 int main() {
-    // Seed the random number generator
     srand(time(0));
 
-    // Generate a random number between 1 and 100
     int secretNumber = rand() % 100 + 1;
     int guess;
     int tries = 0;
