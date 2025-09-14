@@ -27,4 +27,4 @@ std::vector<int> handRanks;
 std::sort(handRanks.begin(), handRanks.end());
 if (isStraight(handRanks)) {
 
-// }
+}
