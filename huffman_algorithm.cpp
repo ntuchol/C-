@@ -1,7 +1,7 @@
 struct MinHeapNode {
-        char data; // Input character
-        int freq;  // Frequency of the character
-        MinHeapNode *left, *right; // Left and right child
+        char data; 
+        int freq;  
+        MinHeapNode *left, *right; 
 
         MinHeapNode(char data, int freq) {
             left = right = nullptr;
@@ -10,7 +10,6 @@ struct MinHeapNode {
         }
     };
 
-    // Custom comparator for the priority queue
     struct compare {
         bool operator()(MinHeapNode* l, MinHeapNode* r) {
             return (l->freq > r->freq);
