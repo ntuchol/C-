@@ -1,9 +1,8 @@
 #include <iostream>
 #include <string>
-#include <cctype> // For tolower()
-
+#include <cctype> 
 bool is_vowel(char c) {
-    c = std::tolower(c); // Convert to lowercase for consistent vowel checking
+    c = std::tolower(c); 
     return (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');
 }
 
@@ -28,16 +27,15 @@ std::string to_pig_latin(const std::string& word) {
             std::string remaining_word = word.substr(first_vowel_pos);
             return remaining_word + consonants + "ay";
         } else {
-            // Case: word contains no vowels (e.g., "rhythm") - handle as desired
-            return word + "ay"; // Or throw an error, or a specific rule
+            return word + "ay"; 
         }
     }
 }
 
 int main() {
-    std::cout << to_pig_latin("apple") << std::endl;  // Output: appleway
-    std::cout << to_pig_latin("pig") << std::endl;    // Output: igpay
-    std::cout << to_pig_latin("street") << std::endl; // Output: eetstray
-    std::cout << to_pig_latin("rhythm") << std::endl; // Output: ythmray (example handling)
+    std::cout << to_pig_latin("apple") << std::endl;  
+    std::cout << to_pig_latin("pig") << std::endl;    
+    std::cout << to_pig_latin("street") << std::endl; 
+    std::cout << to_pig_latin("rhythm") << std::endl; 
     return 0;
 }
