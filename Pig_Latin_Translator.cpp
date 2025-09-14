@@ -23,7 +23,7 @@ std::string toPigLatin(const std::string& word) {
     }
 
     if (firstVowelIndex == 0 && word[0] == 'y') {
-        firstVowelIndex = 1; // Treat 'y' as a consonant
+        firstVowelIndex = 1; 
     }
 
     if (firstVowelIndex == word.length()) { 
