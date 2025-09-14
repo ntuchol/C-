@@ -22,6 +22,6 @@
 
     int main() {
         int number = 1994;
-        std::cout << number << " in Roman numerals is: " << intToRoman(number) << std::endl; // Output: 1994 in Roman numerals is: MCMXCIV
+        std::cout << number << " in Roman numerals is: " << intToRoman(number) << std::endl; 
         return 0;
     }
