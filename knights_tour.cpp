@@ -31,4 +31,3 @@ bool solveKnightTour(int x, int y, int moveCount) {
     return false;
 }
 
-// ...
