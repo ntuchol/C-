@@ -1,39 +1,34 @@
 #include <iostream>
 #include <vector>
-#include <algorithm> // For std::sort
+#include <algorithm> 
 
-// Structure to represent an edge
 struct Edge {
     int u, v, weight;
 
-    // Comparator for sorting edges by weight
     bool operator<(const Edge& other) const {
         return weight < other.weight;
     }
 };
 
-// Disjoint Set Union (DSU) class
 class DSU {
     std::vector<int> parent;
-    std::vector<int> rank; // Or size for union by size
+    std::vector<int> rank; 
 
 public:
     DSU(int n) {
         parent.resize(n);
-        rank.resize(n, 0); // Initialize rank to 0
+        rank.resize(n, 0); 
         for (int i = 0; i < n; ++i) {
-            parent[i] = i; // Each element is its own parent initially
+            parent[i] = i; 
         }
     }
 
-    // Find operation with path compression
     int find(int i) {
         if (parent[i] == i)
             return i;
         return parent[i] = find(parent[i]);
     }
 
-    // Union operation by rank
     void unite(int x, int y) {
         int rootX = find(x);
         int rootY = find(y);
@@ -51,17 +46,16 @@ public:
     }
 };
 
-// Kruskal's Algorithm function
 std::vector<Edge> kruskalMST(int V, std::vector<Edge>& edges) {
     std::vector<Edge> mst;
-    std::sort(edges.begin(), edges.end()); // Sort edges by weight
+    std::sort(edges.begin(), edges.end()); 
     DSU dsu(V);
 
     for (const auto& edge : edges) {
         if (dsu.find(edge.u) != dsu.find(edge.v)) {
             mst.push_back(edge);
             dsu.unite(edge.u, edge.v);
-            if (mst.size() == V - 1) { // MST has V-1 edges
+            if (mst.size() == V - 1) { 
                 break;
             }
         }
@@ -69,9 +63,8 @@ std::vector<Edge> kruskalMST(int V, std::vector<Edge>& edges) {
     return mst;
 }
 
-// Main function for demonstration (example usage)
 int main() {
-    int V = 4; // Number of vertices
+    int V = 4; 
     std::vector<Edge> edges = {
         {0, 1, 10},
         {1, 3, 15},
