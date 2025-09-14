@@ -1,3 +1,3 @@
-double testScore1 = 85.5; // Single test score
-    double scores[5]; // Array to hold 5 test scores
-    std::vector<double> studentScores; // Vector to hold a dynamic number of scores
+double testScore1 = 85.5; 
+    double scores[5]; 
+    std::vector<double> studentScores; 
