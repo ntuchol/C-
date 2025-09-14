@@ -50,6 +50,6 @@ bool solveNQueens(std::vector<std::vector<int>>& board, int col) {
 
 int main() {
     std::vector<std::vector<int>> board(N, std::vector<int>(N, 0));
-    solveNQueens(board, 0); // Start placing queens from column 0
+    solveNQueens(board, 0); 
     return 0;
 }
