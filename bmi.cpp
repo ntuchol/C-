@@ -24,5 +24,5 @@ int main() {
         std::cout << "Category: Obesity" << std::endl;
     }
 
-    return 0; // Indicate successful program execution
+    return 0; 
 }
