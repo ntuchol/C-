@@ -1,5 +1,5 @@
 #include <iostream>
-#include <iomanip> // For setprecision
+#include <iomanip>
 
 int main() {
     int numFloors, roomsOnFloor, occupiedRoomsOnFloor;
@@ -10,20 +10,17 @@ int main() {
     std::cout << "Enter the number of floors in the hotel: ";
     std::cin >> numFloors;
 
-    // Input validation for numFloors (e.g., numFloors >= 1)
 
     for (int i = 1; i <= numFloors; ++i) {
-        if (i == 13) { // Skipping the 13th floor
+        if (i == 13) { 
             continue;
         }
 
         std::cout << "Enter the number of rooms on floor " << i << ": ";
         std::cin >> roomsOnFloor;
-        // Input validation for roomsOnFloor (e.g., roomsOnFloor >= 10)
 
         std::cout << "Enter the number of occupied rooms on floor " << i << ": ";
         std::cin >> occupiedRoomsOnFloor;
-        // Input validation for occupiedRoomsOnFloor (e.g., 0 <= occupiedRoomsOnFloor <= roomsOnFloor)
 
         totalRooms += roomsOnFloor;
         totalOccupiedRooms += occupiedRoomsOnFloor;
