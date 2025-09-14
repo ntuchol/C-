@@ -11,7 +11,7 @@ double stirlingApproximation(int n) {
     }
 
     const double PI = std::numbers::pi; 
-    const double E = std::exp(1.0); // Euler's number
+    const double E = std::exp(1.0); 
 
     return std::sqrt(2 * PI * n) * std::pow((n / E), n);
 }
