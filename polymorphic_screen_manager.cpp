@@ -1,9 +1,9 @@
 class Screen {
     public:
-        virtual void handleInput() = 0; // Pure virtual function
-        virtual void update() = 0;    // Pure virtual function
-        virtual void render() = 0;    // Pure virtual function
-        virtual ~Screen() {}          // Virtual destructor for proper cleanup
+        virtual void handleInput() = 0; 
+        virtual void update() = 0;   
+        virtual void render() = 0;    
+        virtual ~Screen() {}          
     };
 
 class MainMenuScreen : public Screen {
