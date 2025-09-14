@@ -3,7 +3,6 @@
         virtual double area() const = 0;
         virtual double perimeter() const = 0;
         virtual void display() const = 0;
-        // Virtual destructor is important for proper cleanup in polymorphic hierarchies
         virtual ~Shape() {} 
     };
     
@@ -18,5 +17,6 @@
     };
     
     Shape* myShape = new Circle(5.0);
-    double calculatedArea = myShape->area(); // Calls Circle::area()
+    double calculatedArea = myShape->area(); 
+    Circle::area()
     delete myShape; // Important for memory management
