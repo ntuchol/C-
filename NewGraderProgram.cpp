@@ -1,18 +1,18 @@
 
 
 #include <iostream>
-#include <fstream> // For file input/output
-#include <iomanip> // For output formatting
+#include <fstream> 
+#include <iomanip> 
 
 int main() {
-    std::ifstream inputFile("scores.txt"); // Open the input file
+    std::ifstream inputFile("scores.txt"); 
     if (!inputFile.is_open()) {
         std::cerr << "Error: Could not open scores.txt" << std::endl;
         return 1;
     }
 
     double score, total;
-    inputFile >> score >> total; // Read score and total from file
+    inputFile >> score >> total; 
     inputFile.close();
 
     if (total <= 0) {
@@ -22,7 +22,7 @@ int main() {
 
     double percentage = (score / total) * 100.0;
 
-    std::cout << std::fixed << std::setprecision(2); // Format output to 2 decimal places
+    std::cout << std::fixed << std::setprecision(2); 
     std::cout << "Student Score: " << score << std::endl;
     std::cout << "Total Possible: " << total << std::endl;
     std::cout << "Percentage: " << percentage << "%" << std::endl;
