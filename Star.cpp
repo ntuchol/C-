@@ -1,16 +1,15 @@
 struct Star {
     std::string name;
-    double apparentMagnitude; // How bright the star appears from Earth
-    double absoluteMagnitude; // Intrinsic brightness of the star
+    double apparentMagnitude; 
+    double absoluteMagnitude; 
     double distanceLightYears;
-    std::string spectralType; // e.g., O, B, A, F, G, K, M
+    std::string spectralType; 
     double temperatureKelvin; 
     double massSolarMasses;
     double radiusSolarRadii;
 };
 
 #include <fstream>
-// ... (Your Star struct definition)
 
 void saveStarsToFile(const std::vector<Star>& stars, const std::string& filename) {
     std::ofstream outputFile(filename);
@@ -32,14 +31,12 @@ void saveStarsToFile(const std::vector<Star>& stars, const std::string& filename
 }
 
 #include <iostream>
-// ... (Your Star struct definition)
 
 Star getStarDataFromUser() {
     Star newStar;
     std::cout << "Enter star name: ";
-    std::getline(std::cin >> std::ws, newStar.name); // Handles spaces in name
+    std::getline(std::cin >> std::ws, newStar.name); 
     std::cout << "Enter apparent magnitude: ";
     std::cin >> newStar.apparentMagnitude;
-    // ... (Repeat for other characteristics)
     return newStar;
 }
