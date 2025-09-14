@@ -1,13 +1,12 @@
 #include <iostream>
-#include <cctype> // Required for toupper and tolower
-
+#include <cctype> 
 int main() {
     char ch = 'a';
-    char upper_ch = toupper(ch); // upper_ch will be 'A'
+    char upper_ch = toupper(ch); 
     std::cout << "Uppercase: " << upper_ch << std::endl;
 
     char ch2 = 'B';
-    char lower_ch = tolower(ch2); // lower_ch will be 'b'
+    char lower_ch = tolower(ch2); 
     std::cout << "Lowercase: " << lower_ch << std::endl;
 
     return 0;
@@ -15,19 +14,17 @@ int main() {
 
 #include <iostream>
 #include <string>
-#include <algorithm> // Required for std::transform
-#include <cctype>    // Required for toupper and tolower
+#include <algorithm> 
+#include <cctype>    
 
 int main() {
     std::string text = "Hello World!";
 
-    // Convert to uppercase
     std::transform(text.begin(), text.end(), text.begin(), ::toupper);
-    std::cout << "Uppercase string: " << text << std::endl; // Output: HELLO WORLD!
+    std::cout << "Uppercase string: " << text << std::endl; 
 
-    // Convert to lowercase
     std::transform(text.begin(), text.end(), text.begin(), ::tolower);
-    std::cout << "Lowercase string: " << text << std::endl; // Output: hello world!
+    std::cout << "Lowercase string: " << text << std::endl; 
 
     return 0;
 }
