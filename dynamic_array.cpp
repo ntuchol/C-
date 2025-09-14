@@ -4,4 +4,4 @@ dynamicArray[0] = 10;
 *(dynamicArray + 1) = 20;
 
 delete[] dynamicArray;
-dynamicArray = nullptr; // Good practice to set the pointer to nullptr after deletion
+dynamicArray = nullptr; 
