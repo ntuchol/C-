@@ -11,7 +11,7 @@
         };
 
         bool comparePeople(const Person& a, const Person& b) {
-            return a.lastName < b.lastName; // Sort by last name
+            return a.lastName < b.lastName; 
         }
 
         std::vector<Person> people = {{"Alice", "Smith"}, {"Bob", "Johnson"}, {"Charlie", "Adams"}};
