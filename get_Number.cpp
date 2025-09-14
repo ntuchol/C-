@@ -6,7 +6,6 @@
         std::cin >> number;
         return number;
     }
-
     int main() {
         int myNumber = getNumberFromUser();
         std::cout << "You entered: " << myNumber << std::endl;
