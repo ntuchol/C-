@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath> // For sqrt()
+#include <cmath> 
 
 double a, b, c;
     std::cout << "Enter coefficients a, b, and c: ";
