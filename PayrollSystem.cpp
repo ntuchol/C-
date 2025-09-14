@@ -18,10 +18,9 @@ public:
         return hoursWorked * hourlyRate;
     }
 
-    // This is a simplified example, actual tax calculation is more complex
     double calculateNetPay() const {
         double grossPay = calculateGrossPay();
-        double taxDeduction = grossPay * 0.15; // Example 15% tax
+        double taxDeduction = grossPay * 0.15; 
         return grossPay - taxDeduction;
     }
 
@@ -35,5 +34,4 @@ public:
     }
 };
 
-// In a full system, you would have a main function managing a collection of Employee objects
 // and offering menu-driven options for various payroll operations.
