@@ -1,19 +1,18 @@
-// Example using GCC/Clang syntax
 void my_assembly_function() {
     asm volatile (
-        "movl $1, %eax\n" // Move 1 into EAX register
-        "ret\n"          // Return from function
+        "movl $1, %eax\n" 
+        "ret\n"          
     );
 }
 
 int main() {
-    my_assembly_function(); // Call the inline assembly routine
+    my_assembly_function(); 
     return 0;
 }
 
-extern "C" void my_assembly_function_external(); // Declare external assembly function
+extern "C" void my_assembly_function_external(); 
 
     int main() {
-        my_assembly_function_external(); // Call the external assembly routine
+        my_assembly_function_external(); 
         return 0;
     }
