@@ -23,7 +23,7 @@ int main() {
 
   double monthlyPayment = (loanAmount * monthlyInterestRate * pow(1 + monthlyInterestRate, numberOfPayments)) / (pow(1 + monthlyInterestRate, numberOfPayments) - 1);
 
-  cout << fixed << setprecision(2); // Format output to two decimal places
+  cout << fixed << setprecision(2); 
   cout << "Monthly Payment: $" << monthlyPayment << endl;
 
   return 0;
