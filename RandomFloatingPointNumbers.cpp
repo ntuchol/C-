@@ -6,7 +6,7 @@
     int main() {
         std::default_random_engine generator; 
 
-        std::uniform_real_distribution<double> distribution(0.0, 100.0); // Range [0.0, 100.0)
+        std::uniform_real_distribution<double> distribution(0.0, 100.0); 
 
         std::vector<double> random_numbers;
         int num_elements = 10;
