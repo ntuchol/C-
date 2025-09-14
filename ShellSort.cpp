@@ -18,7 +18,6 @@ void shellSort(std::vector<int>& arr) {
     }
 }
 
-// Utility function to print the array
 void printArray(const std::vector<int>& arr) {
     for (int x : arr) {
         std::cout << x << " ";
