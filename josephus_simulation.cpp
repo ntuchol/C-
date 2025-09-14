@@ -1,6 +1,6 @@
 #include <iostream>
-    #include <vector>
-    #include <numeric> 
+#include <vector>
+#include <numeric> 
 
     int josephus_simulation(int n, int k) {
         std::vector<int> people(n);
