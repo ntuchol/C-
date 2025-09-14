@@ -1,21 +1,16 @@
 #include <iostream>
-#include <queue> // Required for std::queue
-
+#include <queue> 
 int main() {
-    std::queue<int> myIntQueue; // Declare an int queue
-
-    // Add elements to the queue
+    std::queue<int> myIntQueue; 
+    
     myIntQueue.push(10);
     myIntQueue.push(20);
     myIntQueue.push(30);
 
-    // Access the front element
-    std::cout << "Front element: " << myIntQueue.front() << std::endl; // Output: 10
+    std::cout << "Front element: " << myIntQueue.front() << std::endl; 
 
-    // Remove elements from the queue
-    myIntQueue.pop(); // Removes 10
+    myIntQueue.pop(); 
 
-    // Check if the queue is empty and print remaining elements
     while (!myIntQueue.empty()) {
         std::cout << "Dequeued: " << myIntQueue.front() << std::endl;
         myIntQueue.pop();
