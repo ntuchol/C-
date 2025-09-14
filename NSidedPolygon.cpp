@@ -1,8 +1,7 @@
 #include <iostream>
 #include <vector>
-#include <cmath> // For M_PI, cos, and sin
+#include <cmath> 
 
-// Function to calculate the vertices of a regular n-sided polygon
 std::vector<std::pair<double, double>> calculatePolygonVertices(int numSides, double radius) {
     std::vector<std::pair<double, double>> vertices;
     if (numSides < 3) {
@@ -10,8 +9,8 @@ std::vector<std::pair<double, double>> calculatePolygonVertices(int numSides, do
         return vertices;
     }
 
-    double angleIncrement = 2 * M_PI / numSides; // Angle between consecutive vertices
-
+    double angleIncrement = 2 * M_PI / numSides; 
+    
     for (int i = 0; i < numSides; ++i) {
         double angle = i * angleIncrement;
         double x = radius * cos(angle);
