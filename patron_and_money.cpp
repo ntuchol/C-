@@ -37,7 +37,7 @@ class Patron {
 private:
     std::string name;
     int patronID;
-    Account checkingAccount; // Each patron has a checking account
+    Account checkingAccount; 
 public:
     Patron(const std::string& n, int id) : name(n), patronID(id) {}
 
