@@ -9,7 +9,7 @@ void printLowerTriangular(const std::vector<std::vector<int>>& matrix) {
     for (int i = 0; i < rows; ++i) {
         for (int j = 0; j < cols; ++j) {
             if (i < j) {
-                std::cout << "0 "; // Elements above the diagonal are zero
+                std::cout << "0 "; 
             } else {
                 std::cout << matrix[i][j] << " ";
             }
