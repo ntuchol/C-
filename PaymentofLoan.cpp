@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>
-#include <iomanip> // Required for setprecision and fixed
+#include <iomanip> 
 
 using namespace std;
 
@@ -20,7 +20,7 @@ int main() {
 
     double monthlyPayment = (principal * monthlyInterestRate * pow(1 + monthlyInterestRate, numberOfPayments)) / (pow(1 + monthlyInterestRate, numberOfPayments) - 1);
 
-    cout << fixed << setprecision(2); // Format output to 2 decimal places
+    cout << fixed << setprecision(2); 
     cout << "Monthly Payment: $" << monthlyPayment << endl;
 
     return 0;
