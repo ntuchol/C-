@@ -30,5 +30,4 @@ void treeSort(int arr[], int n) {
         root = insert(root, arr[i]);
     }
     inorderTraversal(root); 
-    // Remember to deallocate tree memory
 }
