@@ -13,7 +13,6 @@ int main() {
     };
 
     std::sort(paths.begin(), paths.end(), [](const std::string& a, const std::string& b) {
-        // Example: Sort by parent path first, then by filename
         std::filesystem::path path_a(a);
         std::filesystem::path path_b(b);
 
