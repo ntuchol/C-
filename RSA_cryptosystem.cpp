@@ -1,7 +1,6 @@
 #include <iostream>
-#include <numeric> // For std::gcd
+#include <numeric> 
 
-// Function to compute base^expo mod m
 long long power(long long base, long long expo, long long m) {
     long long res = 1;
     base %= m;
@@ -13,16 +12,14 @@ long long power(long long base, long long expo, long long m) {
     return res;
 }
 
-// Function to find modular inverse of e modulo phi
 long long modInverse(long long e, long long phi) {
     for (long long d = 2; d < phi; d++) {
         if ((e * d) % phi == 1) return d;
     }
-    return -1; // Should not happen with valid e and phi
+    return -1;
 }
 
 int main() {
-    // Simplified example with small primes
     long long p = 7;
     long long q = 11;
 
