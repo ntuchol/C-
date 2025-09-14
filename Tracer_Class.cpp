@@ -15,10 +15,8 @@ private:
     std::string m_functionName;
 };
 
-// Usage example:
 void myFunction() {
-    Tracer tracer("myFunction"); // Automatically logs entry and exit
-    // ... function logic ...
+    Tracer tracer("myFunction"); 
 }
 
 int main() {
