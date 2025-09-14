@@ -1,16 +1,15 @@
 #include <iostream>
-#include <limits> // Required for std::numeric_limits
-
+#include <limits> 
 int get_integer_input() {
     int value;
     while (true) {
         std::cout << "Enter an integer: ";
-        if (std::cin >> value) { // Attempt to read the integer
-            return value; // Input is valid, return the value
+        if (std::cin >> value) { 
+            return value; 
         } else {
             std::cout << "Invalid input. Please enter a valid integer." << std::endl;
-            std::cin.clear(); // Clear the error state
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Discard invalid input
+            std::cin.clear(); 
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
         }
     }
 }
