@@ -1,6 +1,5 @@
 #include <iostream>
-#include <iomanip> // For setprecision
-
+#include <iomanip> 
 int main() {
     float x1, y1, x2, y2;
     float slope;
@@ -15,7 +14,6 @@ int main() {
     std::cout << "Enter the y-coordinate of the second point (y2): ";
     std::cin >> y2;
 
-    // Check for vertical line (undefined slope)
     if (x2 - x1 == 0) {
         std::cout << "The line is vertical, and its slope is undefined." << std::endl;
     } else {
