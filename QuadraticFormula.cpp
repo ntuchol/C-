@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath> // For sqrt() function
+#include <cmath> 
 
 int main() {
     double a, b, c;
@@ -16,7 +16,7 @@ int main() {
     } else if (discriminant == 0) {
         double root = -b / (2 * a);
         std::cout << "Roots are real and same: " << root << std::endl;
-    } else { // discriminant < 0
+    } else { 
         double realPart = -b / (2 * a);
         double imaginaryPart = sqrt(std::abs(discriminant)) / (2 * a);
         std::cout << "Roots are complex and different: " << realPart << " + i" << imaginaryPart
