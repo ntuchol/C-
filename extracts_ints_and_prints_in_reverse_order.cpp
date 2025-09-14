@@ -7,6 +7,6 @@ def extract_and_reverse_digits(number):
   while number > 0:
     digit = number % 10  
     print(digit, end=" ")
-    number //= 10        
+    number = 10        
 
 extract_and_reverse_digits(12345)
