@@ -17,7 +17,7 @@ int romanToDecimal(const std::string& roman) {
                 result += s1;
             } else {
                 result += (s2 - s1);
-                i++; // Skip the next character as it's already processed
+                i++; 
             }
         } else {
             result += s1;
