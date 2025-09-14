@@ -6,9 +6,8 @@ private:
 public:
     MyNumber(int val) : value(val) {}
 
-    // Overload unary minus operator
     MyNumber operator-() const {
-        return MyNumber(-value); // Returns a new MyNumber object with negated value
+        return MyNumber(-value); 
     }
 
     void display() const {
@@ -18,8 +17,7 @@ public:
 
 int main() {
     MyNumber num1(10);
-    MyNumber num2 = -num1; // Calls the overloaded unary minus
-
+    MyNumber num2 = -num1; 
     num1.display();
     num2.display();
 
