@@ -1,6 +1,6 @@
 int my_int = 123;
-  long big_int = 1000000L; // L suffix for long
-  float my_float = 3.14f; // f suffix for float
+  long big_int = 1000000L; 
+  float my_float = 3.14f; 
   double my_double = 19.99;
     int large_number = 1'000'000;
 
