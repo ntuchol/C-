@@ -36,7 +36,7 @@ int main() {
     std::cout << "Public Key (e, n): (" << e << ", " << n << ")\n";
     std::cout << "Private Key (d, n): (" << d << ", " << n << ")\n";
 
-    long long message = 5; // Example message
+    long long message = 5; 
     std::cout << "Original Message: " << message << "\n";
 
     long long encrypted_message = power(message, e, n);
