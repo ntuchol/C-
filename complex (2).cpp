@@ -2,8 +2,8 @@
 #include <complex>
 
 int main() {
-    std::complex<double> z1(3.0, 4.0); // Represents 3 + 4i
-    std::complex<double> z2(1.0, 2.0); // Represents 1 + 2i
+    std::complex<double> z1(3.0, 4.0);
+    std::complex<double> z2(1.0, 2.0); 
 
     std::cout << "z1 = " << z1 << std::endl;
     std::cout << "z2 = " << z2 << std::endl;
