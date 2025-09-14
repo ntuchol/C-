@@ -14,7 +14,7 @@ int main() {
         taxRate = 0.10;
     } else if (income <= 50000) {
         taxRate = 0.20;
-    } else { // For incomes greater than 50000
+    } else { 
         taxRate = 0.30;
     }
 
