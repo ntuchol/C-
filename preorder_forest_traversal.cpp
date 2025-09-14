@@ -18,7 +18,6 @@ void preorderTraversal(Node* root) {
     preorderTraversal(root->right);  
 }
 
-// Function for preorder traversal of a forest
 void preorderForestTraversal(const std::vector<Node*>& forestRoots) {
     for (Node* root : forestRoots) {
         if (root != nullptr) {
