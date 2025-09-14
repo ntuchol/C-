@@ -1,5 +1,5 @@
 #include <iostream>
-#include <string> // For std::string
+#include <string> 
 
 struct Student {
     std::string name;
@@ -8,17 +8,15 @@ struct Student {
 };
 
 int main() {
-    Student s1; // Create a Student variable
-
-    // Get input from the user
+    Student s1; 
+    
     std::cout << "Enter student name: ";
-    std::getline(std::cin, s1.name); // Use getline for names with spaces
+    std::getline(std::cin, s1.name); 
     std::cout << "Enter roll number: ";
     std::cin >> s1.rollNumber;
     std::cout << "Enter marks: ";
     std::cin >> s1.marks;
 
-    // Display the stored information
     std::cout << "\nStudent Information:\n";
     std::cout << "Name: " << s1.name << std::endl;
     std::cout << "Roll Number: " << s1.rollNumber << std::endl;
