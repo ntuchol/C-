@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath> // Required for std::exp()
+#include <cmath> 
 
 int main() {
     double value = 1.0;
