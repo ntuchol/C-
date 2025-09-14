@@ -15,7 +15,6 @@ int main() {
     long long deposit_cents = 2575;  // $25.75
     long long total_cents = balance_cents + deposit_cents;
     
-    // Convert back to dollars and cents for display
     double total_dollars = static_cast<double>(total_cents) / 100.0;
     std::cout << "Total money: $" << total_dollars << std::endl;
     return 0;
