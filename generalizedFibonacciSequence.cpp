@@ -1,5 +1,6 @@
 #include <iostream>
 
+
 void generateGeneralizedFibonacci(int a, int b, int n) {
     if (n <= 0) {
         return; 
