@@ -1,12 +1,10 @@
 #include <iostream>
 
 int main() {
-    // Declare variables for the two bases and the height
     double base1;
     double base2;
     double height;
 
-    // Prompt the user to enter the values
     std::cout << "Enter the length of the first base (base1): ";
     std::cin >> base1;
 
@@ -16,10 +14,8 @@ int main() {
     std::cout << "Enter the height of the trapezoid: ";
     std::cin >> height;
 
-    // Calculate the area using the formula
-    double area = (base1 + base2) * height / 2.0; // Use 2.0 for floating-point division
-
-    // Display the calculated area
+    double area = (base1 + base2) * height / 2.0; 
+    
     std::cout << "The area of the trapezoid is: " << area << std::endl;
 
     return 0;
