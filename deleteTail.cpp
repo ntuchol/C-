@@ -1,8 +1,8 @@
 void deleteTail(Node*& head, Node*& tail) {
-    if (head == nullptr) { // Empty list
+    if (head == nullptr) { 
         return;
     }
-    if (head == tail) { // Single node list
+    if (head == tail) { 
         delete head;
         head = nullptr;
         tail = nullptr;
@@ -15,10 +15,8 @@ void deleteTail(Node*& head, Node*& tail) {
         prev = current;
         current = current->next;
     }
-    // Now 'current' is the second-to-last node
-    // and 'tail' is the last node
 
     delete tail;
     tail = current;
-    tail->next = nullptr; // Disconnect the old tail
+    tail->next = nullptr; 
 }
