@@ -6,4 +6,4 @@
     } while (0)
     
 int x = 5, y = 10;
-SWAP_TEMP(int, x, y); // Swaps x and y
+SWAP_TEMP(int, x, y); 
