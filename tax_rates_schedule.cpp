@@ -10,12 +10,10 @@ int main() {
     cout << "Enter your annual income: ";
     cin >> income;
 
-    // Define tax brackets and rates
     const int numBrackets = 4;
     double brackets[numBrackets] = {10000, 40000, 80000, 150000};
     double rates[numBrackets] = {0.10, 0.15, 0.25, 0.30};
 
-    // Calculate tax for each bracket
     for (int i = 0; i < numBrackets; ++i) {
         if (income > brackets[i]) {
             double taxableAmount;
