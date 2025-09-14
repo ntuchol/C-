@@ -48,4 +48,4 @@ int main() {
    int q = 101; 
    rabinKarp(text, pattern, q);
 return 0;
-// }
+}
