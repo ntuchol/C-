@@ -35,7 +35,6 @@ void bellmanFord(int V, int E, const std::vector<Edge>& edges, int source) {
             return;
         }
     }
-
     std::cout << "Shortest distances from source " << source << ":" << std::endl;
     for (int i = 0; i < V; ++i) {
         if (distance[i] == std::numeric_limits<long long>::max()) {
