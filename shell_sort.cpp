@@ -1,23 +1,18 @@
 #include <iostream>
 #include <vector>
-#include <algorithm> // For std::swap
+#include <algorithm> 
 
 void shellSort(std::vector<int>& arr) {
     int n = arr.size();
 
-    // Start with a large gap, then reduce the gap
     for (int gap = n / 2; gap > 0; gap /= 2) {
-        // Perform a gapped insertion sort for the current gap size
         for (int i = gap; i < n; i++) {
             int temp = arr[i];
             int j;
 
-            // Shift elements that are larger than temp to the right
-            // within the current gapped sublist
             for (j = i; j >= gap && arr[j - gap] > temp; j -= gap) {
                 arr[j] = arr[j - gap];
             }
-            // Place temp in its correct position within the gapped sublist
             arr[j] = temp;
         }
     }
