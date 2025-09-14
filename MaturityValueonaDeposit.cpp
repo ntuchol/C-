@@ -1,14 +1,13 @@
 #include <iostream>
-#include <cmath> // Required for the pow() function
-#include <iomanip> // Required for setprecision
+#include <cmath> 
+#include <iomanip> 
 
 int main() {
     double principal;
     double annualRate;
-    int compoundingFrequency; // e.g., 1 for annually, 12 for monthly
+    int compoundingFrequency; 
     double timeInYears;
 
-    // Get input from the user
     std::cout << "Enter the principal amount: ";
     std::cin >> principal;
 
@@ -21,11 +20,9 @@ int main() {
     std::cout << "Enter the time in years: ";
     std::cin >> timeInYears;
 
-    // Calculate the maturity value
     double maturityValue = principal * pow((1 + annualRate / compoundingFrequency), (compoundingFrequency * timeInYears));
 
-    // Display the result
-    std::cout << std::fixed << std::setprecision(2); // Format output to two decimal places
+    std::cout << std::fixed << std::setprecision(2); 
     std::cout << "The maturity value of the deposit is: $" << maturityValue << std::endl;
 
     return 0;
