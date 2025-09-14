@@ -8,7 +8,6 @@ int main() {
     char ch2 = 'B';
     char lower_ch = tolower(ch2); 
     std::cout << "Lowercase: " << lower_ch << std::endl;
-
     return 0;
 }
 
