@@ -1,9 +1,9 @@
 #include <iostream>
-#include <cstdlib> // For rand() and srand()
-#include <ctime>   // For time()
+#include <cstdlib> 
+#include <ctime>   
 
 int main() {
-    srand(time(NULL)); // Seed the random number generator
+    srand(time(NULL)); 
 
     int current_position = 0;
     int num_steps = 10;
@@ -11,12 +11,11 @@ int main() {
     std::cout << "Starting position: " << current_position << std::endl;
 
     for (int i = 0; i < num_steps; ++i) {
-        int direction = rand() % 2; // 0 for left, 1 for right
-
+        int direction = rand() % 2; 
         if (direction == 0) {
-            current_position--; // Move left
+            current_position--; 
         } else {
-            current_position++; // Move right
+            current_position++; 
         }
         std::cout << "After step " << i + 1 << ": " << current_position << std::endl;
     }
