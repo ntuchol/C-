@@ -13,11 +13,9 @@ int main() {
     std::cout << "Enter the loan term in years: ";
     std::cin >> years;
 
-    // Calculate monthly rate and total payments
     double monthlyRate = annualRate / 12.0;
     int totalPayments = years * 12;
 
-    // Calculate monthly payment
     double monthlyPayment = principal * (monthlyRate * std::pow(1 + monthlyRate, totalPayments)) / (std::pow(1 + monthlyRate, totalPayments) - 1);
 
     std::cout << std::fixed << std::setprecision(2);
