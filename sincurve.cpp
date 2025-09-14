@@ -1,13 +1,12 @@
 #include <iostream>
 #include <cmath>
-    const double PI = 3.141592653589793; // Define PI if M_PI is not available
+    const double PI = 3.141592653589793; 
     double angle_degrees = 90.0;
     double angle_radians = angle_degrees * (PI / 180.0);
     double sine_value = sin(angle_radians);
     
 
 int main() {
-    // Define PI if M_PI is not available in your compiler's cmath
     #ifndef M_PI
     const double M_PI = 3.14159265358979323846;
     #endif
