@@ -1,9 +1,8 @@
 #include <iostream>
 #include <string>
-#include <cctype> // For isupper, islower, isdigit
-
+#include <cctype> 
 bool verifyPassword(const std::string& password) {
-    if (password.length() < 8) { // Example: Minimum 8 characters
+    if (password.length() < 8) { 
         std::cout << "Password must be at least 8 characters long.\n";
         return false;
     }
@@ -11,8 +10,8 @@ bool verifyPassword(const std::string& password) {
     bool hasUppercase = false;
     bool hasLowercase = false;
     bool hasDigit = false;
-    bool hasSpecial = false; // Optional: For special characters
-
+    bool hasSpecial = false; 
+    
     for (char c : password) {
         if (isupper(c)) {
             hasUppercase = true;
@@ -20,7 +19,7 @@ bool verifyPassword(const std::string& password) {
             hasLowercase = true;
         } else if (isdigit(c)) {
             hasDigit = true;
-        } else if (ispunct(c) || c == ' ') { // Example: Punctuation or space as special
+        } else if (ispunct(c) || c == ' ') { 
             hasSpecial = true;
         }
     }
@@ -37,13 +36,13 @@ bool verifyPassword(const std::string& password) {
         std::cout << "Password must contain at least one digit.\n";
         return false;
     }
-    // Optional: Check for special character
-    // if (!hasSpecial) {
-    //     std::cout << "Password must contain at least one special character.\n";
-    //     return false;
-    // }
+    
+if (!hasSpecial) {
+    std::cout << "Password must contain at least one special character.\n";
+    return false;
+}
 
-    return true; // Password is valid
+    return true; 
 }
 
 int main() {
