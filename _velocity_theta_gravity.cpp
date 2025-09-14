@@ -1,6 +1,4 @@
-#include <cmath> // For std::cos, std::sin, std::atan2
-
-// Function to calculate projectile motion at a given time
+#include <cmath> 
 struct ProjectileState {
     double x;
     double y;
