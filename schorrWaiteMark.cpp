@@ -1,12 +1,10 @@
 #include <iostream>
 
-// Represents a node in the binary tree
 struct Node {
     Node* left;
     Node* right;
-    bool marked; // Mark bit for reachability
-    int state;   // 0: unvisited, 1: visiting left, 2: visiting right
-
+    bool marked; 
+    int state;   
     Node(Node* l = nullptr, Node* r = nullptr) : left(l), right(r), marked(false), state(0) {}
 };
 
@@ -16,51 +14,47 @@ void schorrWaiteMark(Node* root) {
     }
 
     Node* current = root;
-    Node* prev = nullptr; // Used to store the predecessor during pointer reversal
-
+    Node* prev = nullptr; 
+    
     while (current != nullptr) {
         if (!current->marked) {
-            current->marked = true; // Mark the node as visited
+            current->marked = true; 
         }
 
-        if (current->state == 0) { // First visit: try left child
+        if (current->state == 0) { 
             current->state = 1;
             if (current->left != nullptr && !current->left->marked) {
-                // Reverse pointer and move to left child
                 Node* temp = current->left;
                 current->left = prev;
                 prev = current;
                 current = temp;
-                continue; // Continue traversal
+                continue; 
             }
         }
 
-        if (current->state == 1) { // Second visit: try right child
+        if (current->state == 1) { 
             current->state = 2;
             if (current->right != nullptr && !current->right->marked) {
-                // Reverse pointer and move to right child
                 Node* temp = current->right;
                 current->right = prev;
                 prev = current;
                 current = temp;
-                continue; // Continue traversal
+                continue; 
             }
         }
 
-        // Third visit or no unmarked children: backtrack
         if (prev != nullptr) {
-            // Restore pointer and move back to parent
-            if (prev->left == current) { // Current was the left child of prev
-                prev->left = current->right; // Restore prev's left pointer
-                current->right = prev;       // Restore current's pointer to prev
-            } else { // Current was the right child of prev
-                prev->right = current->left; // Restore prev's right pointer
-                current->left = prev;        // Restore current's pointer to prev
+            if (prev->left == current) { 
+                prev->left = current->right; 
+                current->right = prev;       
+            } else { 
+                prev->right = current->left; 
+                current->left = prev;        
             }
             Node* temp = prev;
             prev = current;
             current = temp;
-        } else { // Back to the root, traversal complete
+        } else { 
             break;
         }
     }
