@@ -1,25 +1,22 @@
 #include <iostream>
 #include <vector>
-#include <numeric> // For std::accumulate
-#include <cmath>   // For std::pow and std::sqrt
+#include <numeric> 
+#include <cmath>  
 
 double calculateStandardDeviation(const std::vector<double>& data) {
     if (data.empty()) {
-        return 0.0; // Handle empty data set
+        return 0.0; 
     }
 
-    // 1. Calculate the mean
     double sum = std::accumulate(data.begin(), data.end(), 0.0);
     double mean = sum / data.size();
 
-    // 2. Calculate the variance
     double variance_sum = 0.0;
     for (double val : data) {
         variance_sum += std::pow(val - mean, 2);
     }
-    double variance = variance_sum / data.size(); // Population standard deviation
+    double variance = variance_sum / data.size(); 
 
-    // 3. Calculate the standard deviation
     return std::sqrt(variance);
 }
 
