@@ -1,6 +1,6 @@
-#include <algorithm> // Required for std::binary_search
-    #include <vector>
-    #include <iostream>
+#include <algorithm> 
+#include <vector>
+#include <iostream>
 
     int main() {
         std::vector<int> data = {1, 3, 5, 7, 9, 11};
