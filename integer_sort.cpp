@@ -1,11 +1,10 @@
 #include <iostream>
 #include <vector>
-#include <algorithm> // Required for std::sort
+#include <algorithm> 
 
 int main() {
     std::vector<int> numbers = {7, 1, 5, 3, 9, 2, 8, 4, 6};
 
-    // Sort in ascending order
     std::sort(numbers.begin(), numbers.end());
     std::cout << "Sorted in ascending order: ";
     for (int num : numbers) {
@@ -13,7 +12,6 @@ int main() {
     }
     std::cout << std::endl;
 
-    // Sort in descending order
     std::sort(numbers.begin(), numbers.end(), std::greater<int>());
     std::cout << "Sorted in descending order: ";
     for (int num : numbers) {
