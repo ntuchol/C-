@@ -1,5 +1,5 @@
 #include <iostream>
-#include <iomanip> // For setprecision and fixed
+#include <iomanip> 
 
 int main() {
     int numPennies = 10;
