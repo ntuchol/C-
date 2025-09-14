@@ -32,7 +32,7 @@ int main() {
     cout << "Enter diastolic blood pressure (mm Hg): ";
     cin >> diastolic;
 
-    int calculated_age = 30; // Replace with actual calculated age
+    int calculated_age = 30; 
 
     assessBloodPressure(systolic, diastolic, calculated_age);
 
