@@ -1,11 +1,11 @@
 #include <iostream>
-#include <iomanip> // For formatting output
+#include <iomanip> 
 
 int main() {
     double initialBalance;
     double currentBalance;
     double totalServiceCharges = 0.0;
-    const double CHECK_SERVICE_CHARGE = 0.25; // Example service charge
+    const double CHECK_SERVICE_CHARGE = 0.25; 
 
     std::cout << "Welcome to the Checkbook Balancer!" << std::endl;
     std::cout << "Enter your initial balance: $";
@@ -18,8 +18,7 @@ int main() {
     do {
         std::cout << "\nEnter transaction type (D for Deposit, C for Check, E to End): ";
         std::cin >> transactionType;
-        transactionType = toupper(transactionType); // Convert to uppercase for case-insensitivity
-
+        transactionType = toupper(transactionType); 
         if (transactionType == 'D') {
             std::cout << "Enter deposit amount: $";
             std::cin >> transactionAmount;
@@ -47,7 +46,6 @@ int main() {
         }
     } while (transactionType != 'E');
 
-    // Deduct total service charges at the end
     currentBalance -= totalServiceCharges;
 
     std::cout << "\n--- End of Month Summary ---" << std::endl;
