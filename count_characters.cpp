@@ -1,7 +1,6 @@
 #include <iostream>
     #include <string>
-    #include <algorithm> // For std::count
-
+    #include <algorithm> 
     int main() {
         std::string text = "hello world";
         char target_char = 'o';
