@@ -1,16 +1,16 @@
 #include <iostream>
-#include <cmath> // For sqrt()
+#include <cmath> 
 
 bool isPrime(int n) {
     if (n <= 1) {
-        return false; // Numbers less than or equal to 1 are not prime
+        return false; 
     }
     for (int i = 2; i <= sqrt(n); ++i) {
         if (n % i == 0) {
-            return false; // Found a divisor, so it's not prime
+            return false; 
         }
     }
-    return true; // No divisors found, so it's prime
+    return true; 
 }
 
 int main() {
