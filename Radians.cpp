@@ -1,5 +1,5 @@
     radians = degrees * (PI / 180.0)
-#include <cmath> // For sin() and M_PI
+    #include <cmath> 
     #include <iostream>
 
     int main() {
