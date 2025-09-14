@@ -1,5 +1,5 @@
-#include <iostream> // For std::cout
-#include <cstdlib>  // For rand() and RAND_MAX
+#include <iostream> 
+#include <cstdlib>  
 
 int main() {
     int randomNumber = rand();
