@@ -3,7 +3,7 @@
 
 int main() {
     int num = 42;
-    std::cout << std::setw(5) << num << std::endl; // Output:    42
+    std::cout << std::setw(5) << num << std::endl; 
     return 0;
 }
 
@@ -12,7 +12,7 @@ int main() {
 
 int main() {
     int num = 42;
-    std::cout << std::setfill('0') << std::setw(5) << num << std::endl; // Output: 00042
+    std::cout << std::setfill('0') << std::setw(5) << num << std::endl; 
     return 0;
 }
 
@@ -21,9 +21,9 @@ int main() {
 
 int main() {
     int num = 42;
-    std::cout << std::dec << num << std::endl; // Output: 42
-    std::cout << std::oct << num << std::endl; // Output: 52 (octal representation of 42)
-    std::cout << std::hex << num << std::endl; // Output: 2a (hexadecimal representation of 42)
+    std::cout << std::dec << num << std::endl; 
+    std::cout << std::oct << num << std::endl; 
+    std::cout << std::hex << num << std::endl; 
     return 0;
 }
 
@@ -31,15 +31,15 @@ int main() {
 #include <iomanip>
 
 int main() {
-    std::ios state(nullptr); // Create an ios object to store the state
+    std::ios state(nullptr); 
     std::cout << "The answer in decimal is: " << 42 << std::endl;
 
-    state.copyfmt(std::cout); // Save current formatting
+    state.copyfmt(std::cout); 
     std::cout << "In hex: 0x"
               << std::hex << std::uppercase << std::setw(8) << std::setfill('0')
               << 42
               << std::endl;
-    std::cout.copyfmt(state); // Restore previous formatting
+    std::cout.copyfmt(state); 
     std::cout << "Back to decimal: " << 42 << std::endl;
     return 0;
 }
