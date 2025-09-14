@@ -8,10 +8,8 @@ public:
     }
 
     void removeItem(const std::string& item) {
-        // Implement removal logic (e.g., iterating and finding the item)
     }
 
-    // You can also provide an iterator to traverse the items
     std::vector<std::string>::iterator begin() {
         return items_.begin();
     }
@@ -21,5 +19,5 @@ public:
     }
 
 private:
-    std::vector<std::string> items_; // Using a vector to hold items.
+    std::vector<std::string> items_; 
 };
