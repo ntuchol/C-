@@ -34,4 +34,3 @@ public:
     }
 };
 
-// and offering menu-driven options for various payroll operations.
