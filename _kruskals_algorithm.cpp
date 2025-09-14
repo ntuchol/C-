@@ -2,17 +2,14 @@
 #include <vector>
 #include <algorithm>
 
-// Structure to represent an edge
 struct Edge {
     int src, dest, weight;
 };
 
-// Comparator for sorting edges by weight
 bool compareEdges(const Edge& a, const Edge& b) {
     return a.weight < b.weight;
 }
 
-// Disjoint Set Union (DSU) class
 class DSU {
     std::vector<int> parent;
     std::vector<int> rank; // For union by rank
@@ -22,18 +19,16 @@ public:
         parent.resize(n);
         rank.resize(n, 0);
         for (int i = 0; i < n; ++i) {
-            parent[i] = i; // Each element is initially its own parent
+            parent[i] = i; 
         }
     }
 
-    // Find operation with path compression
     int find(int i) {
         if (parent[i] == i)
             return i;
         return parent[i] = find(parent[i]);
     }
 
-    // Union operation by rank
     void unite(int x, int y) {
         int rootX = find(x);
         int rootY = find(y);
@@ -52,7 +47,6 @@ public:
 };
 
 int kruskalMST(int V, std::vector<Edge>& edges) {
-    // Sort all edges by weight
     std::sort(edges.begin(), edges.end(), compareEdges);
 
     DSU dsu(V);
@@ -64,12 +58,10 @@ int kruskalMST(int V, std::vector<Edge>& edges) {
         int v = edge.dest;
         int weight = edge.weight;
 
-        // If including this edge does not form a cycle
         if (dsu.find(u) != dsu.find(v)) {
             dsu.unite(u, v);
             mstWeight += weight;
             edgesCount++;
-            // If V-1 edges are added, we have the MST
             if (edgesCount == V - 1) {
                 break;
             }
@@ -79,7 +71,7 @@ int kruskalMST(int V, std::vector<Edge>& edges) {
 }
 
 int main() {
-    int V = 4; // Number of vertices
+    int V = 4; 
     std::vector<Edge> edges = {
         {0, 1, 10},
         {1, 3, 15},
