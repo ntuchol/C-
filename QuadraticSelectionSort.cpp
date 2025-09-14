@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <algorithm> // For std::swap
+#include <algorithm> 
 
 void selectionSort(std::vector<int>& arr) {
     int n = arr.size();
@@ -11,7 +11,6 @@ void selectionSort(std::vector<int>& arr) {
                 min_idx = j;
             }
         }
-        // Swap the found minimum element with the first element of the unsorted part
         if (min_idx != i) {
             std::swap(arr[i], arr[min_idx]);
         }
