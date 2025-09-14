@@ -1,14 +1,13 @@
 #include <iostream>
 #include <vector>
 #include <list>
-#include <algorithm> // For std::reverse
+#include <algorithm> 
 
 class Graph {
 private:
-    int V; // Number of vertices
-    std::list<int>* adj; // Adjacency list
+    int V; 
+    std::list<int>* adj; 
 
-    // Helper function for DFS to check connectivity
     void DFSUtil(int v, std::vector<bool>& visited) {
         visited[v] = true;
         for (int neighbor : adj[v]) {
@@ -30,10 +29,9 @@ public:
 
     void addEdge(int u, int v) {
         adj[u].push_back(v);
-        adj[v].push_back(u); // For undirected graph
+        adj[v].push_back(u); 
     }
 
-    // Check if all non-zero degree vertices are connected
     bool isConnected() {
         std::vector<bool> visited(V, false);
         int i;
@@ -42,7 +40,7 @@ public:
                 break;
         }
 
-        if (i == V) // Empty graph
+        if (i == V) 
             return true;
 
         DFSUtil(i, visited);
@@ -54,19 +52,17 @@ public:
         return true;
     }
 
-    // Check if the graph has an Eulerian Circuit
     bool hasEulerCircuit() {
         if (!isConnected())
             return false;
 
         for (int i = 0; i < V; i++) {
-            if (adj[i].size() % 2 != 0) // Check if degree is odd
+            if (adj[i].size() % 2 != 0) 
                 return false;
         }
         return true;
     }
 
-    // Function to find and print Euler Circuit using Hierholzer's Algorithm
     void findEulerCircuit() {
         if (!hasEulerCircuit()) {
             std::cout << "Graph does not have an Euler Circuit." << std::endl;
@@ -75,9 +71,8 @@ public:
 
         std::vector<int> circuit;
         std::vector<int> current_path;
-        int current_vertex = 0; // Start from vertex 0
-
-        // Find a starting vertex with non-zero degree if 0 is isolated
+        int current_vertex = 0; 
+        
         for (int i = 0; i < V; ++i) {
             if (!adj[i].empty()) {
                 current_vertex = i;
@@ -92,7 +87,6 @@ public:
                 int next_vertex = adj[current_vertex].front();
                 adj[current_vertex].pop_front();
                 
-                // Remove the reverse edge as well for undirected graph
                 for(auto it = adj[next_vertex].begin(); it != adj[next_vertex].end(); ++it) {
                     if (*it == current_vertex) {
                         adj[next_vertex].erase(it);
@@ -120,7 +114,6 @@ public:
     }
 };
 
-// Example Usage
 int main() {
     Graph g1(5);
     g1.addEdge(0, 1);
@@ -129,12 +122,12 @@ int main() {
     g1.addEdge(0, 3);
     g1.addEdge(3, 4);
     g1.addEdge(4, 0);
-    g1.findEulerCircuit(); // Expected: Euler Circuit: 0 -> 4 -> 3 -> 0 -> 2 -> 1 -> 0
-
+    g1.findEulerCircuit(); 
+    
     Graph g2(3);
     g2.addEdge(0, 1);
     g2.addEdge(1, 2);
-    g2.findEulerCircuit(); // Expected: Graph does not have an Euler Circuit.
-
+    g2.findEulerCircuit(); 
+    
     return 0;
 }
