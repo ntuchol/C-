@@ -9,7 +9,7 @@ std::string caesarCipher(const std::string& text, int shift) {
             char base = isupper(c) ? 'A' : 'a';
             result += static_cast<char>((c - base + shift) % 26 + base);
         } else {
-            result += c; // Keep non-alphabetic characters as they are
+            result += c; 
         }
     }
     return result;
@@ -20,6 +20,6 @@ int main() {
     int shift = 3;
     std::string encrypted_message = caesarCipher(message, shift);
     std::cout << "Original: " << message << std::endl;
-    std::cout << "Encrypted: " << encrypted_message << std::endl; // Output: KHOOR ZRUOG
+    std::cout << "Encrypted: " << encrypted_message << std::endl; 
     return 0;
 }
