@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 
-// Define a simple Node structure for a binary tree
 struct Node {
     int data;
     Node* left;
@@ -10,14 +9,13 @@ struct Node {
     Node(int val) : data(val), left(nullptr), right(nullptr) {}
 };
 
-// Function for preorder traversal of a single binary tree
 void preorderTraversal(Node* root) {
     if (root == nullptr) {
         return;
     }
-    std::cout << root->data << " "; // Visit the root
-    preorderTraversal(root->left);   // Traverse left subtree
-    preorderTraversal(root->right);  // Traverse right subtree
+    std::cout << root->data << " "; 
+    preorderTraversal(root->left);   
+    preorderTraversal(root->right);  
 }
 
 // Function for preorder traversal of a forest
