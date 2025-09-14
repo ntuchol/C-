@@ -1,12 +1,12 @@
-int x = 10; // Global variable
+int x = 10; 
     void func() {
-        int x = 20; // Local variable
-        std::cout << ::x; // Accesses the global x (outputs 10)
+        int x = 20; 
+        std::cout << ::x; 
     }
     void myGlobalFunction() { /* ... */ }
     class MyClass {
     public:
         void memberFunction() {
-            ::myGlobalFunction(); // Calls the global myGlobalFunction
+            ::myGlobalFunction(); 
         }
     };
