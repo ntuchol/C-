@@ -1,7 +1,7 @@
-    #include <iostream> // For input/output
-    #include <vector>   // For std::vector
-    #include <string>   // For std::string
-    #include <algorithm> // For std::sort
+    #include <iostream> 
+    #include <vector>   
+    #include <string>   
+    #include <algorithm> 
     
       std::vector<std::string> names = {"Charlie", "Alice", "Bob", "David"};
       std::sort(names.begin(), names.end());
@@ -10,7 +10,6 @@
             std::string lastName;
         };
 
-        // Custom comparison function
         bool comparePeople(const Person& a, const Person& b) {
             return a.lastName < b.lastName; // Sort by last name
         }
