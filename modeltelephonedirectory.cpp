@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <algorithm> // For std::remove_if
+#include <algorithm> 
 
 class Contact {
 public:
@@ -69,6 +69,4 @@ public:
         }
     }
 };
-
-// Main function for user interaction would be implemented here
 AI responses may include mistak
