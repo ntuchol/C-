@@ -1,4 +1,4 @@
-include <iostream>
+#include <iostream>
 #include <string>
 #include <vector>
 #include <map> 
@@ -68,4 +68,4 @@ std::string lzw_decode(const std::vector<int>& encoded_codes) {
      std::cout << "Decoded text: " << decoded_text << std::endl;
 
     return 0;
-// }
+}
