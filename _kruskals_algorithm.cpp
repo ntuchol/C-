@@ -12,7 +12,7 @@ bool compareEdges(const Edge& a, const Edge& b) {
 
 class DSU {
     std::vector<int> parent;
-    std::vector<int> rank; // For union by rank
+    std::vector<int> rank; 
 
 public:
     DSU(int n) {
