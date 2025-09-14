@@ -7,25 +7,21 @@ int main() {
     std::cout << "Enter the amount of money (e.g., 15.67): $";
     std::cin >> amount_dollars;
 
-    // Convert to cents to avoid floating-point precision issues
-    int amount_cents = static_cast<int>(amount_dollars * 100 + 0.5); // Add 0.5 for proper rounding
-
-    // Define denominations in cents, from largest to smallest
+    int amount_cents = static_cast<int>(amount_dollars * 100 + 0.5); 
     std::vector<int> denominations = {
-        10000, // $100
-        5000,  // $50
-        2000,  // $20
-        1000,  // $10
-        500,   // $5
-        100,   // $1
-        50,    // 50 cents
-        25,    // 25 cents (quarter)
-        10,    // 10 cents (dime)
-        5,     // 5 cents (nickel)
-        1      // 1 cent (penny)
+        10000, 
+        5000,  
+        2000, 
+        1000,  
+        500,   
+        100,  
+        50,    
+        25,    
+        10,    
+        5,     
+        1      
     };
 
-    // Map to store the count of each denomination
     std::map<int, int> counts;
 
     std::cout << "\nBreakdown of " << amount_dollars << " into bills and coins:\n";
@@ -34,11 +30,10 @@ int main() {
         if (amount_cents >= denom) {
             int num_units = amount_cents / denom;
             counts[denom] = num_units;
-            amount_cents %= denom; // Update remaining amount
+            amount_cents %= denom; 
         }
     }
 
-    // Print the results
     for (auto const& [denom, count] : counts) {
         if (count > 0) {
             if (denom >= 100) { // Bills
