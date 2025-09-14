@@ -1,5 +1,5 @@
 #include <iostream>
-#include <algorithm> // Required for std::swap
+#include <algorithm>
 
 void cocktailSort(int arr[], int n) {
     bool swapped = true;
@@ -7,9 +7,7 @@ void cocktailSort(int arr[], int n) {
     int end = n - 1;
 
     while (swapped) {
-        swapped = false; // Reset flag for each pass
-
-        // Forward pass (like Bubble Sort)
+        swapped = false; 
         for (int i = start; i < end; ++i) {
             if (arr[i] > arr[i + 1]) {
                 std::swap(arr[i], arr[i + 1]);
@@ -17,22 +15,20 @@ void cocktailSort(int arr[], int n) {
             }
         }
 
-        // If no swaps occurred in the forward pass, the array is sorted
         if (!swapped) {
             break;
         }
 
-        swapped = false; // Reset flag for the backward pass
-        end--; // Decrease the end boundary as the largest element is now in place
-
-        // Backward pass
+        swapped = false; 
+        end--; 
+        
         for (int i = end - 1; i >= start; --i) {
             if (arr[i] > arr[i + 1]) {
                 std::swap(arr[i], arr[i + 1]);
                 swapped = true;
             }
         }
-        start++; // Increase the start boundary as the smallest element is now in place
+        start++; 
     }
 }
 
