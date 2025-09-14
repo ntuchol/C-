@@ -64,7 +64,6 @@ int main() {
         totalGrossPay += grossPay;
         totalNetPay += netPay;
     }
-
     std::cout << "\n--- Summary ---" << std::endl;
     std::cout << "Total Gross Pay: $" << totalGrossPay << std::endl;
     std::cout << "Total Net Pay: $" << totalNetPay << std::endl;
