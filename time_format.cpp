@@ -1,6 +1,6 @@
 #include <ctime>
 #include <iostream>
-#include <iomanip> // For std::put_time in C++11+
+#include <iomanip> 
 
 int main() {
     char buffer[80];
@@ -8,9 +8,7 @@ int main() {
     struct tm *timeinfo;
 
     time(&rawtime);
-    timeinfo = localtime(&rawtime); // Get local time
-
-    // Format for "YYYY-MM-DD HH:MM:SS"
+    timeinfo = localtime(&rawtime); 
     strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", timeinfo);
     std::cout << "Formatted time (strftime): " << buffer << std::endl;
 
