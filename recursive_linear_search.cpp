@@ -2,15 +2,12 @@
 #include <vector>
 
 int recursiveLinearSearch(const std::vector<int>& arr, int target, int index) {
-    // Base Case 1: Element not found (index out of bounds)
     if (index >= arr.size()) {
         return -1;
     }
-    // Base Case 2: Element found
     if (arr[index] == target) {
         return index;
     }
-    // Recursive Step: Search in the rest of the array
     return recursiveLinearSearch(arr, target, index + 1);
 }
 
