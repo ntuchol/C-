@@ -7,8 +7,8 @@ struct Rectangle {
 
 int main() {
     Rectangle building;
-    building.length = 50.0; // meters
-    building.width = 30.0;  // meters
+    building.length = 50.0; 
+    building.width = 30.0;  
 
     std::cout << "Building Length: " << building.length << " meters" << std::endl;
     std::cout << "Building Width: " << building.width << " meters" << std::endl;
