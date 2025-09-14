@@ -2,7 +2,6 @@
 #include <queue>
 #include <random>
 
-// Define structures for Customer and Event (as described above)
 struct Customer {
     int arrivalTime;
     int transactionTime;
@@ -12,27 +11,24 @@ struct Event {
     enum EventType { ARRIVAL, DEPARTURE };
     EventType type;
     int time;
-    Customer customer; // Associated customer
+    Customer customer; 
 
-    // For priority queue ordering (by event time)
-    bool operator>(const Event& other) const {
+bool operator>(const Event& other) const {
         return time > other.time;
     }
 };
 
 void simulateBank(double arrivalRate, int numTellers, int simulationTime) {
-    std::priority_queue<Event, std::vector<Event>, std::greater<Event>> eventList; // Event list
-    std::queue<Customer> bankQueue; // Customer waiting line
+    std::priority_queue<Event, std::vector<Event>, std::greater<Event>> eventList; 
+    std::queue<Customer> bankQueue; 
 
-    // Initialize random number generator for arrivals
     std::random_device rd;
     std::mt19937 gen(rd());
     std::exponential_distribution<double> arrivalDistribution(arrivalRate); 
 
-    // Generate initial arrival event
     Event initialArrival;
     initialArrival.type = Event::ARRIVAL;
-    initialArrival.time = 0; // First customer arrives at time 0
+    initialArrival.time = 0; 
     eventList.push(initialArrival);
 
     int currentTime = 0;
@@ -45,24 +41,17 @@ void simulateBank(double arrivalRate, int numTellers, int simulationTime) {
         currentTime = currentEvent.time;
 
         if (currentEvent.type == Event::ARRIVAL) {
-            // Process arrival
-            // Generate next arrival time
             int nextArrivalTime = currentTime + static_cast<int>(arrivalDistribution(gen)); 
             Event nextArrival;
             nextArrival.type = Event::ARRIVAL;
             nextArrival.time = nextArrivalTime;
-            // Only add if next arrival is within simulation time
             if (nextArrivalTime <= simulationTime) { 
                 eventList.push(nextArrival);
             }
 
-            // ... Logic for checking teller availability and adding to bankQueue ...
-            // ... Logic for creating and adding departure events ...
 
-        } else { // Departure Event
-            // ... Logic for handling teller availability and potentially serving next customer from bankQueue ...
+        } else { 
         }
-        // ... (Update statistics, etc.)
     }
 
     // Output statistics (average wait time, number of customers served, etc.)
