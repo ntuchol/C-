@@ -15,7 +15,7 @@
     int main() {
         long long base = 2;
         int exponent = 10;
-        long long result = power(base, exponent); // result will be 1024
+        long long result = power(base, exponent); 
         std::cout << "Result: " << result << std::endl;
         return 0;
     }
