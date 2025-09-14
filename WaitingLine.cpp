@@ -54,14 +54,11 @@ void simulateBank(double arrivalRate, int numTellers, int simulationTime) {
         }
     }
 
-    // Output statistics (average wait time, number of customers served, etc.)
     std::cout << "Simulation finished." << std::endl;
     std::cout << "Total customers served: " << numCustomersServed << std::endl;
-    // ...
 }
 
 int main() {
-    // Call simulateBank with desired parameters (arrival rate, number of tellers, simulation time)
     simulateBank(0.2, 1, 100); 
     return 0;
 }
