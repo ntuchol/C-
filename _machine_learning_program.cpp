@@ -6,7 +6,6 @@ int main() {
     arma::mat dataset;
     mlpack::data::Load("data.csv", dataset);
 
-    // NearestNeighborSort for sorting neighbors by distance, ManhattanDistance as metric
     mlpack::neighbor::NeighborSearch<mlpack::neighbor::NearestNeighborSort, mlpack::metric::ManhattanDistance> nn(dataset);
 
     arma::mat query_point = "1.0 2.0 3.0"; 
