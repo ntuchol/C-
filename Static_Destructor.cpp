@@ -5,15 +5,14 @@ public:
     MyStaticClass() {
         std::cout << "MyStaticClass constructor called." << std::endl;
     }
-    ~MyStaticClass() { // Destructor for the static object
+    ~MyStaticClass() { 
         std::cout << "MyStaticClass destructor called." << std::endl;
     }
 };
 
-static MyStaticClass globalStaticObject; // Global static object
-
+static MyStaticClass globalStaticObject; 
 void func() {
-    static MyStaticClass functionStaticObject; // Function-scope static object
+    static MyStaticClass functionStaticObject; 
     std::cout << "func() called." << std::endl;
 }
 
