@@ -36,9 +36,9 @@ int main() {
 
     for (auto const& [denom, count] : counts) {
         if (count > 0) {
-            if (denom >= 100) { // Bills
+            if (denom >= 100) { 
                 std::cout << "$" << denom / 100 << " bills: " << count << "\n";
-            } else { // Coins
+            } else { 
                 std::cout << denom << " cent coins: " << count << "\n";
             }
         }
