@@ -1,7 +1,6 @@
 class Point {
 public:
     double x, y;
-    // Constructors, operators, etc.
 };
 
 class Shape {
@@ -31,14 +30,13 @@ public:
 class Square : public Rectangle {
 public:
     Square(const Point& topLeft, double sideLength);
-    // Inherits area and perimeter calculations from Rectangle
 };
 
-class Circle : public Shape { // Or a separate branch if preferred
+class Circle : public Shape { 
 public:
     Circle(const Point& center, double radius);
     double calculateArea() const override;
-    double calculatePerimeter() const override; // Circumference
+    double calculatePerimeter() const override; 
 private:
     Point center;
     double radius;
