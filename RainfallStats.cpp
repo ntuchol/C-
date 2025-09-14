@@ -27,4 +27,4 @@ int main() {
 double calculateTotal(const std::vector<double>& rainfall) { ... }
 double calculateAverage(const std::vector<double>& rainfall) { ... }
 int findHighestMonthIndex(const std::vector<double>& rainfall) { ... }
-// int findLowestMonthIndex(const std::vector<double>& rainfall) { ... }
+int findLowestMonthIndex(const std::vector<double>& rainfall) { ... }
