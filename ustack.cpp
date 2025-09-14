@@ -1,23 +1,17 @@
 #include <iostream>
-#include <stack> // Required for std::stack
-
+#include <stack> 
 int main() {
-    // Create a stack of integers
     std::stack<int> myStack;
 
-    // Push elements onto the stack
     myStack.push(10);
     myStack.push(20);
     myStack.push(30);
 
-    // Access the top element
-    std::cout << "Top element: " << myStack.top() << std::endl; // Output: 30
-
-    // Pop an element
+    std::cout << "Top element: " << myStack.top() << std::endl; 
+    
     myStack.pop();
 
-    // Access the new top element
-    std::cout << "New top element: " << myStack.top() << std::endl; // Output: 20
+    std::cout << "New top element: " << myStack.top() << std::endl; 
 
     // Check if the stack is empty
     if (myStack.empty()) {
