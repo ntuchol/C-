@@ -60,7 +60,6 @@ void schorrWaiteMark(Node* root) {
     }
 }
 
-// Example usage and verification (e.g., print marked nodes)
 void printMarkedNodes(Node* node) {
     if (node == nullptr) return;
     if (node->marked) {
@@ -70,9 +69,7 @@ void printMarkedNodes(Node* node) {
     printMarkedNodes(node->right);
 }
 
-// Main function to demonstrate
 int main() {
-    // Create a sample binary tree
     Node* root = new Node();
     root->left = new Node();
     root->right = new Node();
@@ -86,7 +83,5 @@ int main() {
     std::cout << "\nAfter marking:" << std::endl;
     printMarkedNodes(root);
 
-    // Clean up memory (not shown in detail for brevity)
-    // In a real application, a garbage collector would handle this.
     return 0;
 }
