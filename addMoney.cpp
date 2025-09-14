@@ -11,8 +11,8 @@ int main() {
 #include <iostream>
 
 int main() {
-    long long balance_cents = 10050; // $100.50
-    long long deposit_cents = 2575;  // $25.75
+    long long balance_cents = 10050; 
+    long long deposit_cents = 2575;  
     long long total_cents = balance_cents + deposit_cents;
     
     double total_dollars = static_cast<double>(total_cents) / 100.0;
