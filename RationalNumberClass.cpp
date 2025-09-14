@@ -32,5 +32,4 @@ public:
         std::cout << numerator << "/" << denominator << std::endl;
     }
 
-    // ... other operators and functions
 };
