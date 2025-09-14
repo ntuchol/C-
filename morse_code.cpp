@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <map>
-#include <cctype> // For tolower()
+#include <cctype> 
 
 std::map<char, std::string> morse_map = {
     {'a', ".-"}, {'b', "-..."}, {'c', "-.-."}, {'d', "-.."}, {'e', "."},
@@ -11,7 +11,7 @@ std::map<char, std::string> morse_map = {
     {'u', "..-"}, {'v', "...-"}, {'w', ".--"}, {'x', "-..-"}, {'y', "-.--"},
     {'z', "--.."}, {'1', ".----"}, {'2', "..---"}, {'3', "...--"}, {'4', "....-"},
     {'5', "....."}, {'6', "-...."}, {'7', "--..."}, {'8', "---.."}, {'9', "----."},
-    {'0', "-----"}, {' ', "/"} // Space separator
+    {'0', "-----"}, {' ', "/"} 
 };
 
 std::string englishToMorse(const std::string& text) {
@@ -21,7 +21,6 @@ std::string englishToMorse(const std::string& text) {
         if (morse_map.count(lower_c)) {
             morse_code += morse_map[lower_c] + " ";
         } else {
-            // Handle characters not in the map (e.g., punctuation)
             morse_code += "? "; 
         }
     }
