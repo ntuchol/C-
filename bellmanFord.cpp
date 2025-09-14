@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <limits> // For numeric_limits
+#include <limits> 
 
 struct Edge {
     int source, destination, weight;
@@ -12,7 +12,6 @@ void bellmanFord(int V, int E, const std::vector<Edge>& edges, int source) {
 
     distance[source] = 0;
 
-    // Relax all edges V-1 times
     for (int i = 0; i < V - 1; ++i) {
         for (const auto& edge : edges) {
             int u = edge.source;
@@ -26,7 +25,6 @@ void bellmanFord(int V, int E, const std::vector<Edge>& edges, int source) {
         }
     }
 
-    // Check for negative cycles
     for (const auto& edge : edges) {
         int u = edge.source;
         int v = edge.destination;
@@ -38,7 +36,6 @@ void bellmanFord(int V, int E, const std::vector<Edge>& edges, int source) {
         }
     }
 
-    // Print shortest distances
     std::cout << "Shortest distances from source " << source << ":" << std::endl;
     for (int i = 0; i < V; ++i) {
         if (distance[i] == std::numeric_limits<long long>::max()) {
@@ -49,5 +46,4 @@ void bellmanFord(int V, int E, const std::vector<Edge>& edges, int source) {
     }
 }
 
-// Main function to create graph and call bellmanFord
 // int main() { ... }
