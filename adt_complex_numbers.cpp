@@ -6,20 +6,16 @@ private:
     double imaginary;
 
 public:
-    // Constructor
     Complex(double r = 0.0, double i = 0.0) : real(r), imaginary(i) {}
 
-    // Overload the + operator for addition
     Complex operator+(const Complex& other) const {
         return Complex(real + other.real, imaginary + other.imaginary);
     }
 
-    // Overload the - operator for subtraction
     Complex operator-(const Complex& other) const {
         return Complex(real - other.real, imaginary - other.imaginary);
     }
 
-    // Member function to display the complex number
     void display() const {
         std::cout << real;
         if (imaginary >= 0) {
