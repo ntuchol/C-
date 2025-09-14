@@ -4,22 +4,20 @@ int interpolationSearch(int arr[], int n, int key) {
     int high = n - 1;
 
     while (low <= high && key >= arr[low] && key <= arr[high]) {
-        // Handle division by zero or equal values at ends
         if (arr[high] == arr[low]) {
-            if (arr[low] == key) return low; // Key found at low/high
-            return -1; // Key not found
+            if (arr[low] == key) return low; 
+            return -1; 
         }
 
-        // Calculate probe position
         int pos = low + (((double)(key - arr[low]) * (high - low)) / (arr[high] - arr[low]));
 
         if (arr[pos] == key) {
-            return pos; // Key found
+            return pos; 
         } else if (arr[pos] < key) {
-            low = pos + 1; // Search in the right sub-array
+            low = pos + 1; 
         } else {
-            high = pos - 1; // Search in the left sub-array
+            high = pos - 1; 
         }
     }
-    return -1; // Key not found
+    return -1; 
 }
