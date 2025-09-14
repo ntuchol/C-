@@ -16,15 +16,12 @@
 
         switch (choice) {
             case 1:
-                // Call function to generate Sales Report
                 std::cout << "Generating Sales Report...\n";
                 break;
             case 2:
-                // Call function to generate Inventory Report
                 std::cout << "Generating Inventory Report...\n";
                 break;
             case 3:
-                // Call function to generate Customer Report
                 std::cout << "Generating Customer Report...\n";
                 break;
             case 4:
