@@ -1,4 +1,3 @@
-// Example of a full adder function
     struct FullAdderOutput {
         int sum;
         int carry_out;
