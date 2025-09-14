@@ -6,10 +6,8 @@ private:
     std::vector<double> coefficients;
 
 public:
-    // Constructor
     Polynomial(const std::vector<double>& coeffs) : coefficients(coeffs) {}
 
-    // Operator overloading for addition
     Polynomial operator+(const Polynomial& other) const {
         size_t max_size = std::max(coefficients.size(), other.coefficients.size());
         std::vector<double> result_coeffs(max_size, 0.0);
@@ -22,7 +20,6 @@ public:
         return Polynomial(result_coeffs);
     }
 
-    // Evaluation method (Horner's method)
     double evaluate(double x) const {
         double result = 0.0;
         for (int i = coefficients.size() - 1; i >= 0; --i) {
@@ -31,7 +28,6 @@ public:
         return result;
     }
 
-    // Print method
     void print() const {
         for (int i = coefficients.size() - 1; i >= 0; --i) {
             if (coefficients[i] != 0.0) {
