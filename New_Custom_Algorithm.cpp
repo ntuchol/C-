@@ -1,7 +1,6 @@
     #include <vector>
-    #include <algorithm> // For std::swap
+    #include <algorithm> 
 
-    // A simple custom bubble sort implementation
     template <typename RandomAccessIterator>
     void custom_bubble_sort(RandomAccessIterator first, RandomAccessIterator last) {
         bool swapped;
@@ -16,6 +15,5 @@
         } while (swapped);
     }
 
-    // Example usage:
   std::vector<int> my_vec = {5, 2, 8, 1, 9};
   custom_bubble_sort(my_vec.begin(), my_vec.end());
