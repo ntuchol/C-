@@ -1,24 +1,20 @@
 #include <iostream>
-#include <algorithm> // For std::swap
+#include <algorithm> 
 
 void selectionSort(int arr[], int n) {
     for (int i = 0; i < n - 1; ++i) {
-        // Assume the current element is the minimum
         int min_idx = i;
 
-        // Find the minimum element in the remaining unsorted array
         for (int j = i + 1; j < n; ++j) {
             if (arr[j] < arr[min_idx]) {
                 min_idx = j;
             }
         }
 
-        // Swap the found minimum element with the first element of the unsorted part
         std::swap(arr[i], arr[min_idx]);
     }
 }
 
-// Function to print an array
 void printArray(int arr[], int size) {
     for (int i = 0; i < size; ++i) {
         std::cout << arr[i] << " ";
