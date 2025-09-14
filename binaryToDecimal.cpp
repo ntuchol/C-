@@ -1,16 +1,15 @@
 #include <iostream>
-#include <cmath> // For pow function, though bit shifting is often preferred for performance
-
+#include <cmath> 
 int binaryToDecimal(long long n) {
     int decimalValue = 0;
-    int i = 0; // Represents the power of 2 (0, 1, 2, ...)
+    int i = 0; 
     int remainder;
 
     while (n != 0) {
-        remainder = n % 10; // Get the last digit
-        n /= 10;           // Remove the last digit
-        decimalValue += remainder * pow(2, i); // Add (digit * 2^i) to decimalValue
-        ++i;               // Increment power for the next digit
+        remainder = n % 10; 
+        n /= 10;          
+        decimalValue += remainder * pow(2, i); 
+        ++i;           
     }
     return decimalValue;
 }
