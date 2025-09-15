@@ -1,12 +1,11 @@
 #include <iostream>
 #include <string>
-#include <algorithm> // For std::tolower and std::isalnum
-
+#include <algorithm> 
 bool isPalindrome(const std::string& s) {
     std::string cleaned_s;
     for (char c : s) {
-        if (std::isalnum(c)) { // Check for alphanumeric characters
-            cleaned_s += std::tolower(c); // Convert to lowercase
+        if (std::isalnum(c)) { 
+            cleaned_s += std::tolower(c); 
         }
     }
 
