@@ -1,0 +1,50 @@
+a) Create a lambda function that multiplies each element of an array by a number. This number is a captured variable; test the function for the cases when it is copy-by-value and a reference. The original array is modified after having called the function.
+
+b) Print the values of the modified array using auto to initialize the iterator variable instead of declaring it explicitly.
+
+c) Write a lambda function to compute both the minimum and maximum of the elements in an array. The return type is an std::pair (or if you prefer, std::tuple with two elements) containing the computed minimum and maximum values in the array.
+
+d) Compare the approach taken in part c) by calling std::minmax_element. For example, do you get the same output? How easy is to understand and reuse the code?
+
+b) Implement the accumulation algorithm using an embedded lambda function in combination with std::for_each() and captured variables.
+
+c) Give an example of a stored lambda function that may be called from an STL algorithm (may be any relevant STL algorithm). Demonstrate using the STL algorithm with your stored lambda.
+
+a) Modify class C so that 1) its default constructor is absent and 2) copy constructor and assignment are private. To this end, use keyword default to explicitly tell the compiler to generate a default constructor. Furthermore, use the keyword delete to mark the copy constructor and assignment operator as deleted functions. Deleted functions may not be used in any way, even by friends. Test your code again, including calling the defaulted and deleted functions. What is the resulting behavior?
+
+b) Use the explicit keyword in the constructors to disallow implicit type conversion.
+
+c) Use constexpr keyword for those functions in which input arguments are known at compile-time (for example, constructors and setters). Then the data members will also be known at compile-time.
+
+d) Use the keyword noexcept for those member functions which you know will not throw an exception.
+
+a) Create a string and move it to another string. Check the contents of the source and target strings before and after the move.
+
+b) Create a vector and move it to another vector. Check the contents of the source and target vectors before and after the move. Compare the time it takes to move a vector compared to a copy constructor or a copy assignment statement.
+
+c) Consider the following user-defined code to swap two objects:
+
+a) Create the move constructor and the move assignment operator for class C.
+
+b) Test these new functions. How can you ensure that a move constructor is called instead of a copy constructor?
+
+c) What happens if you use an lvalue as the source of a move operation?
+a) Create the template variadic function with its parameter pack.
+
+b) Create the termination/tail function, that is the print function accepting a single input argument.
+a) Based on the result in part a) create a rotation function that works with any object whose class implements the member function rotate() . Test your code.
+
+b) Implement the alternative solution to this problem:
+
+C++:
+// The other way of doing it.
+std::array<Shape*, 5>
+shapeList{ &circle, &line, &circle, &circle, &line };
+double factor2 = 20.0;
+for (auto& elem : shapeList)
+{
+elem->rotate(factor2);
+}
+
+Why can we not include valves in this array? And why can we include valves in the variadic approach?
+
