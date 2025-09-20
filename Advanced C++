@@ -1,0 +1,96 @@
+a) Create a lambda function that multiplies each element of an array by a number. This number is a captured variable; test the function for the cases when it is copy-by-value and a reference. The original array is modified after having called the function.
+
+b) Print the values of the modified array using auto to initialize the iterator variable instead of declaring it explicitly.
+
+c) Write a lambda function to compute both the minimum and maximum of the elements in an array. The return type is an std::pair (or if you prefer, std::tuple with two elements) containing the computed minimum and maximum values in the array.
+
+d) Compare the approach taken in part c) by calling std::minmax_element. For example, do you get the same output? How easy is to understand and reuse the code?
+
+b) Implement the accumulation algorithm using an embedded lambda function in combination with std::for_each() and captured variables.
+
+c) Give an example of a stored lambda function that may be called from an STL algorithm (may be any relevant STL algorithm). Demonstrate using the STL algorithm with your stored lambda.
+a) Modify class C so that 1) its default constructor is absent and 2) copy constructor and assignment are private. To this end, use keyword default to explicitly tell the compiler to generate a default constructor. Furthermore, use the keyword delete to mark the copy constructor and assignment operator as deleted functions. Deleted functions may not be used in any way, even by friends. Test your code again, including calling the defaulted and deleted functions. What is the resulting behavior?
+
+b) Use the explicit keyword in the constructors to disallow implicit type conversion.
+
+c) Use constexpr keyword for those functions in which input arguments are known at compile-time (for example, constructors and setters). Then the data members will also be known at compile-time.
+
+d) Use the keyword noexcept for those member functions which you know will not throw an exception.
+
+a) Create a string and move it to another string. Check the contents of the source and target strings before and after the move.
+
+b) Create a vector and move it to another vector. Check the contents of the source and target vectors before and after the move. Compare the time it takes to move a vector compared to a copy constructor or a copy assignment statement.
+
+a) Create the move constructor and the move assignment operator for class C.
+
+b) Test these new functions. How can you ensure that a move constructor is called instead of a copy constructor?
+
+c) What happens if you use an lvalue as the source of a move operation?
+
+a) Create the template variadic function with its parameter pack.
+
+b) Create the termination/tail function, that is the print function accepting a single input argument.
+
+a) Define functions of arity 3, 2,1 and 0 based on the above function.
+
+b) Test these functions by binding the appropriate variables and checking that the output is correct.
+
+a) Bind the function wrapper to C’s static member function.
+
+b) Bind the function wrapper to C’s member functions using std::bind and placeholders.
+
+c) Test the function.
+
+a) The goal of the exercise is to create a single Shape with an embedded command-style function wrapper (such as rotate() or other ones).
+
+a) Create a tuple that models some attributes of a Person consisting of a name, address (both std::string ) and date of birth (as a Boost date). Create some instances of Person and modify their elements.
+
+b) Create a function to print the elements of Person.
+
+c) Create a list/vector of Person and add some instances of Person to it.
+
+d) Write a function to sort the list based on one of the elements (for example, we can sort by name, address or date of birth).
+
+e) Create fixed-sized and variable-sized arrays and create span views of them. Are these views read-only? Prove or disprove this question.
+
+f) Create 3 print functions for spans using a) range-based for loops, b) iterators and c) indexing operator [].
+
+g) Write functions to return the first and last N elements of a span.
+
+h) Write a function to test std::subspan.
+
+i) Investigate and extend the following code to create “byte views of spans”:
+
+b) Test the code on tuples with two and three elements whose underlying type is double.
+
+c) Compute the sum and average of a tuple whose element type is std::complex<int>.
+
+a) Create a function that returns the following statistical properties of a numeric vector as a tuple: mean, mean deviation, range (the difference between the largest and smallest numbers in the vector), standard deviation and variance.
+
+b) Test the function from part a). In order to make the code more readable you can use tied variables and std::ignore.
+
+c) Write a function that computes the median of a sorted vector (the median is either the middle value or the arithmetic mean of the two middle values) and the mode which is the value that occurs with the greatest frequency.
+
+a) Given a sorted numeric vector v and a target value x , find the first index i, such that:
+
+​
+v[i] <= x < v [i+1]​
+
+
+Determine the return type.​
+
+b) Find the maximum error between two vectors v1 and v2 in a given index range [i; j] . We wish to compute the difference in some (customisable) norm, specifically the absolute error, relative error and the index values where these errors occur.
+
+Ideally, you should use the following C++ functionality if possible:
+Move semantics instead of copy constructors.
+Smart pointers (if applicable).
+Function objects and lambda functions.
+Use as much of STL Algorithms as you can (investigate what’s in the library).
+a) Create derived classes Circle and Line. Create I/O device classes to display CAD shapes in different ways.
+a) Fix this code without removing any of the (perceived) functionality.
+
+b) Once fixed, create instances of Derived using Base smart pointers. Check that you get the expected output.
+a) Create a single class TMPClass consisting of a vector, input device and output device. Build the code for the algorithm.
+a) (re)Create the class using alias template instead of typedef.
+
+
